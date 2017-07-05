@@ -85,6 +85,11 @@ int main( void ){
             for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
                 //hwlib::cout << rowValue[rowCtr];
                 if(rowValue[rowCtr] != 0){
+                    int notenumber = keyToMidiMap[colCtr][rowCtr];
+                    
+                    int letter = notenumber - ((notenumber/12) * 12);
+                    
+                    //int octave = notenumber/12;
                     buzz.tone(2093);
                     if(!keyPressed[rowCtr][colCtr]){
                         keyPressed[rowCtr][colCtr] = true;
@@ -108,9 +113,6 @@ int main( void ){
                         }
                         else{
                             mijnmidi.noteOn(txPin, 0x00, rowCtr, colCtr,127, keyToMidiMap);
-                        
-                            int midi = keyToMidiMap[colCtr][rowCtr];
-                            int letter = midi - ((midi/12) * 12);
                             kees.set8x8matrix(LETTERS[letter], 0);
                             
                             int volume = velocity;
