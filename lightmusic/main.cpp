@@ -12,6 +12,7 @@
 #include "constantsmidi.hpp"
 #include "constants8x8chars.hpp"
 #include "buzzer.hpp"
+#include <cmath>
 #include <vector>
 
 #define NUM_ROWS 4
@@ -55,7 +56,7 @@ int main( void ){
     auto txPin    = target::pin_out(target::pins::d1);
     
     //initialize note
-    int note = 29;
+    int note = 81;
     int manynotes = 0;
     int velocity = 127;
     bool keyPressed[9][17];         ///< Bool used for detection of a pushed button or releaved button
@@ -89,13 +90,15 @@ int main( void ){
                     
                     int letter = notenumber - ((notenumber/12) * 12);
                     
-                    //int octave = notenumber/12;
-                    buzz.tone(2093);
+                    int octave = (notenumber/12);
+                    int hertzoctave = 16 * pow(2,octave);
+                    int hertznote = (((16 * pow(2,octave+1))-(16 * pow(2,octave)))/12*letter);
+                    buzz.tone(hertzoctave+hertznote);
                     if(!keyPressed[rowCtr][colCtr]){
                         keyPressed[rowCtr][colCtr] = true;
                         //hwlib::cout << "ROW: " << rowCtr << "COL: " << colCtr << "\n\n";
                         manynotes++;
-                
+                        
                         
                         if(keyPressed[NUM_ROWS-1][NUM_COLS-1] == true && velocity > 0){
                             velocity--;
