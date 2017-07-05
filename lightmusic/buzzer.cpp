@@ -5,7 +5,7 @@ buzzer::buzzer(hwlib::target::pin_out sig):
 {}
 
 void buzzer::tone(int hertz){
-    int halfPeriodns = (period/hertz)/2;
+    int halfPeriodns = ((period/hertz)/2);
     sig.set(1);
     hwlib::wait_ns(halfPeriodns);
     sig.set(0);

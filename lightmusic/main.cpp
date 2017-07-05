@@ -11,6 +11,7 @@
 #include "constantsmax7219.hpp"
 #include "constantsmidi.hpp"
 #include "constants8x8chars.hpp"
+#include "buzzer.hpp"
 #include <vector>
 
 #define NUM_ROWS 4
@@ -29,13 +30,14 @@ int main( void ){
     auto clk    = target::pin_out(target::pins::d6);                         //Due pin 2
     auto load   = target::pin_out(target::pins::d7);                         //Due pin 3
     auto din    = target::pin_out(target::pins::d11);
+    auto sig    = target::pin_out(target::pins::d12);
     
     
     max7219 kees(din,clk,load,8,8);
     //int matrix[LEDMATRIX_SIZE+1][(LEDMATRIX_SIZE * LEDMATRIX_QUANTITY)+1] = {0};
     kees.Setup();
-    hwlib::cout << "\n\nCHECK\n";
-    kees.checkOutputmatrix();
+    //kees.checkOutputmatrix();
+    buzzer buzz(sig);
     
     //initialize all rows
     auto row1Pin = target::pin_in(target::pins::d2);
@@ -82,42 +84,45 @@ int main( void ){
             //mijnmidi.midinoteOn(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
             for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
                 //hwlib::cout << rowValue[rowCtr];
-                if(rowValue[rowCtr] != 0 && !keyPressed[rowCtr][colCtr]){
-                    keyPressed[rowCtr][colCtr] = true;
-                    //hwlib::cout << "ROW: " << rowCtr << "COL: " << colCtr << "\n\n";
-                    manynotes++;
-            
-                    
-                    if(keyPressed[NUM_ROWS-1][NUM_COLS-1] == true && velocity > 0){
-                        velocity--;
-                        kees.set8x8matrix(MXIN[0], 0);
-                        kees.set8x8matrix(MXIN[1], 1);
-                        kees.set8x8matrix(MXIN[3], 2);
-                        kees.set8x8matrix(MXIN[4], 3);
-                    }
-                    else if(keyPressed[NUM_ROWS-1][NUM_COLS-2] == true && velocity < 127){
-                        velocity++;
-                        kees.set8x8matrix(MXIN[0], 0);
-                        kees.set8x8matrix(MXIN[1], 1);
-                        kees.set8x8matrix(LETTERS[9], 2);
-                        kees.set8x8matrix(MXIN[2], 3);
-                    }
-                    else{
-                        mijnmidi.noteOn(txPin, 0x00, rowCtr, colCtr,127, keyToMidiMap);
-                    
-                        int midi = keyToMidiMap[colCtr][rowCtr];
-                        int letter = midi - ((midi/12) * 12);
-                        kees.set8x8matrix(LETTERS[letter], 0);
+                if(rowValue[rowCtr] != 0){
+                    buzz.tone(2093);
+                    if(!keyPressed[rowCtr][colCtr]){
+                        keyPressed[rowCtr][colCtr] = true;
+                        //hwlib::cout << "ROW: " << rowCtr << "COL: " << colCtr << "\n\n";
+                        manynotes++;
+                
                         
-                        int volume = velocity;
-                        int number1 = volume/100;
-                        int number2 = (volume - (number1*100)) / 10;
-                        int number3 = volume - (number1 *100 + number2 * 10);
-                        kees.set8x8matrix(NUMBERS[number1], 1);
-                        kees.set8x8matrix(NUMBERS[number2], 2);
-                        kees.set8x8matrix(NUMBERS[number3], 3);
+                        if(keyPressed[NUM_ROWS-1][NUM_COLS-1] == true && velocity > 0){
+                            velocity--;
+                            kees.set8x8matrix(MXIN[0], 0);
+                            kees.set8x8matrix(MXIN[1], 1);
+                            kees.set8x8matrix(MXIN[3], 2);
+                            kees.set8x8matrix(MXIN[4], 3);
+                        }
+                        else if(keyPressed[NUM_ROWS-1][NUM_COLS-2] == true && velocity < 127){
+                            velocity++;
+                            kees.set8x8matrix(MXIN[0], 0);
+                            kees.set8x8matrix(MXIN[1], 1);
+                            kees.set8x8matrix(LETTERS[9], 2);
+                            kees.set8x8matrix(MXIN[2], 3);
+                        }
+                        else{
+                            mijnmidi.noteOn(txPin, 0x00, rowCtr, colCtr,127, keyToMidiMap);
+                        
+                            int midi = keyToMidiMap[colCtr][rowCtr];
+                            int letter = midi - ((midi/12) * 12);
+                            kees.set8x8matrix(LETTERS[letter], 0);
+                            
+                            int volume = velocity;
+                            int number1 = volume/100;
+                            int number2 = (volume - (number1*100)) / 10;
+                            int number3 = volume - (number1 *100 + number2 * 10);
+                            kees.set8x8matrix(NUMBERS[number1], 1);
+                            kees.set8x8matrix(NUMBERS[number2], 2);
+                            kees.set8x8matrix(NUMBERS[number3], 3);
+                        }
+                        kees.draw();
                     }
-                    kees.draw();
                 }
             }
             //midinoteOff checks if the input is false again and sends his own midi messages with note off
