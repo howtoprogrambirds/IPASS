@@ -1,0 +1,1005 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+                              main.o (pow)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (__ieee754_pow)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o) (__ieee754_sqrt)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o) (fabs)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (finite)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (__fdlib_version)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (matherr)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o) (nan)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (rint)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o) (scalbn)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o) (copysign)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+                              main.o (__aeabi_dsub)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+                              main.o (__aeabi_dmul)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (__aeabi_dcmpeq)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (__aeabi_dcmpun)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+                              main.o (__aeabi_d2iz)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+                              hwlib.o (__aeabi_ldivmod)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+                              hwlib.o (__aeabi_uldivmod)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o) (__udivmoddi4)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o) (__errno)
+c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+                              c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o) (_impure_ptr)
+
+Allocating common symbols
+Common symbol       size              file
+
+__dso_handle        0x4               bmptk_cortex.o
+
+Discarded input sections
+
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .group         0x00000000        0x8 hwlib.o
+ .text          0x00000000        0x0 hwlib.o
+ .data          0x00000000        0x0 hwlib.o
+ .bss           0x00000000        0x0 hwlib.o
+ .text._ZN5hwlib10pin_in_out7refreshEv
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib10pin_in_out5flushEv
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib6pin_oc7refreshEv
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib6pin_oc5flushEv
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class3setEbNS_9bufferingE
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class3getENS_9bufferingE
+                0x00000000        0x4 hwlib.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class19direction_set_inputEv
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib23_pin_in_out_dummy_class20direction_set_outputEv
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib20_pin_out_dummy_class3setEbNS_9bufferingE
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib19_pin_oc_dummy_class3setEbNS_9bufferingE
+                0x00000000        0x2 hwlib.o
+ .text._ZN5hwlib19_pin_oc_dummy_class3getENS_9bufferingE
+                0x00000000        0x4 hwlib.o
+ .text._ZNK5hwlib9image_8x818get_implementationENS_8locationE
+                0x00000000       0x44 hwlib.o
+ .text._ZN5hwlib7ostream6fillerEi
+                0x00000000       0x1a hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamEPKc
+                0x00000000       0x54 hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamEx
+                0x00000000      0x10a hwlib.o
+ .text._ZN5hwliblsERNS_7ostreamENS_8locationE
+                0x00000000       0x3c hwlib.o
+ .text._ZN5hwlib6window5writeENS_8locationENS_5colorENS_9bufferingE
+                0x00000000       0x38 hwlib.o
+ .text._ZN5hwlib4line4drawERNS_6windowENS_9bufferingE
+                0x00000000       0x78 hwlib.o
+ .text._ZN5hwlib6circle4drawERNS_6windowENS_9bufferingE
+                0x00000000      0x320 hwlib.o
+ .text._ZN5hwlib4randEv
+                0x00000000       0x20 hwlib.o
+ .text._ZN5hwlib15random_in_rangeEjj
+                0x00000000       0x1a hwlib.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x00000000       0x1c hwlib.o
+ .text._ZN3due11ad_seq_infoEm
+                0x00000000       0x20 hwlib.o
+ .text._ZN3due6now_usEv
+                0x00000000       0x78 hwlib.o
+ .text._ZN5hwlib7wait_nsEi
+                0x00000000       0x14 hwlib.o
+ .text._ZN5hwlib5blinkERNS_7pin_outEj
+                0x00000000       0x2c hwlib.o
+ .text._ZN5hwlib4kittERNS_11port_in_outEj
+                0x00000000       0x58 hwlib.o
+ .text._ZN5hwlib4kittERNS_8port_outEj
+                0x00000000       0x52 hwlib.o
+ .text._ZN5hwlib4kittERNS_7port_ocEj
+                0x00000000       0x52 hwlib.o
+ .text._ZN5hwlib21graphics_random_linesERNS_6windowEj
+                0x00000000      0x100 hwlib.o
+ .text._ZN5hwlib23graphics_random_circlesERNS_6windowEj
+                0x00000000       0x90 hwlib.o
+ .text._ZN5hwlib12dac_triangleERNS_3dacEj
+                0x00000000       0x36 hwlib.o
+ .text._ZN5hwlib6now_usEv
+                0x00000000        0x8 hwlib.o
+ .text._ZN5hwlib40uart_getc_bit_banged_pin_custom_baudrateERNS_6pin_inEi
+                0x00000000       0x7c hwlib.o
+ .text._ZN5hwlib24uart_getc_bit_banged_pinERNS_6pin_inE
+                0x00000000        0xc hwlib.o
+ .text._ZN5hwlib9uart_getcEv
+                0x00000000       0x38 hwlib.o
+ .text._ZN5hwlib19cin_using_uart_getc4getcEv
+                0x00000000        0x8 hwlib.o
+ .rodata._ZTVN5hwlib23_pin_in_out_dummy_classE
+                0x00000000       0x20 hwlib.o
+ .rodata._ZTVN5hwlib20_pin_out_dummy_classE
+                0x00000000       0x10 hwlib.o
+ .rodata._ZTVN5hwlib19_pin_oc_dummy_classE
+                0x00000000       0x18 hwlib.o
+ .rodata._ZTVN5hwlib19cin_using_uart_getcE
+                0x00000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib9image_8x8E
+                0x00000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib4lineE
+                0x00000000        0xc hwlib.o
+ .rodata._ZTVN5hwlib6circleE
+                0x00000000        0xc hwlib.o
+ .bss._ZGVZN5hwlib9uart_getcEvE3pin
+                0x00000000        0x4 hwlib.o
+ .bss._ZZN3due6now_usEvE4high
+                0x00000000        0x8 hwlib.o
+ .bss._ZZN3due6now_usEvE8last_low
+                0x00000000        0x4 hwlib.o
+ .bss._ZZN3due6now_usEvE9init_done
+                0x00000000        0x1 hwlib.o
+ .bss._ZZN5hwlib4randEvE1n
+                0x00000000        0x4 hwlib.o
+ .bss._ZZN5hwlib9uart_getcEvE3pin
+                0x00000000        0xc hwlib.o
+ .data._ZN5hwlib12pin_oc_dummyE
+                0x00000000        0x4 hwlib.o
+ .data._ZN5hwlib13pin_out_dummyE
+                0x00000000        0x4 hwlib.o
+ .data._ZN5hwlib15font_16x16_dataE
+                0x00000000      0xbe4 hwlib.o
+ .data._ZN5hwlib16pin_in_out_dummyE
+                0x00000000        0x4 hwlib.o
+ .data._ZN5hwlib3cinE
+                0x00000000        0x4 hwlib.o
+ .rodata._ZN5hwlib16font_default_8x86imagesE
+                0x00000000      0xa00 hwlib.o
+ .rodata._ZN5hwlibL5blackE
+                0x00000000        0x4 hwlib.o
+ .rodata._ZN5hwlibL5whiteE
+                0x00000000        0x4 hwlib.o
+ .rodata._ZN5hwliblsERNS_7ostreamENS_8locationE.str1.1
+                0x00000000        0x6 hwlib.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x00000000        0xc hwlib.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x00000000       0x70 hwlib.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .text._ZN5hwlib6pin_in7refreshEv
+                0x00000000        0x2 main.o
+ .text._ZN5hwlib7pin_out5flushEv
+                0x00000000        0x2 main.o
+ .text._ZN3due6pin_in3getEN5hwlib9bufferingE
+                0x00000000       0x10 main.o
+ .text._ZN3due7pin_out3setEbN5hwlib9bufferingE
+                0x00000000        0xe main.o
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x00000000       0x20 main.o
+ .text._ZN3due11ad_pin_infoENS_7ad_pinsE
+                0x00000000       0x1c main.o
+ .text._ZN3due11ad_seq_infoEm
+                0x00000000       0x20 main.o
+ .text._ZN3due14port_registersEm
+                0x00000000       0x48 main.o
+ .text._ZN3due6now_usEv
+                0x00000000       0x78 main.o
+ .text._ZN5hwlib7wait_usEi
+                0x00000000       0x28 main.o
+ .text._ZN5hwlib7wait_nsEi
+                0x00000000       0x14 main.o
+ .text._ZN5hwlib7wait_msEi
+                0x00000000       0x16 main.o
+ .text._ZN5hwlib9uart_putcEc
+                0x00000000       0x40 main.o
+ .text._ZN5hwlib9uart_getcEv
+                0x00000000       0x3c main.o
+ .text._ZN5hwlib6now_usEv
+                0x00000000        0x8 main.o
+ .rodata._ZTVN3due6pin_inE
+                0x00000000       0x10 main.o
+ .rodata._ZTVN3due7pin_outE
+                0x00000000       0x10 main.o
+ .bss._ZGVZN5hwlib9uart_getcEvE3pin
+                0x00000000        0x4 main.o
+ .bss._ZGVZN5hwlib9uart_putcEcE3pin
+                0x00000000        0x4 main.o
+ .bss._ZZN3due6now_usEvE4high
+                0x00000000        0x8 main.o
+ .bss._ZZN3due6now_usEvE8last_low
+                0x00000000        0x4 main.o
+ .bss._ZZN3due6now_usEvE9init_done
+                0x00000000        0x1 main.o
+ .bss._ZZN5hwlib9uart_getcEvE3pin
+                0x00000000        0xc main.o
+ .bss._ZZN5hwlib9uart_putcEcE3pin
+                0x00000000        0xc main.o
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x00000000       0x33 main.o
+ .rodata._ZZN3due11ad_pin_infoENS_7ad_pinsEE17ad_pin_info_array
+                0x00000000        0xc main.o
+ .rodata._ZZN3due11ad_seq_infoEmE12ad_seq_array
+                0x00000000       0x70 main.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x00000000       0xa4 main.o
+ .text          0x00000000        0x0 bmptk_cortex.o
+ .data          0x00000000        0x0 bmptk_cortex.o
+ .bss           0x00000000        0x0 bmptk_cortex.o
+ .text.__aeabi_idiv0
+                0x00000000        0x4 bmptk_cortex.o
+ .text.__cxa_pure_virtual
+                0x00000000        0x2 bmptk_cortex.o
+ COMMON         0x00000000        0x4 bmptk_cortex.o
+ .text          0x00000000        0x0 bmptk_heap_none.o
+ .data          0x00000000        0x0 bmptk_heap_none.o
+ .bss           0x00000000        0x0 bmptk_heap_none.o
+ .text.malloc   0x00000000        0xa bmptk_heap_none.o
+ .text.free     0x00000000        0x4 bmptk_heap_none.o
+ .text          0x00000000        0x0 bmptk_fixed_size_stack.o
+ .data          0x00000000        0x0 bmptk_fixed_size_stack.o
+ .bss           0x00000000        0x0 bmptk_fixed_size_stack.o
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .text          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .text          0x00000000       0xa0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .text          0x00000000       0x30 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .text          0x00000000      0x2dc c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x00000000        0x8 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .text          0x00000000        0x4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .text          0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+ .rodata        0x00000000        0x4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00080000         xr
+ram              0x20000000         0x00018000         xrw
+nul              0x20000000         0x00000000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a
+LOAD hwlib.o
+LOAD main.o
+LOAD bmptk_cortex.o
+LOAD bmptk_heap_none.o
+LOAD bmptk_fixed_size_stack.o
+LOAD c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libstdc++.a
+LOAD c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a
+START GROUP
+LOAD c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a
+LOAD c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a
+END GROUP
+                0x00000000                __rom_start = ORIGIN (rom)
+                0x00080000                __rom_size = LENGTH (rom)
+                0x00080000                __rom_end = (__rom_start + __rom_size)
+                0x20000000                __ram_start = ORIGIN (ram)
+                0x00018000                __ram_size = LENGTH (ram)
+                0x20018000                __ram_end = (__ram_start + __ram_size)
+                [!provide]                PROVIDE (__rom_start, __rom_start)
+                [!provide]                PROVIDE (__rom_size, __rom_size)
+                [!provide]                PROVIDE (__rom_end, __rom_end)
+                [!provide]                PROVIDE (__ram_start, __ram_start)
+                [!provide]                PROVIDE (__ram_size, __ram_size)
+                [!provide]                PROVIDE (__ram_end, __ram_end)
+
+.text           0x00000000     0x4520
+                0x00000000                . = ALIGN (0x4)
+                0x00000000                __text_start = .
+                [!provide]                PROVIDE (__text_start, __text_start)
+                0x00000000                . = ALIGN (0x4)
+ *(.vectors)
+ .vectors       0x00000000       0x20 bmptk_cortex.o
+                0x00000000                __vectors
+                0x00000020                . = ALIGN (0x4)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text._ZN5hwlib6pin_in7refreshEv
+                0x00000020        0x2 hwlib.o
+                0x00000020                _ZN5hwlib6pin_in7refreshEv
+ .text._ZN5hwlib7pin_out5flushEv
+                0x00000022        0x2 hwlib.o
+                0x00000022                _ZN5hwlib7pin_out5flushEv
+ .text._ZN5hwlib19_pin_in_dummy_class3getENS_9bufferingE
+                0x00000024        0x4 hwlib.o
+                0x00000024                _ZN5hwlib19_pin_in_dummy_class3getENS_9bufferingE
+ .text._ZN5hwlib7ostream5flushEv
+                0x00000028        0x2 hwlib.o
+                0x00000028                _ZN5hwlib7ostream5flushEv
+ .text._ZN3due6pin_in3getEN5hwlib9bufferingE
+                0x0000002a       0x10 hwlib.o
+                0x0000002a                _ZN3due6pin_in3getEN5hwlib9bufferingE
+ .text._ZN3due7pin_out3setEbN5hwlib9bufferingE
+                0x0000003a        0xe hwlib.o
+                0x0000003a                _ZN3due7pin_out3setEbN5hwlib9bufferingE
+ .text._ZN5hwlib5panicEPKcj
+                0x00000048        0x2 hwlib.o
+                0x00000048                _ZN5hwlib5panicEPKcj
+ *fill*         0x0000004a        0x2 
+ .text._ZN3due8pin_infoENS_4pinsE
+                0x0000004c       0x20 hwlib.o
+                0x0000004c                _ZN3due8pin_infoENS_4pinsE
+ .text._ZN3due14port_registersEm
+                0x0000006c       0x48 hwlib.o
+                0x0000006c                _ZN3due14port_registersEm
+ *fill*         0x000000b4        0xc 
+ .text._ZN5hwlib7wait_usEi
+                0x000000c0       0x28 hwlib.o
+                0x000000c0                _ZN5hwlib7wait_usEi
+ .text._ZN5hwlib40uart_putc_bit_banged_pin_custom_baudrateEcRNS_7pin_outEi
+                0x000000e8       0x68 hwlib.o
+                0x000000e8                _ZN5hwlib40uart_putc_bit_banged_pin_custom_baudrateEcRNS_7pin_outEi
+ .text._ZN5hwlib24uart_putc_bit_banged_pinEcRNS_7pin_outE
+                0x00000150        0xc hwlib.o
+                0x00000150                _ZN5hwlib24uart_putc_bit_banged_pinEcRNS_7pin_outE
+ .text._ZN5hwlib7wait_msEi
+                0x0000015c       0x16 hwlib.o
+                0x0000015c                _ZN5hwlib7wait_msEi
+ *fill*         0x00000172        0x2 
+ .text._ZN5hwlib9uart_putcEc
+                0x00000174       0x3c hwlib.o
+                0x00000174                _ZN5hwlib9uart_putcEc
+ .text._ZN5hwlib20cout_using_uart_putc4putcEc
+                0x000001b0        0xa hwlib.o
+                0x000001b0                _ZN5hwlib20cout_using_uart_putc4putcEc
+ .text._ZN5hwlib7port_in7refreshEv
+                0x000001ba        0x2 main.o
+                0x000001ba                _ZN5hwlib7port_in7refreshEv
+ .text._ZN5hwlib17port_in_from_pins14number_of_pinsEv
+                0x000001bc        0x4 main.o
+                0x000001bc                _ZN5hwlib17port_in_from_pins14number_of_pinsEv
+ .text._ZN5hwlib17port_in_from_pins3getENS_9bufferingE
+                0x000001c0       0x1c main.o
+                0x000001c0                _ZN5hwlib17port_in_from_pins3getENS_9bufferingE
+ .text._ZN3due6pin_inC2ENS_4pinsE
+                0x000001dc       0x34 main.o
+                0x000001dc                _ZN3due6pin_inC2ENS_4pinsE
+                0x000001dc                _ZN3due6pin_inC1ENS_4pinsE
+ .text._ZN3due7pin_outC2ENS_4pinsE
+                0x00000210       0x34 main.o
+                0x00000210                _ZN3due7pin_outC2ENS_4pinsE
+                0x00000210                _ZN3due7pin_outC1ENS_4pinsE
+ .text.startup.main
+                0x00000244      0x454 main.o
+                0x00000244                main
+ .text.__startup
+                0x00000698       0x48 bmptk_cortex.o
+                0x00000698                __startup
+ .text          0x000006e0      0x340 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+                0x000006e0                pow
+ .text          0x00000a20      0xaac c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+                0x00000a20                __ieee754_pow
+ .text          0x000014cc      0x178 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+                0x000014cc                __ieee754_sqrt
+ .text          0x00001644        0x8 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+                0x00001644                fabs
+ .text          0x0000164c        0xc c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+                0x0000164c                finite
+ .text          0x00001658        0x4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+                0x00001658                matherr
+ .text          0x0000165c        0xc c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+                0x0000165c                nan
+ .text          0x00001668      0x11c c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+                0x00001668                rint
+ *fill*         0x00001784        0x4 
+ .text          0x00001788       0xe4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+                0x00001788                scalbn
+ .text          0x0000186c       0x10 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+                0x0000186c                copysign
+ .text          0x0000187c      0x370 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+                0x0000187c                __aeabi_drsub
+                0x00001884                __aeabi_dsub
+                0x00001884                __subdf3
+                0x00001888                __aeabi_dadd
+                0x00001888                __adddf3
+                0x00001b00                __floatunsidf
+                0x00001b00                __aeabi_ui2d
+                0x00001b20                __floatsidf
+                0x00001b20                __aeabi_i2d
+                0x00001b44                __aeabi_f2d
+                0x00001b44                __extendsfdf2
+                0x00001b80                __floatundidf
+                0x00001b80                __aeabi_ul2d
+                0x00001b90                __floatdidf
+                0x00001b90                __aeabi_l2d
+ .text          0x00001bec      0x424 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+                0x00001bec                __aeabi_dmul
+                0x00001bec                __muldf3
+                0x00001e40                __divdf3
+                0x00001e40                __aeabi_ddiv
+ .text          0x00002010      0x110 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+                0x00002010                __gtdf2
+                0x00002010                __gedf2
+                0x00002018                __ltdf2
+                0x00002018                __ledf2
+                0x00002020                __nedf2
+                0x00002020                __eqdf2
+                0x00002020                __cmpdf2
+                0x0000209c                __aeabi_cdrcmple
+                0x000020ac                __aeabi_cdcmpeq
+                0x000020ac                __aeabi_cdcmple
+                0x000020bc                __aeabi_dcmpeq
+                0x000020d0                __aeabi_dcmplt
+                0x000020e4                __aeabi_dcmple
+                0x000020f8                __aeabi_dcmpge
+                0x0000210c                __aeabi_dcmpgt
+ .text          0x00002120       0x2c c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+                0x00002120                __unorddf2
+                0x00002120                __aeabi_dcmpun
+ .text          0x0000214c       0x50 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+                0x0000214c                __aeabi_d2iz
+                0x0000214c                __fixdfsi
+ .text          0x0000219c        0xc c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+                0x0000219c                __errno
+                0x000021a8                . = ALIGN (0x4)
+ *(.glue_7t .glue_7)
+ .glue_7        0x000021a8        0x0 linker stubs
+ .glue_7t       0x000021a8        0x0 linker stubs
+                0x000021a8                . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata._ZTVN5hwlib19_pin_in_dummy_classE
+                0x000021a8       0x10 hwlib.o
+                0x000021a8                _ZTVN5hwlib19_pin_in_dummy_classE
+ .rodata._ZTVN5hwlib20cout_using_uart_putcE
+                0x000021b8       0x10 hwlib.o
+                0x000021b8                _ZTVN5hwlib20cout_using_uart_putcE
+ .rodata._ZTVN3due6pin_inE
+                0x000021c8       0x10 hwlib.o
+                0x000021c8                _ZTVN3due6pin_inE
+ .rodata._ZTVN3due7pin_outE
+                0x000021d8       0x10 hwlib.o
+                0x000021d8                _ZTVN3due7pin_outE
+ .rodata._ZN3due8pin_infoENS_4pinsE.str1.1
+                0x000021e8       0x33 hwlib.o
+ .rodata._ZZN3due8pin_infoENS_4pinsEE14pin_info_array
+                0x0000221b       0xa4 hwlib.o
+ *fill*         0x000022bf        0x1 
+ .rodata._ZTVN5hwlib17port_in_from_pinsE
+                0x000022c0       0x14 main.o
+                0x000022c0                _ZTVN5hwlib17port_in_from_pinsE
+ .rodata._ZN10const8x8chL4MXINE
+                0x000022d4      0x654 main.o
+ .rodata._ZN10const8x8chL7LETTERSE
+                0x00002928      0xf30 main.o
+ .rodata._ZN10const8x8chL7NUMBERSE
+                0x00003858      0xca8 main.o
+ .rodata.main.str1.1
+                0x00004500        0x7 main.o
+ *fill*         0x00004507        0x1 
+ .rodata.str1.4
+                0x00004508        0x4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .rodata.str1.4
+                0x0000450c        0x4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+                                  0x1 (size before relaxing)
+ .rodata        0x00004510       0x10 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+                0x00004520                . = ALIGN (0x4)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00004520                . = ALIGN (0x4)
+ *(.gcc_except_table)
+                0x00004520                . = ALIGN (0x4)
+ *(.eh_frame_hdr)
+                0x00004520                . = ALIGN (0x4)
+ *(.eh_frame)
+                0x00004520                . = ALIGN (0x4)
+                0x00004520                __text_end = .
+                [!provide]                PROVIDE (__text_end, __text_end)
+
+.vfp11_veneer   0x00004520        0x0
+ .vfp11_veneer  0x00004520        0x0 linker stubs
+
+.v4_bx          0x00004520        0x0
+ .v4_bx         0x00004520        0x0 linker stubs
+
+.iplt           0x00004520        0x0
+ .iplt          0x00004520        0x0 hwlib.o
+
+.rel.dyn        0x00004520        0x0
+ .rel.iplt      0x00004520        0x0 hwlib.o
+
+.IF_YOU_SEE_THIS_YOU_HAVE_ONE_OR_MORE_GLOBAL_OBJECT_CONSTRUCTORS
+ *(.init)
+ *(.preinit_array)
+ *(SORT(.init_array.*))
+ *(.init_array)
+                0x00004520                . = ALIGN (0x4)
+                0x00004520                __exidx_start = .
+                [!provide]                PROVIDE (__exidx_start, __exidx_start)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00004520                . = ALIGN (0x4)
+                0x00004520                __exidx_end = .
+                [!provide]                PROVIDE (__exidx_end, __exidx_end)
+
+.bss            0x20000000    0x12010
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                __stack_start = .
+                [!provide]                PROVIDE (__stack_start, __stack_start)
+                0x20000000                . = ALIGN (0x4)
+ *(.bmptk_stack)
+ .bmptk_stack   0x20000000    0x12000 bmptk_fixed_size_stack.o
+                0x20000000                bmptk_stack
+                0x20012000                . = ALIGN (0x8)
+                0x20012000                __main_stack_end = .
+                [!provide]                PROVIDE (__main_stack_end, __main_stack_end)
+                0x20012000                . = ALIGN (0x4)
+                0x20012000                __stack_end = .
+                [!provide]                PROVIDE (__stack_end, __stack_end)
+                0x20012000                . = ALIGN (0x4)
+                0x20012000                __bss_start = .
+                [!provide]                PROVIDE (__bss_start, __bss_start)
+                0x20012000                . = ALIGN (0x4)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss._ZGVZN5hwlib9uart_putcEcE3pin
+                0x20012000        0x4 hwlib.o
+ .bss._ZZN5hwlib9uart_putcEcE3pin
+                0x20012004        0xc hwlib.o
+                0x20012010                . = ALIGN (0x4)
+ *(COMMON)
+                0x20012010                . = ALIGN (0x4)
+                0x20012010                __bss_end = .
+                [!provide]                PROVIDE (__bss_end, __bss_end)
+
+.data           0x20012010      0x450 load address 0x00004520
+                0x20012010                . = ALIGN (0x4)
+                0x00004520                __data_init_start = LOADADDR (.data)
+                [!provide]                PROVIDE (__data_init_start, __data_init_start)
+                0x20012010                __data_start = .
+                [!provide]                PROVIDE (__data_start, __data_start)
+                0x20012010                . = ALIGN (0x4)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data._ZN5hwlib12pin_in_dummyE
+                0x20012010        0x4 hwlib.o
+                0x20012010                _ZN5hwlib12pin_in_dummyE
+ .data._ZN5hwlib4coutE
+                0x20012014       0x14 hwlib.o
+                0x20012014                _ZN5hwlib4coutE
+ .data          0x20012028        0x1 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+                0x20012028                __fdlib_version
+ *fill*         0x20012029        0x7 
+ .data          0x20012030      0x430 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+                0x20012030                _impure_ptr
+                0x20012460                . = ALIGN (0x4)
+                0x20012460                __data_end = .
+                [!provide]                PROVIDE (__data_end, __data_end)
+                0x00004520                __data_init_end = LOADADDR (.data)
+                [!provide]                PROVIDE (__data_init_end, __data_init_end)
+                0x00000450                PROVIDE (__data_size, (__data_end - __data_start))
+                0x00000450                PROVIDE (__data_init_size, __data_size)
+                [!provide]                PROVIDE (__data_init_end, (__data_init_start + __data_init_size))
+
+.igot.plt       0x20012460        0x0 load address 0x00004970
+ .igot.plt      0x20012460        0x0 hwlib.o
+                0x20012460                . = ALIGN (0x4)
+                0x20012460                __heap_start = .
+                [!provide]                PROVIDE (__heap_start, __heap_start)
+                0x20012460                . = ALIGN (0x4)
+                0x20018000                __heap_end = __ram_end
+                [!provide]                PROVIDE (__heap_end, __heap_end)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x2b0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .debug_aranges
+                0x00000020       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_aranges
+                0x00000040       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .debug_aranges
+                0x00000060       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .debug_aranges
+                0x00000080       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .debug_aranges
+                0x000000a0       0x18 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .debug_aranges
+                0x000000b8       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .debug_aranges
+                0x000000d8       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .debug_aranges
+                0x000000f8       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_aranges
+                0x00000118       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_aranges
+                0x00000138       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .debug_aranges
+                0x00000158       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .debug_aranges
+                0x00000178       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .debug_aranges
+                0x00000198       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .debug_aranges
+                0x000001b8       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .debug_aranges
+                0x000001d8       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .debug_aranges
+                0x000001f8       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_aranges
+                0x00000218       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .debug_aranges
+                0x00000238       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .debug_aranges
+                0x00000258       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .debug_aranges
+                0x00000278       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .debug_aranges
+                0x00000298       0x18 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x961c
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0xad6 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .debug_info    0x00000ad6      0xf5a c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_info    0x00001a30      0xa67 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .debug_info    0x00002497      0x991 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .debug_info    0x00002e28      0x977 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .debug_info    0x0000379f      0x8da c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .debug_info    0x00004079      0x969 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .debug_info    0x000049e2      0x90d c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .debug_info    0x000052ef      0xa64 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_info    0x00005d53      0xaa4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_info    0x000067f7      0x9b9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .debug_info    0x000071b0       0xde c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .debug_info    0x0000728e       0xde c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .debug_info    0x0000736c       0xde c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .debug_info    0x0000744a       0xde c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .debug_info    0x00007528       0xde c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .debug_info    0x00007606       0xd9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_info    0x000076df       0xd9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x000077b8      0xc00 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .debug_info    0x000083b8       0xdd c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00008495      0x8d7 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .debug_info    0x00008d6c      0x8b0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+.debug_abbrev   0x00000000     0x1d18
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x255 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .debug_abbrev  0x00000255      0x2e2 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_abbrev  0x00000537      0x232 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .debug_abbrev  0x00000769      0x205 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .debug_abbrev  0x0000096e      0x1f8 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .debug_abbrev  0x00000b66      0x1aa c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .debug_abbrev  0x00000d10      0x1ea c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .debug_abbrev  0x00000efa      0x1d9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .debug_abbrev  0x000010d3      0x24b c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_abbrev  0x0000131e      0x25e c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_abbrev  0x0000157c      0x230 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .debug_abbrev  0x000017ac       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .debug_abbrev  0x000017c0       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .debug_abbrev  0x000017d4       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .debug_abbrev  0x000017e8       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .debug_abbrev  0x000017fc       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .debug_abbrev  0x00001810       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_abbrev  0x00001824       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x00001838      0x18c c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x000019c4       0x14 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x000019d8      0x1ae c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .debug_abbrev  0x00001b86      0x192 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+.debug_line     0x00000000     0x1ff3
+ *(.debug_line)
+ .debug_line    0x00000000      0x270 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .debug_line    0x00000270      0x396 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_line    0x00000606      0x295 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .debug_line    0x0000089b      0x1e4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .debug_line    0x00000a7f      0x1a9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .debug_line    0x00000c28      0x13b c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .debug_line    0x00000d63      0x14c c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .debug_line    0x00000eaf      0x149 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .debug_line    0x00000ff8      0x1ee c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_line    0x000011e6      0x1d0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_line    0x000013b6      0x1ac c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .debug_line    0x00001562      0x189 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .debug_line    0x000016eb      0x1a5 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .debug_line    0x00001890       0xc4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .debug_line    0x00001954       0x75 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .debug_line    0x000019c9       0x80 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .debug_line    0x00001a49       0x85 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_line    0x00001ace       0x67 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x00001b35      0x24e c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .debug_line    0x00001d83       0x67 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .debug_line    0x00001dea      0x112 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .debug_line    0x00001efc       0xf7 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+.debug_frame    0x00000000      0x4b4
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x48 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .debug_frame   0x00000048       0x64 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_frame   0x000000ac       0x34 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .debug_frame   0x000000e0       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .debug_frame   0x00000100       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .debug_frame   0x00000120       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .debug_frame   0x00000140       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .debug_frame   0x00000160       0x3c c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_frame   0x0000019c       0x30 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_frame   0x000001cc       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .debug_frame   0x000001ec       0xac c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000298       0x50 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x000002e8       0xc4 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x000003ac       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x000003cc       0x24 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x000003f0       0x44 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x00000434       0x2c c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x00000460       0x34 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00000494       0x20 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+
+.debug_str      0x00000000     0x183d
+ *(.debug_str)
+ .debug_str     0x00000000      0x610 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+                                0x67f (size before relaxing)
+ .debug_str     0x00000610       0xf7 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+                                0x6e0 (size before relaxing)
+ .debug_str     0x00000707       0x4a c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+                                0x675 (size before relaxing)
+ .debug_str     0x00000751       0x4a c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+                                0x65c (size before relaxing)
+ .debug_str     0x0000079b       0xd8 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+                                0x664 (size before relaxing)
+ .debug_str     0x00000873       0x4a c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+                                0x621 (size before relaxing)
+ .debug_str     0x000008bd       0x4a c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+                                0x64e (size before relaxing)
+ .debug_str     0x00000907       0x46 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+                                0x624 (size before relaxing)
+ .debug_str     0x0000094d       0xe9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+                                0x682 (size before relaxing)
+ .debug_str     0x00000a36       0x5f c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+                                0x68e (size before relaxing)
+ .debug_str     0x00000a95       0x4b c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+                                0x663 (size before relaxing)
+ .debug_str     0x00000ae0      0xbaa c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+                                0xc9d (size before relaxing)
+ .debug_str     0x0000168a       0xd3 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+                                0x5d2 (size before relaxing)
+ .debug_str     0x0000175d       0xe0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+                                0x5c0 (size before relaxing)
+
+.debug_loc      0x00000000     0x2d12
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x128 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .debug_loc     0x00000128     0x1421 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_loc     0x00001549      0x445 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .debug_loc     0x0000198e       0x2b c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .debug_loc     0x000019b9       0x28 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .debug_loc     0x000019e1       0x21 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .debug_loc     0x00001a02       0x21 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .debug_loc     0x00001a23      0x2ed c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_loc     0x00001d10      0x1f6 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_loc     0x00001f06       0x53 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .debug_loc     0x00001f59      0xdb9 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+
+.comment        0x00000000       0x11
+ .comment       0x00000000       0x11 hwlib.o
+                                 0x12 (size before relaxing)
+ .comment       0x00000011       0x12 main.o
+ .comment       0x00000011       0x12 bmptk_cortex.o
+ .comment       0x00000011       0x12 bmptk_heap_none.o
+ .comment       0x00000011       0x12 bmptk_fixed_size_stack.o
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .comment       0x00000011       0x12 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x33
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x33 hwlib.o
+ .ARM.attributes
+                0x00000033       0x33 main.o
+ .ARM.attributes
+                0x00000066       0x33 bmptk_cortex.o
+ .ARM.attributes
+                0x00000099       0x33 bmptk_heap_none.o
+ .ARM.attributes
+                0x000000cc       0x33 bmptk_fixed_size_stack.o
+ .ARM.attributes
+                0x000000ff       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-w_pow.o)
+ .ARM.attributes
+                0x00000132       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .ARM.attributes
+                0x00000165       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_sqrt.o)
+ .ARM.attributes
+                0x00000198       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_fabs.o)
+ .ARM.attributes
+                0x000001cb       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_finite.o)
+ .ARM.attributes
+                0x000001fe       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_lib_ver.o)
+ .ARM.attributes
+                0x00000231       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_matherr.o)
+ .ARM.attributes
+                0x00000264       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_nan.o)
+ .ARM.attributes
+                0x00000297       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .ARM.attributes
+                0x000002ca       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .ARM.attributes
+                0x000002fd       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_copysign.o)
+ .ARM.attributes
+                0x00000330       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000353       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000376       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000399       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_unorddf2.o)
+ .ARM.attributes
+                0x000003bc       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x000003df       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x00000402       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000425       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000458       0x23 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000047b       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x000004ae       0x33 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libc.a(lib_a-impure.o)
+
+/DISCARD/
+ *(.note.GNU-stack)
+                [!provide]                PROVIDE (__text_size, (__text_end - __text_start))
+                [!provide]                PROVIDE (__exidx_size, (__exidx_end - __exidx_start))
+                [!provide]                PROVIDE (__bss_size, (__bss_end - __bss_start))
+                [!provide]                PROVIDE (__stack_size, (__stack_end - __stack_start))
+                [!provide]                PROVIDE (__heap_size, (__heap_end - __heap_start))
+OUTPUT(main.elf elf32-littlearm)
+
+.debug_ranges   0x00000000      0x250
+ .debug_ranges  0x00000000      0x118 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-e_pow.o)
+ .debug_ranges  0x00000118       0x30 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_rint.o)
+ .debug_ranges  0x00000148       0x18 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/../../../../arm-eabi/lib/thumb/cortex_m3\libm.a(lib_a-s_scalbn.o)
+ .debug_ranges  0x00000160       0xf0 c:/sysgcc/arm-eabi/bin/../lib/gcc/arm-eabi/6.2.0/thumb/cortex_m3\libgcc.a(_udivmoddi4.o)

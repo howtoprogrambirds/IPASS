@@ -22,12 +22,7 @@
 
 #include "hwlib.hpp"
 #include "stdint.h"
-#include "midi.hpp"
-#include "max7219.hpp"
-#include "constantsmax7219.hpp"
-#include "constantsmidi.hpp"
-#include "constants8x8chars.hpp"
-#include "buzzer.hpp"
+#include "lightmusiclib.hpp"
 #include <cmath>
 #include <vector>
 
@@ -50,11 +45,11 @@ int main( void ){
     auto sig    = target::pin_out(target::pins::d12);
     
     
-    max7219 kees(din,clk,load,8,8);
+    lightmusic::max7219 kees(din,clk,load,8,8);
     //int matrix[LEDMATRIX_SIZE+1][(LEDMATRIX_SIZE * LEDMATRIX_QUANTITY)+1] = {0};
     kees.Setup();
     //kees.checkOutputmatrix();
-    buzzer buzz(sig);
+    lightmusic::buzzer buzz(sig);
     
     //initialize all rows
     auto row1Pin = target::pin_in(target::pins::d2);
@@ -79,7 +74,7 @@ int main( void ){
     uint8_t keyToMidiMap[9][17];    ///< Uint8_t used for setting every button to a key
     
     //makes a object mijnmidi
-    midi mijnmidi(rows, NUM_COLS, note);
+    lightmusic::midi mijnmidi(rows, NUM_COLS, note);
     
     //set the keymatrix of mijnmidi every keypressed on false and keytomidimap to his note 
     mijnmidi.set(note, keyPressed, keyToMidiMap);
@@ -118,29 +113,29 @@ int main( void ){
                         
                         if(keyPressed[NUM_ROWS-1][NUM_COLS-1] == true && velocity > 0){
                             velocity--;
-                            kees.set8x8matrix(MXIN[0], 0);
-                            kees.set8x8matrix(MXIN[1], 1);
-                            kees.set8x8matrix(MXIN[3], 2);
-                            kees.set8x8matrix(MXIN[4], 3);
+                            kees.set8x8matrix(const8x8ch::MXIN[0], 0);
+                            kees.set8x8matrix(const8x8ch::MXIN[1], 1);
+                            kees.set8x8matrix(const8x8ch::MXIN[3], 2);
+                            kees.set8x8matrix(const8x8ch::MXIN[4], 3);
                         }
                         else if(keyPressed[NUM_ROWS-1][NUM_COLS-2] == true && velocity < 127){
                             velocity++;
-                            kees.set8x8matrix(MXIN[0], 0);
-                            kees.set8x8matrix(MXIN[1], 1);
-                            kees.set8x8matrix(LETTERS[9], 2);
-                            kees.set8x8matrix(MXIN[2], 3);
+                            kees.set8x8matrix(const8x8ch::MXIN[0], 0);
+                            kees.set8x8matrix(const8x8ch::MXIN[1], 1);
+                            kees.set8x8matrix(const8x8ch::LETTERS[9], 2);
+                            kees.set8x8matrix(const8x8ch::MXIN[2], 3);
                         }
                         else{
                             mijnmidi.noteOn(txPin, 0x00, rowCtr, colCtr,127, keyToMidiMap);
-                            kees.set8x8matrix(LETTERS[letter], 0);
+                            kees.set8x8matrix(const8x8ch::LETTERS[letter], 0);
                             
                             int volume = velocity;
                             int number1 = volume/100;
                             int number2 = (volume - (number1*100)) / 10;
                             int number3 = volume - (number1 *100 + number2 * 10);
-                            kees.set8x8matrix(NUMBERS[number1], 1);
-                            kees.set8x8matrix(NUMBERS[number2], 2);
-                            kees.set8x8matrix(NUMBERS[number3], 3);
+                            kees.set8x8matrix(const8x8ch::NUMBERS[number1], 1);
+                            kees.set8x8matrix(const8x8ch::NUMBERS[number2], 2);
+                            kees.set8x8matrix(const8x8ch::NUMBERS[number3], 3);
                         }
                         kees.draw();
                     }

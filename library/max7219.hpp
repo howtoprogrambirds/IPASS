@@ -21,6 +21,8 @@
 #include "hwlib.hpp"
 #include "max7219.hpp"
 
+namespace lightmusic{
+    
     /**
      * @class       max7219
      * @brief       Class to set and draw on the max7219 8x8 matrixes
@@ -107,5 +109,7 @@ public:
     void checkOutputmatrix();
 
 };
+
+}
 
 #endif // MAX7219_HPP

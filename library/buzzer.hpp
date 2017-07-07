@@ -2,6 +2,8 @@
 #define BUZZER_HPP
 #include "hwlib.hpp"
 
+namespace lightmusic{
+
 class buzzer{
 private:
     int period = 1000000000;
@@ -11,4 +13,5 @@ public:
     void tone(int hertz);
 };
 
+}
 #endif // BUZZER_HPP

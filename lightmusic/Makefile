@@ -9,10 +9,10 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES :=keymatrix.cpp midi.cpp monochrome8x8dotmatrix.cpp max7219.cpp
+SOURCES :=keymatrix.cpp midi.cpp monochrome8x8dotmatrix.cpp max7219.cpp buzzer.cpp
 
 # header files in this project
-HEADERS :=keymatrix.hpp midi.hpp monochrome8x8dotmatrix.hpp constantsmax7219.hpp constantsmidi.hpp max7219.hpp
+HEADERS :=keymatrix.hpp midi.hpp monochrome8x8dotmatrix.hpp constantsmax7219.hpp constantsmidi.hpp max7219.hpp buzzer.hpp
 
 # other places to look for files for this project
 SEARCH  := 

@@ -20,6 +20,8 @@
 #include "keymatrix.hpp"
 #include "hwlib.hpp"
 
+namespace lightmusic{
+
 /**
  *  @class     midi
  *  @brief     Class to send midi messages to tx pin.
@@ -100,5 +102,7 @@ public:
      */
     void midinoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]);
 };
+
+}
 
 #endif // MIDI_HPP

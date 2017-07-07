@@ -6,7 +6,7 @@
 //    (See accompanying file LICENSE_1_0.txt or copy at
 //          http://www.boost.org/LICENSE_1_0.txt)
 
-
+namespace lightmusic{
 //Constructor initialize row with param row, num_row with the number of the pins of row, num_cols with param num_cols
 keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols, const int & note):
     row(row),
@@ -82,4 +82,6 @@ int keymatrix::getNum_rows(){
 
 int keymatrix::getNum_cols(){
     return num_cols;
+}
+
 }
