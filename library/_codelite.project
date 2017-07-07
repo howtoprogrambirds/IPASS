@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeLite_Project Name="library" InternalType="" Version="10.0.0">
+<CodeLite_Project Name="library" InternalType="">
   <Plugins>
     <Plugin Name="qmake">
       <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
@@ -37,6 +37,7 @@
     <File Name="constantsmidi.hpp"/>
     <File Name="keymatrix.cpp"/>
     <File Name="keymatrix.hpp"/>
+    <File Name="lightmusiclib.hpp"/>
     <File Name="max7219.cpp"/>
     <File Name="max7219.hpp"/>
     <File Name="midi.cpp"/>
@@ -44,7 +45,6 @@
     <File Name="monochrome8x8dotmatrix.cpp"/>
     <File Name="monochrome8x8dotmatrix.hpp"/>
     <File Name="makefile"/>
-    <File Name="lightmusiclib.hpp"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">
     <GlobalSettings>
@@ -57,7 +57,7 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-32 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-std=c++11" C_Options="-g;-O0;-Wall" Assembler="" Required="no" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+       <Compiler Options="-g;-O0;-std=c++11" C_Options="-g;-O0;-Wall" Assembler="" Required="no" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value=".;../Catch/include"/>
       </Compiler>
       <Linker Options="" Required="yes"/>
@@ -133,4 +133,4 @@
       </Completion>
     </Configuration>
   </Settings>
-</CodeLite_Project>
+</CodeLite_Project>   
