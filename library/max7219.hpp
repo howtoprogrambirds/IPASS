@@ -19,7 +19,6 @@
 
 #include "monochrome8x8dotmatrix.hpp"
 #include "hwlib.hpp"
-#include "max7219.hpp"
 
 namespace lightmusic{
     

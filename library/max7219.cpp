@@ -6,7 +6,9 @@
 
 #include "max7219.hpp"
 
-lightmusic::max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y):
+namespace lightmusic{
+
+max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y):
     monochrome8x8dotmatrix(size_x, size_y),
     din(din),
     clk(clk),
@@ -15,18 +17,18 @@ lightmusic::max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out 
     hwlib::wait_ms(1000);
 }
 //set a pixel on the big matrix(8,32)
-void lightmusic::max7219::setPixel(int x, int y, bool data){
+void max7219::setPixel(int x, int y, bool data){
     if( (x < LEDMATRIX_SIZE+1 ) && (x > 0) && (y < LEDMATRIX_SIZE*LEDMATRIX_QUANTITY+1) && (y > 0) ){
         outputmatrix[x][y] = data;
     }
 }
 //setpixel and draw it direct after setting it
-void lightmusic::max7219::drawPixel(int x, int y, bool data){
+void max7219::drawPixel(int x, int y, bool data){
     setPixel(x,y,data);
     draw();
 }
 //pulse the clkpin once
-void lightmusic::max7219::pulseClk(hwlib::target::pin_out clk, int wait = 0){
+void max7219::pulseClk(hwlib::target::pin_out clk, int wait = 0){
     clk.set(0);
     hwlib::wait_ms(wait);
     clk.set(1);
@@ -34,7 +36,7 @@ void lightmusic::max7219::pulseClk(hwlib::target::pin_out clk, int wait = 0){
 }
 
 //shift data to the din pin, its repeating it so many time as it's own parameter repeat
-void lightmusic::max7219::shiftDataRepeat(const uint16_t data, const uint8_t repeat){
+void max7219::shiftDataRepeat(const uint16_t data, const uint8_t repeat){
     for( uint8_t repeatCnt = 0; repeatCnt < repeat; repeatCnt++ ) {
         for( int16_t bitCnt = 15; bitCnt >= 0; bitCnt-- ) {
             //splits data in bits and write it one bit at a time to the din pin
@@ -47,7 +49,7 @@ void lightmusic::max7219::shiftDataRepeat(const uint16_t data, const uint8_t rep
 }
 
 
-void lightmusic::max7219::sendDataRepeat(const uint16_t data, const uint8_t repeat){
+void max7219::sendDataRepeat(const uint16_t data, const uint8_t repeat){
     // sets load to zero to make it possible to clock data
     load.set(0);
     shiftDataRepeat(data, repeat);
@@ -56,7 +58,7 @@ void lightmusic::max7219::sendDataRepeat(const uint16_t data, const uint8_t repe
     
 }
 
-void lightmusic::max7219::Setup(){
+void max7219::Setup(){
     //it send a DISPLAYTEST it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:       00001111 00000000(normal operation), 
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
     sendDataRepeat( ( MAX7219_REG_DISPLAYTEST << 8) | MAX7219_NO_OP_DATA, LEDMATRIX_QUANTITY );
@@ -76,7 +78,7 @@ void lightmusic::max7219::Setup(){
 }
 
 //sets a 8x8 matrix in the output matrix, it is possible to set the matrix at the first second thirth and last matrix,
-void lightmusic::max7219::set8x8matrix(const int inputmatrix[LEDMATRIX_SIZE+1][LEDMATRIX_SIZE+1], int ledX){
+void max7219::set8x8matrix(const int inputmatrix[LEDMATRIX_SIZE+1][LEDMATRIX_SIZE+1], int ledX){
     for( int columnr = 1; columnr <= LEDMATRIX_SIZE; columnr++ ){
         for( int row = LEDMATRIX_SIZE; row >= 1; row-- ){
             int x = columnr + 8 * ledX;
@@ -86,7 +88,7 @@ void lightmusic::max7219::set8x8matrix(const int inputmatrix[LEDMATRIX_SIZE+1][L
 }
 
 //draw the input matrix to the led matrix
-void lightmusic::max7219::draw(){
+void max7219::draw(){
     for( int columnr = 1; columnr <= LEDMATRIX_SIZE; columnr++ ){
         load.set(0);
         for( int row = LEDMATRIX_SIZE * LEDMATRIX_QUANTITY; row >= 1; row-- ){
@@ -103,7 +105,7 @@ void lightmusic::max7219::draw(){
     }
 }
 
-void lightmusic::max7219::clearDisplay(){
+void max7219::clearDisplay(){
     for(int columnr = 1; columnr < LEDMATRIX_SIZE+1; columnr++ ){
             for( int pixel = 1; pixel < LEDMATRIX_SIZE * LEDMATRIX_QUANTITY+1; pixel++ ){
                 setPixel(columnr,pixel,0);
@@ -112,7 +114,7 @@ void lightmusic::max7219::clearDisplay(){
     max7219::draw();
 }
 
-void lightmusic::max7219::checkOutputmatrix(){
+void max7219::checkOutputmatrix(){
     for(int i = 0; i < LEDMATRIX_SIZE+1; i++){
         for(int j = 0; j < (LEDMATRIX_SIZE * LEDMATRIX_QUANTITY)+1; j++){
             hwlib::cout << outputmatrix[i][j] << ' ';
@@ -120,4 +122,5 @@ void lightmusic::max7219::checkOutputmatrix(){
         hwlib::cout << '\n';
     }
     
+}
 }

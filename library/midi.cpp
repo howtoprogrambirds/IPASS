@@ -8,8 +8,10 @@
 #include "midi.hpp"
 #include "constantsmidi.hpp"
 
+namespace lightmusic{
+
 //constructor initialize the same as the class setup
-lightmusic::midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note):
+midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note):
     keymatrix(row, num_cols, note)
 {
 }
@@ -18,7 +20,7 @@ lightmusic::midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, con
     FUNCTIONS       
 *****************/  
 
-void lightmusic::midi::midiSetChannelBank(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t bank){
+void midi::midiSetChannelBank(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t bank){
     if (chan > 15)  return;
     if (bank > 127) return;
     
@@ -27,7 +29,7 @@ void lightmusic::midi::midiSetChannelBank(hwlib::target::pin_out & tx_pin, uint8
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(bank, tx_pin, 31250);
 }
 
-void lightmusic::midi::midiSetInstrument(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t inst){
+void midi::midiSetInstrument(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t inst){
     if (chan > 15) return;
     inst --; // page 32 of the datasheet vs1053 has instruments starting with 1 not 0
     if (inst > 127) return;
@@ -36,7 +38,7 @@ void lightmusic::midi::midiSetInstrument(hwlib::target::pin_out & tx_pin, uint8_
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(inst, tx_pin, 31250);
 }
 
-void lightmusic::midi::midiSetChannelVolume(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t vol){
+void midi::midiSetChannelVolume(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t vol){
     if (chan > 15) return;
     if (vol > 127) return;
 
@@ -46,7 +48,7 @@ void lightmusic::midi::midiSetChannelVolume(hwlib::target::pin_out & tx_pin, uin
 }
 
 //Send midi note on message to tx_pin
-void lightmusic::midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]){
+void midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]){
     if (chan > 15) return;
     if (vel > 127) return;
 
@@ -69,7 +71,7 @@ void lightmusic::midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int
 }
 
 //Send midi note off message to tx_pin
-void lightmusic::midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]) {
+void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]) {
     if (chan > 15) return;
     if (vel > 127) return;
     
@@ -99,7 +101,7 @@ void lightmusic::midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, in
 //      3  -   |   -   -
 //      4  -   |   -   -
 //      --------------->
-void lightmusic::midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]) {
+void midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]) {
     for(int rowCtr=0; rowCtr< num_rows; ++rowCtr){
         //TEST//
         //int k = rowValue[rowCtr];
@@ -113,11 +115,13 @@ void lightmusic::midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[
 }
 
 // function checks if rowvalue is 0 and keypressed is true
-void lightmusic::midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]) {
+void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]) {
     for(int rowCtr=0; rowCtr< num_rows; ++rowCtr){
         if(rowValue[rowCtr] == 0 && keyPressed[rowCtr][colCtr]){
             keyPressed[rowCtr][colCtr] = false;
             noteOff(tx_pin, chan, rowCtr, colCtr, vel, keyToMidiMap);
         }
     }
+}
+
 }
