@@ -8,6 +8,8 @@
 #include "midi.hpp"
 #include "constantsmidi.hpp"
 
+namespace lightmusic{
+
 //constructor initialize the same as the class setup
 midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note):
     keymatrix(row, num_cols, note)
@@ -120,4 +122,6 @@ void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int col
             noteOff(tx_pin, chan, rowCtr, colCtr, vel, keyToMidiMap);
         }
     }
+}
+
 }

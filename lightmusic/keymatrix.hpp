@@ -25,6 +25,7 @@
  *  \details   It has one function who sets the keymatrix. So, every button has the value false and has its own note
  */
 
+namespace lightmusic{
 class keymatrix
 {
 private:
@@ -73,5 +74,7 @@ public:
     int getNum_cols();
 
 };
+
+}
 
 #endif // KEYMATRIX_HPP

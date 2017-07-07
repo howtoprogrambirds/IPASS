@@ -1,5 +1,7 @@
 #include "buzzer.hpp"
 
+using namespace lightmusic; 
+
 buzzer::buzzer(hwlib::target::pin_out sig):
     sig(sig)
 {}
@@ -11,4 +13,3 @@ void buzzer::tone(int hertz){
     sig.set(0);
     hwlib::wait_ns(halfPeriodns);
 }
-

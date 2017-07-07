@@ -6,6 +6,8 @@
 
 #include "max7219.hpp"
 
+namespace lightmusic{
+
 max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y):
     monochrome8x8dotmatrix(size_x, size_y),
     din(din),
@@ -120,4 +122,5 @@ void max7219::checkOutputmatrix(){
         hwlib::cout << '\n';
     }
     
+}
 }

@@ -2,7 +2,7 @@
 #define CONSTANTS8X8CHARS_HPP
 
 #include "stdint.h"
-
+namespace const8x8ch{
 ///@file
 constexpr int LETTERS[12][9][9]                          = {
                                             //C
@@ -329,5 +329,7 @@ constexpr int MXIN[5][9][9]                   = {
                                             {0,1,1,1,1,1,1,1,0},
                                             {0,0,0,0,0,0,0,0,0},
                                             {0,0,0,0,0,0,0,0,0}}};
-                                            
+
+}
+
 #endif

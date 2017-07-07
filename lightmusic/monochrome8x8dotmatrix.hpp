@@ -25,6 +25,8 @@
 
 #include "constantsmax7219.hpp"
 
+namespace lightmusic{
+
 class monochrome8x8dotmatrix
 {
 protected:
@@ -52,5 +54,7 @@ public:
     virtual void clearDisplay() = 0;
 
 };
+
+}
 
 #endif // UNICOLORDISPLAY_HPP
