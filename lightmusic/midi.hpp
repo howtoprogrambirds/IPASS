@@ -28,21 +28,32 @@
 
 namespace lightmusic{
 
-/**
- *  @class     midi
- *  @brief     Class to send midi messages to tx pin.
- *  @details   Midi is a sub class It has six functions who makes it possible to send midi messages on the basis of the keymatrix's input.
+ /**
+ * @class     midi
+ * @brief     Class to send midi messages to tx pin.
+ *  
+ * @details   
+ * Midi is a sub class It has six functions who makes it possible
+ * to send midi messages on the basis of the keymatrix's input.
  */
 
 class midi: public keymatrix{
 public:
 
     /**
+     * @brief Constructor
      * @param row           ~ Port of al the row inputs
      * @param num_cols      ~ Number of all the colums
      * @param note          ~ Number of the first button's key
+     * 
+     * @details
+     * initialize the same parameters as the class keymatrix
      */
     midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note);
+    
+    /*****************
+        FUNCTIONS     
+    *****************/
     
     /**
      * @brief Set te channelbank of the vs1053
