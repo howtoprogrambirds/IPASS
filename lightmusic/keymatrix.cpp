@@ -76,7 +76,11 @@ void keymatrix::shiftOut(hwlib::target::pin_out & dataPin, hwlib::target::pin_ou
         //int test = !!(val & (1 << (7 - i)));
         //hwlib::cout << test;
         
-        
+        //00000001
+        //00000010
+        //00000100
+        //00001000
+        //etc.
         dataPin.set( !!(val & (1 << (7 - i))));
 
         clockPin.set(1);
@@ -102,10 +106,12 @@ void keymatrix::scanColumn( const int num_cols, hwlib::target::pin_out & latchPi
     latchPin.set(1);
 }
 
+//return number of rows in the keymatrix
 int keymatrix::getNum_rows(){
     return num_rows;
 }
 
+//return number of cols in the keymatrix
 int keymatrix::getNum_cols(){
     return num_cols;
 }

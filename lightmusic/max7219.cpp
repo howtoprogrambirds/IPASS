@@ -1,7 +1,24 @@
-//          Copyright Dylan van Eck 2017.
-// Distributed under the Boost Software License, Version 1.0.
-//    (See accompanying file LICENSE_1_0.txt or copy at
-//          http://www.boost.org/LICENSE_1_0.txt)
+/*===================================================================================================
+//        ___               __      __                                            
+//       /\_ \   __        /\ \    /\ \__                            __          
+//       \//\ \ /\_\     __\ \ \___\ \ ,_\   ___ ___   __  __   ____/\_\    ___   
+//         \ \ \\/\ \  /'_ `\ \  _ `\ \ \/ /' __` __`\/\ \/\ \ /',__\/\ \  /'___\ 
+//          \_\ \\ \ \/\ \L\ \ \ \ \ \ \ \_/\ \/\ \/\ \ \ \_\ /\__, `\ \ \/\ \__/ 
+//          /\____\ \_\ \____ \ \_\ \_\ \__\ \_\ \_\ \_\ \____\/\____/\ \_\ \____\
+//          \/____/\/_/\/___L\ \/_/\/_/\/__/\/_/\/_/\/_/\/___/ \/___/  \/_/\/____/
+//                       /\____/                                                  
+//                       \_/__/                                                   
+//
+//           File      : max7219.cpp
+//           Part of   : C++ Lightmusic, syntherziser library include buzzer, keymatrix, max7219
+//           Author    : Dylan van Eck
+//           Github    : https://github.com/howtoprogrambirds/IPASS
+//           Copyright : dylan.vaneck@student.hu.nl 2017
+//
+//                 Distributed under the Boost Software License, Version 1.0.
+//     (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+//
+===================================================================================================*/
 
 
 #include "max7219.hpp"
@@ -67,13 +84,13 @@ void max7219::Setup(){
     sendDataRepeat( ( constmax7219::MAX7219_REG_SCAN_LIMIT  << 8) | constmax7219::MAX7219_DATA_SCAN_LIMIT8, constmax7219::MAX7219_QUANTITY );
     //it send the DECODE it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:          00001001 00000000(no decoder for digits 7-0),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( constmax7219::MAX7219_REG_DECODE      << 8) | constmax7219::MAX7219_DATA_DECODE_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_DECODE      << 8) | constmax7219::MAX7219_DATA_DECODE_NO_DECODE, constmax7219::MAX7219_QUANTITY );
     //it send the INTENSITY it is left shifted by 8 and or on MAX7219_DATA_INTENSITY_LVL1 because it write this two bytes:    00001010 00000001(3/32),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( constmax7219::MAX7219_REG_INTENSITY  << 8)  | constmax7219::MAX7219_DATA_INTENSITY_LVL1, constmax7219::MAX7219_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_INTENSITY  << 8)  | constmax7219::MAX7219_DATA_INTENSITY_LVL2, constmax7219::MAX7219_QUANTITY );
     //it send the SHUTDOWN it is left shifted by 8 and or on INTENSITY_LVL because it write this two bytes:     00001100 00000001(normal operation),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( constmax7219::MAX7219_REG_SHUTDOWN    << 8) | constmax7219::MAX7219_DATA_DECODE_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_SHUTDOWN    << 8) | constmax7219::MAX7219_DATA_SHUTDOWN_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
     clearDisplay();
 }
 
