@@ -62,10 +62,10 @@ constexpr uint8_t MAX7219_REG_DISPLAYTEST                   = 0x0F;
 ///DECODE register data - sets BCD code B (0-9, E, H, L, P, and -) 
 ///or no-decode operation for each digit.
 
-constexpr uint8_t MAX7219_DATA_NO_DECODE                    = 0x00;
-constexpr uint8_t MAX7219_DATA_CODE_B1                      = 0x01;
-constexpr uint8_t MAX7219_DATA_CODE_B2                      = 0x0F;
-constexpr uint8_t MAX7219_DATA_CODE_B_ALL                   = 0xFF;
+constexpr uint8_t MAX7219_DATA_DECODE_NO_DECODE             = 0x00;
+constexpr uint8_t MAX7219_DATA_DECODE_CODE_B1               = 0x01;
+constexpr uint8_t MAX7219_DATA_DECODE_CODE_B2               = 0x0F;
+constexpr uint8_t MAX7219_DATA_DECODE_CODE_B_ALL            = 0xFF;
 
 // -----------------------------------------------------------------------------
 ///INTENSITY register data - control the display brightness.
@@ -102,14 +102,14 @@ constexpr uint8_t MAX7219_DATA_SCAN_LIMIT8                  = 0x07;
 // -----------------------------------------------------------------------------
 ///SHUTDOWN register data - makes it possible to shut the max7219 down.
 
-constexpr uint8_t MAX7219_DATA_DECODE_SHUTDOWN              = 0x00;
-constexpr uint8_t MAX7219_DATA_DECODE_NORMAL_OPERATION      = 0x01;
+constexpr uint8_t MAX7219_DATA_SHUTDOWN_SHUTDOWN              = 0x00;
+constexpr uint8_t MAX7219_DATA_SHUTDOWN_NORMAL_OPERATION      = 0x01;
 
 // -----------------------------------------------------------------------------
 ///DISPLAY TEST register data - operates in two modes: normal and display test. 
 ///Display-test mode turns all LEDs.
 
-constexpr uint8_t MAX7219_DATA_TEST_NORMAL_OPERATION        = 0x01;
+constexpr uint8_t MAX7219_DATA_TEST_NORMAL_OPERATION        = 0x00;
 constexpr uint8_t MAX7219_DATA_TEST_DISPLAY_TEST            = 0x01;
 
 // -----------------------------------------------------------------------------
