@@ -1,24 +1,25 @@
-/*==========================================================================================
-//  ___               __      __                                            
-// /\_ \   __        /\ \    /\ \__                            __          
-// \//\ \ /\_\     __\ \ \___\ \ ,_\   ___ ___   __  __   ____/\_\    ___   
-//   \ \ \\/\ \  /'_ `\ \  _ `\ \ \/ /' __` __`\/\ \/\ \ /',__\/\ \  /'___\ 
-//    \_\ \\ \ \/\ \L\ \ \ \ \ \ \ \_/\ \/\ \/\ \ \ \_\ /\__, `\ \ \/\ \__/ 
-//    /\____\ \_\ \____ \ \_\ \_\ \__\ \_\ \_\ \_\ \____\/\____/\ \_\ \____\
-//    \/____/\/_/\/___L\ \/_/\/_/\/__/\/_/\/_/\/_/\/___/ \/___/  \/_/\/____/
-//                 /\____/                                                  
-//                 \_/__/                                                   
+/*===================================================================================================
+//        ___               __      __                                            
+//       /\_ \   __        /\ \    /\ \__                            __          
+//       \//\ \ /\_\     __\ \ \___\ \ ,_\   ___ ___   __  __   ____/\_\    ___   
+//         \ \ \\/\ \  /'_ `\ \  _ `\ \ \/ /' __` __`\/\ \/\ \ /',__\/\ \  /'___\ 
+//          \_\ \\ \ \/\ \L\ \ \ \ \ \ \ \_/\ \/\ \/\ \ \ \_\ /\__, `\ \ \/\ \__/ 
+//          /\____\ \_\ \____ \ \_\ \_\ \__\ \_\ \_\ \_\ \____\/\____/\ \_\ \____\
+//          \/____/\/_/\/___L\ \/_/\/_/\/__/\/_/\/_/\/_/\/___/ \/___/  \/_/\/____/
+//                       /\____/                                                  
+//                       \_/__/                                                   
 //
 //           File      : main.cpp
-//           Part of   : C++ Lightmusic,
+//           Part of   : C++ Lightmusic, syntherziser library include buzzer, keymatrix, max7219
 //           Author    : Dylan van Eck
 //           Github    : https://github.com/howtoprogrambirds/IPASS
 //           Copyright : dylan.vaneck@student.hu.nl 2017
 //
-//          Distributed under the Boost Software License, Version 1.0.
-//(See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+//                 Distributed under the Boost Software License, Version 1.0.
+//     (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 //
-==========================================================================================*/
+===================================================================================================*/
+
 
 #include "hwlib.hpp"
 #include "stdint.h"
@@ -113,17 +114,17 @@ int main( void ){
                         
                         if(keyPressed[NUM_ROWS-1][NUM_COLS-1] == true && velocity > 0){
                             velocity--;
-                            kees.set8x8matrix(const8x8ch::MXIN[0], 0);
-                            kees.set8x8matrix(const8x8ch::MXIN[1], 1);
-                            kees.set8x8matrix(const8x8ch::MXIN[3], 2);
-                            kees.set8x8matrix(const8x8ch::MXIN[4], 3);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[0], 0);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[1], 1);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[3], 2);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[4], 3);
                         }
                         else if(keyPressed[NUM_ROWS-1][NUM_COLS-2] == true && velocity < 127){
                             velocity++;
-                            kees.set8x8matrix(const8x8ch::MXIN[0], 0);
-                            kees.set8x8matrix(const8x8ch::MXIN[1], 1);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[0], 0);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[1], 1);
                             kees.set8x8matrix(const8x8ch::LETTERS[9], 2);
-                            kees.set8x8matrix(const8x8ch::MXIN[2], 3);
+                            kees.set8x8matrix(const8x8ch::SPACEMXIN[2], 3);
                         }
                         else{
                             mijnmidi.noteOn(txPin, 0x00, rowCtr, colCtr,127, keyToMidiMap);

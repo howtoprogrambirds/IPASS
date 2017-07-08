@@ -18,7 +18,7 @@ max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::
 }
 //set a pixel on the big matrix(8,32)
 void max7219::setPixel(int x, int y, bool data){
-    if( (x < LEDMATRIX_SIZE+1 ) && (x > 0) && (y < LEDMATRIX_SIZE*LEDMATRIX_QUANTITY+1) && (y > 0) ){
+    if( (x < constmax7219::LEDMATRIX_SIZE+1 ) && (x > 0) && (y < constmax7219::LEDMATRIX_SIZE*constmax7219::MAX7219_QUANTITY+1) && (y > 0) ){
         outputmatrix[x][y] = data;
     }
 }
@@ -61,26 +61,26 @@ void max7219::sendDataRepeat(const uint16_t data, const uint8_t repeat){
 void max7219::Setup(){
     //it send a DISPLAYTEST it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:       00001111 00000000(normal operation), 
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( MAX7219_REG_DISPLAYTEST << 8) | MAX7219_NO_OP_DATA, LEDMATRIX_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_DISPLAYTEST << 8) | constmax7219::MAX7219_DATA_TEST_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
     //it send the SCANLIMIT it is left shifted by 8 and or on SCAN_LIMIT because it write this two bytes:       00001011 00000111(display digits 0,1,2,3,4,5,6,7),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( MAX7219_REG_SCAN_LIMIT  << 8) | MAX7219_SCAN_LIMIT, LEDMATRIX_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_SCAN_LIMIT  << 8) | constmax7219::MAX7219_DATA_SCAN_LIMIT8, constmax7219::MAX7219_QUANTITY );
     //it send the DECODE it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:          00001001 00000000(no decoder for digits 7-0),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( MAX7219_REG_DECODE      << 8) | MAX7219_NO_OP_DATA, LEDMATRIX_QUANTITY );
-    //it send the INTENSITY it is left shifted by 8 and or on INTENSITY_LVL because it write this two bytes:    00001010 00000001(3/32),
+    sendDataRepeat( ( constmax7219::MAX7219_REG_DECODE      << 8) | constmax7219::MAX7219_DATA_DECODE_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
+    //it send the INTENSITY it is left shifted by 8 and or on MAX7219_DATA_INTENSITY_LVL1 because it write this two bytes:    00001010 00000001(3/32),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( MAX7219_REG_INTENSITY  << 8)  | INTENSITY_LVL, LEDMATRIX_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_INTENSITY  << 8)  | constmax7219::MAX7219_DATA_INTENSITY_LVL1, constmax7219::MAX7219_QUANTITY );
     //it send the SHUTDOWN it is left shifted by 8 and or on INTENSITY_LVL because it write this two bytes:     00001100 00000001(normal operation),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
-    sendDataRepeat( ( MAX7219_REG_SHUTDOWN    << 8) | MAX7219_NORMAL_OPERATION, LEDMATRIX_QUANTITY );
+    sendDataRepeat( ( constmax7219::MAX7219_REG_SHUTDOWN    << 8) | constmax7219::MAX7219_DATA_DECODE_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
     clearDisplay();
 }
 
 //sets a 8x8 matrix in the output matrix, it is possible to set the matrix at the first second thirth and last matrix,
-void max7219::set8x8matrix(const int inputmatrix[LEDMATRIX_SIZE+1][LEDMATRIX_SIZE+1], int ledX){
-    for( int columnr = 1; columnr <= LEDMATRIX_SIZE; columnr++ ){
-        for( int row = LEDMATRIX_SIZE; row >= 1; row-- ){
+void max7219::set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE+1], int ledX){
+    for( int columnr = 1; columnr <= constmax7219::LEDMATRIX_SIZE; columnr++ ){
+        for( int row = constmax7219::LEDMATRIX_SIZE; row >= 1; row-- ){
             int x = columnr + 8 * ledX;
             setPixel(row, x ,  inputmatrix[columnr][row]);
         }
@@ -89,9 +89,9 @@ void max7219::set8x8matrix(const int inputmatrix[LEDMATRIX_SIZE+1][LEDMATRIX_SIZ
 
 //draw the input matrix to the led matrix
 void max7219::draw(){
-    for( int columnr = 1; columnr <= LEDMATRIX_SIZE; columnr++ ){
+    for( int columnr = 1; columnr <= constmax7219::LEDMATRIX_SIZE; columnr++ ){
         load.set(0);
-        for( int row = LEDMATRIX_SIZE * LEDMATRIX_QUANTITY; row >= 1; row-- ){
+        for( int row = constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY; row >= 1; row-- ){
             if( row%8 == 0 ){
                 for ( int columnbit = 7; columnbit >= 0; columnbit-- ){
                     din.set( columnr & ( 1 << columnbit ));
@@ -106,8 +106,8 @@ void max7219::draw(){
 }
 
 void max7219::clearDisplay(){
-    for(int columnr = 1; columnr < LEDMATRIX_SIZE+1; columnr++ ){
-            for( int pixel = 1; pixel < LEDMATRIX_SIZE * LEDMATRIX_QUANTITY+1; pixel++ ){
+    for(int columnr = 1; columnr < constmax7219::LEDMATRIX_SIZE+1; columnr++ ){
+            for( int pixel = 1; pixel < constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY+1; pixel++ ){
                 setPixel(columnr,pixel,0);
             }
     }
@@ -115,8 +115,8 @@ void max7219::clearDisplay(){
 }
 
 void max7219::checkOutputmatrix(){
-    for(int i = 0; i < LEDMATRIX_SIZE+1; i++){
-        for(int j = 0; j < (LEDMATRIX_SIZE * LEDMATRIX_QUANTITY)+1; j++){
+    for(int i = 0; i < constmax7219::LEDMATRIX_SIZE+1; i++){
+        for(int j = 0; j < (constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1; j++){
             hwlib::cout << outputmatrix[i][j] << ' ';
         }
         hwlib::cout << '\n';

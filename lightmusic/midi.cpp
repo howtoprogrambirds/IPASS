@@ -24,8 +24,8 @@ void midi::midiSetChannelBank(hwlib::target::pin_out & tx_pin, uint8_t chan, uin
     if (chan > 15)  return;
     if (bank > 127) return;
     
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(MIDI_CHAN_BANK, tx_pin, 31250);           //midi_chan_bank
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_BANK, tx_pin, 31250);           //midi_chan_bank
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(bank, tx_pin, 31250);
 }
 
@@ -34,7 +34,7 @@ void midi::midiSetInstrument(hwlib::target::pin_out & tx_pin, uint8_t chan, uint
     inst --; // page 32 of the datasheet vs1053 has instruments starting with 1 not 0
     if (inst > 127) return;
   
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(MIDI_CHAN_PROGRAM | chan, tx_pin, 31250);    //midi_chan_program
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_PROGRAM | chan, tx_pin, 31250);    //midi_chan_program
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(inst, tx_pin, 31250);
 }
 
@@ -42,8 +42,8 @@ void midi::midiSetChannelVolume(hwlib::target::pin_out & tx_pin, uint8_t chan, u
     if (chan > 15) return;
     if (vol > 127) return;
 
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg  
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(MIDI_CHAN_VOLUME, tx_pin, 31250);           //midi_chan_volume
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg  
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_VOLUME, tx_pin, 31250);           //midi_chan_volume
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(vol, tx_pin, 31250);
 }
 

@@ -16,7 +16,7 @@ keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols, const
 }
 
 /*****************
-    FUNCTIONS       
+    FUNCTIONS     
 *****************/  
 
 // Function Sets every button of the matrix on false and gives his own key

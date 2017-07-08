@@ -33,7 +33,7 @@ private:
     hwlib::target::pin_out din;         ///<Pin dataIn
     hwlib::target::pin_out clk;         ///<Pin clock
     hwlib::target::pin_out load;        ///<Pin load
-    int outputmatrix[LEDMATRIX_SIZE+1][(LEDMATRIX_SIZE * LEDMATRIX_QUANTITY)+1] = {0};
+    int outputmatrix[constmax7219::LEDMATRIX_SIZE+1][(constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1] = {0};
     
 public:
 
@@ -91,7 +91,7 @@ public:
      * @param outputmatrix      The full matrix where the inputmatrix will be set
      * @param ledX              Use for where to set the inputmatrix, first, second, thirth or last matrix
      */
-    void set8x8matrix(const int inputmatrix[LEDMATRIX_SIZE+1][LEDMATRIX_SIZE +1], int ledX);
+    void set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], int ledX);
     
     /**
      * @brief Virtual to clear the full matrix(now: (8,32))
