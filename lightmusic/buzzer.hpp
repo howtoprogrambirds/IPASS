@@ -28,8 +28,8 @@ namespace lightmusic{
 
 class buzzer{
 private:
-    int period = 1000000000;
-    hwlib::target::pin_out sig;
+    int period = 1000000000;                    ///<period of 1 hertz, use for calculating the half of the period by given hertz
+    hwlib::target::pin_out sig;                 ///<output pin signal for the buzzer
 public:
     /**
     * @brief Constructor

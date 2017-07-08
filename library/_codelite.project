@@ -37,6 +37,7 @@
     <File Name="constantsmidi.hpp"/>
     <File Name="keymatrix.cpp"/>
     <File Name="keymatrix.hpp"/>
+    <File Name="lightmusic.hpp"/>
     <File Name="lightmusiclib.hpp"/>
     <File Name="max7219.cpp"/>
     <File Name="max7219.hpp"/>

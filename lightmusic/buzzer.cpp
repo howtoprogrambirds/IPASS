@@ -22,16 +22,36 @@
 
 #include "buzzer.hpp"
 
-using namespace lightmusic; 
-
+namespace lightmusic{
+ 
+//constructor, sets the output pin to the given output pin
 buzzer::buzzer(hwlib::target::pin_out sig):
     sig(sig)
 {}
 
+/*****************
+    FUNCTIONS     
+*****************/ 
+
+//play the tone by given hertz
 void buzzer::tone(int hertz){
+    
+    //calculate the half of the period by the given hertz in nanoseconds
     int halfPeriodns = ((period/hertz)/2);
+    
+    
+    //sets halfperiod the signal on 1 and halftime the signal on 0
+    //     halfp          halfp
+    // ------------------------------>
+    //_______1______                ______
+    //|             |               |
+    //|             |               |
+    //|             |               |
+    //|             |_______0_______|
     sig.set(1);
     hwlib::wait_ns(halfPeriodns);
     sig.set(0);
     hwlib::wait_ns(halfPeriodns);
+}
+
 }
