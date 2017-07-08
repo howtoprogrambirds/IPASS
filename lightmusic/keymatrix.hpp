@@ -29,10 +29,13 @@ namespace lightmusic{
     
  /**
  * @class     keymatrix
- * @brief     Class with a keymatrix.
+ * @brief     Class for a keymatrix.
+ *
  * @details   
- * It has one function who sets the keymatrix. 
- * So, every button has the value false and has its own note.
+ * keymatrix is a class with 5 functions,
+ * who makes it possible to setup the keymatrix, 
+ * scan the colums with using of shiftout function.
+ * And to return the number of cols and rows
  */
     
 class keymatrix {

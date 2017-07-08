@@ -9,7 +9,7 @@
 //                       /\____/                                                  
 //                       \_/__/                                                   
 //
-//           File      : max7219.cpp
+//           File      : max7219.hpp
 //           Part of   : C++ Lightmusic, syntherziser library include buzzer, keymatrix, max7219
 //           Author    : Dylan van Eck
 //           Github    : https://github.com/howtoprogrambirds/IPASS
@@ -20,7 +20,6 @@
 //
 ===================================================================================================*/
 
-
 #ifndef MAX7219_HPP
 #define MAX7219_HPP
 
@@ -29,40 +28,56 @@
 
 namespace lightmusic{
     
-    /**
-     * @class       max7219
-     * @brief       Class to set and draw on the max7219 8x8 matrixes
-     * @details     max7219 is a class with 8 functions who makes it possible to set, draw and clear 8x8 matrixes
-     */
+ /**
+ * @class       max7219
+ * @brief       Class to set and draw on the max7219 8x8 matrixes
+ * 
+ * @details     
+ * max7219 is a class with 8 functions,
+ * who makes it possible to set, draw and clear 8x8 matrixes
+ */
 
 class max7219: public monochrome8x8dotmatrix{
 private:
-    hwlib::target::pin_out din;         ///<Pin dataIn
-    hwlib::target::pin_out clk;         ///<Pin clock
-    hwlib::target::pin_out load;        ///<Pin load
-    int outputmatrix[constmax7219::LEDMATRIX_SIZE+1][(constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1] = {0};
+    hwlib::target::pin_out din;                                                                                                 ///<Pin dataIn
+    hwlib::target::pin_out clk;                                                                                                 ///<Pin clock
+    hwlib::target::pin_out load;                                                                                                ///<Pin load
+    int outputmatrix[constmax7219::LEDMATRIX_SIZE+1][(constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1] = {0};  ///<The output matrix that writes to the max7219
     
 public:
 
     /**
-     * @param din       ~ Pin dataIn
-     * @param clk       ~ Pin clock
-     * @param load      ~ Pin load
-     * @param size_x    ~ Width of led matrix
-     * @param size_y    ~ Height of led matrix
+     * @brief Construtor
+     * @param din Pin dataIn
+     * @param clk Pin clock
+     * @param load Pin load
+     * @param size_x Width of led matrix
+     * @param size_y Height of led matrix
+     * 
+     * @details
+     * sets the din-outputpin, clock-outputpin, load/cs-outputpin
      */
     max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y);
     
+    /*****************
+        FUNCTIONS     
+    *****************/
+    
     /**
-     * @brief Funtion Set a pixel on the full matrix
+     * @brief Funtion Set a pixel on the outputmatrix
      * @param x         ~ Indicates the x-axis where the pixel have to be set
      * @param y         ~ Indicates the y-axis where the pixel have to be set
-     * @param matrix    ~ The matrix where the pixel will be set
      * @param data      ~ Is the data that will be set on the location it is default 1
      */
     void setPixel(int x, int y, bool data);
     
     
+    /**
+     * @brief Funtion Set a pixel draw it direct after setting it on the outputmatrix
+     * @param x         ~ Indicates the x-axis where the pixel have to be set
+     * @param y         ~ Indicates the y-axis where the pixel have to be set
+     * @param data      ~ Is the data that will be set on the location it is default 1
+     */
     void drawPixel(int x, int y, bool data);
     
     /**
@@ -101,17 +116,18 @@ public:
     void set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], int ledX);
     
     /**
-     * @brief Virtual to clear the full matrix(now: (8,32))
-     * @param matrix    ~ The matrix that will be cleared
+     * @brief sets the outputmatrix to 0 and draws it to the ledmatrix
      */
     void clearDisplay();
     
     /**
-     * @brief draws the matrix to the ledmatrix
-     * @param matrix    ~ Matrix that will be written to led matrix
+     * @brief draws the outputmatrix to the ledmatrix
      */
     void draw();
     
+    /**
+     * @brief writes the outputmatrix out with hwlib::cout
+     */
     void checkOutputmatrix();
 
 };

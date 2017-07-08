@@ -25,6 +25,7 @@
 
 namespace lightmusic{
 
+//sets the din-outputpin, clock-outputpin, load/cs-outputpin
 max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y):
     monochrome8x8dotmatrix(size_x, size_y),
     din(din),
@@ -44,6 +45,7 @@ void max7219::drawPixel(int x, int y, bool data){
     setPixel(x,y,data);
     draw();
 }
+
 //pulse the clkpin once
 void max7219::pulseClk(hwlib::target::pin_out clk, int wait = 0){
     clk.set(0);
@@ -56,25 +58,32 @@ void max7219::pulseClk(hwlib::target::pin_out clk, int wait = 0){
 void max7219::shiftDataRepeat(const uint16_t data, const uint8_t repeat){
     for( uint8_t repeatCnt = 0; repeatCnt < repeat; repeatCnt++ ) {
         for( int16_t bitCnt = 15; bitCnt >= 0; bitCnt-- ) {
+            
             //splits data in bits and write it one bit at a time to the din pin
             din.set( ( data & ( 1 << bitCnt ) ) != 0 );
             pulseClk(clk);
-                        hwlib::cout << (( data & ( 1 << bitCnt ) ) != 0) << ' ';
+                        
+            //TEST//
+            //hwlib::cout << (( data & ( 1 << bitCnt ) ) != 0) << ' ';
+            
         }
-        hwlib::cout<<"\n";
+        
+        //TEST//
+        //hwlib::cout<<"\n";
+        
     }
 }
 
 
+//Shift data to the din pin, its repeating it so many time as it's own value repeat, 
+//it use the function shift data and it set the load "low" before it and "high" after
 void max7219::sendDataRepeat(const uint16_t data, const uint8_t repeat){
-    // sets load to zero to make it possible to clock data
     load.set(0);
     shiftDataRepeat(data, repeat);
-    // sets load to one to load the data
     load.set(1);
-    
 }
 
+//setup the matrix so its possible to use
 void max7219::Setup(){
     //it send a DISPLAYTEST it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:       00001111 00000000(normal operation), 
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
@@ -104,7 +113,7 @@ void max7219::set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1]
     }
 }
 
-//draw the input matrix to the led matrix
+//draw the output matrix to the led matrix
 void max7219::draw(){
     for( int columnr = 1; columnr <= constmax7219::LEDMATRIX_SIZE; columnr++ ){
         load.set(0);
@@ -122,6 +131,8 @@ void max7219::draw(){
     }
 }
 
+
+//sets the outputmatrix to 0 and draws it to the ledmatrix
 void max7219::clearDisplay(){
     for(int columnr = 1; columnr < constmax7219::LEDMATRIX_SIZE+1; columnr++ ){
             for( int pixel = 1; pixel < constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY+1; pixel++ ){
@@ -131,6 +142,7 @@ void max7219::clearDisplay(){
     max7219::draw();
 }
 
+//writes the outputmatrix out with hwlib::cout
 void max7219::checkOutputmatrix(){
     for(int i = 0; i < constmax7219::LEDMATRIX_SIZE+1; i++){
         for(int j = 0; j < (constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1; j++){
