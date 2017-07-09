@@ -132,4 +132,36 @@ int keymatrix::getkeytomidimap(int rowctr, int colctr){
     return keyToMidiMap[rowctr][colctr];
 }
 
+uint8_t keymatrix::getkeytomidimap8t(int rowctr, int colctr){
+    return keyToMidiMap[rowctr][colctr];
+}
+
+void keymatrix::minMaxVelocity(int number, bool minMax){
+    if(minMax == 1 && ((velocity+number) <= 127)){
+        hwlib::cout << velocity;
+        velocity += number;
+    }
+    else if(minMax == 0 && ((velocity-number) >= 0)){
+        velocity -= number;
+    }
+
+}
+
+int keymatrix::getVelocity(){
+    return velocity;
+}
+
+void keymatrix::minMaxQuantOfPresKeys(bool minMax){
+    if(minMax == 1){
+        quantOfPresKeys++;
+    }
+    else{
+        quantOfPresKeys--;
+    }
+
+}
+
+int keymatrix::getQuantOfPresKeys(){
+    return quantOfPresKeys;
+}
 }

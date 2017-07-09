@@ -24,16 +24,16 @@
 #include "hwlib.hpp"
 #include "stdint.h"
 #include "lightmusiclib.hpp"
-#include <cmath>
-#include <vector>
+
 
 #define NUM_ROWS 4
 #define NUM_COLS 8
 #define VELOCITY 40
 
 int main( void ){	
-   // kill the watchdog
+    // kill the watchdog
     WDT->WDT_MR = WDT_MR_WDDIS;
+    
     hwlib::wait_ms(1000);
     //know when to start
     hwlib::cout << "start\n";
@@ -46,7 +46,7 @@ int main( void ){
     auto sig    = target::pin_out(target::pins::d12);
     
     
-    lightmusic::max7219 ledmatrix(din,clk,load,8,8);
+    lightmusic::max7219 ledmatrix(din,clk,load);
     ledmatrix.Setup();
     
     //TEST//
@@ -69,23 +69,19 @@ int main( void ){
     auto clockPin = target::pin_out(target::pins::d10);
     auto txPin    = target::pin_out(target::pins::d1);
     
-    //initialize note
-    int note = 81;
-    int manynotes = 0;
-    int velocity = 127;
-    //bool keyPressed[9][17];         ///< Bool used for detection of a pushed button or releaved button
-    uint8_t keyToMidiMap[9][17];    ///< Uint8_t used for setting every button to a key
+    //bool keyPressed[9][17];           ///< Bool used for detection of a pushed button or releaved button
+    //uint8_t keyToMidiMap[9][17];        ///< Uint8_t used for setting every button to a key
     
-    //makes a object mijnmidi
-    lightmusic::midi mijnmidi(rows, NUM_COLS, note);
+    //makes a object myMidi
+    lightmusic::midi myMidi(rows, NUM_COLS, 81);
     
-    //set the keymatrix of mijnmidi every keypressed on false and keytomidimap to his note 
-    mijnmidi.set();
+    //set the keymatrix of myMidi every keypressed on false and keytomidimap to his note 
+    myMidi.set();
     
-    for(;;){
+    while(true){
         for (int colCtr = 0; colCtr < NUM_COLS; ++colCtr){
             //scan the column for input
-            mijnmidi.scanColumn(colCtr,latchPin,dataPin,clockPin);
+            myMidi.scanColumn(colCtr,latchPin,dataPin,clockPin);
             
             
             int rowValue[NUM_ROWS];
@@ -96,35 +92,36 @@ int main( void ){
             
             
             //midinoteOn checks if there is an input if so he sends a midi message with note on
-            //mijnmidi.midinoteOn(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
+            //myMidi.midinoteOn(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
             for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
                 //hwlib::cout << rowValue[rowCtr];
                 if(rowValue[rowCtr] != 0){
                     
-                    int notenumber = mijnmidi.getkeytomidimap(colCtr,rowCtr);
+                    int notenumber = myMidi.getkeytomidimap(colCtr,rowCtr);
                     buzz.tone(buzz.keymidimaptohertz(notenumber));
                     
-                    if(!mijnmidi.getkeypressed(rowCtr, colCtr)){
-                        mijnmidi.setkeypressed(rowCtr, colCtr, true);
+                    if(!myMidi.getkeypressed(rowCtr, colCtr)){
+                        myMidi.setkeypressed(rowCtr, colCtr, true);
                         
                         //TEST//
                         //hwlib::cout << "ROW: " << rowCtr << "COL: " << colCtr << "\n\n";
                         
-                        manynotes++;
+                        myMidi.minMaxQuantOfPresKeys(1);
                         
                         
-                        if(mijnmidi.getkeypressed(NUM_ROWS-1, NUM_COLS-1) == true && velocity > 0){
-                            velocity--;
+                        if(myMidi.getkeypressed(NUM_ROWS-1, NUM_COLS-4) == true && myMidi.getVelocity() > 0){
+                            myMidi.minMaxVelocity(10,false);
                             ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::SPACEMXIN[0], const8x8ch::SPACEMXIN[1], const8x8ch::SPACEMXIN[3], const8x8ch::SPACEMXIN[4]);
                         }
-                        else if(mijnmidi.getkeypressed(NUM_ROWS-1, NUM_COLS-2) == true && velocity < 127){
-                            velocity++;
+                        else if(myMidi.getkeypressed(NUM_ROWS-1, NUM_COLS-3) == true && myMidi.getVelocity() < 127){
+                            myMidi.minMaxVelocity(10,true);
+                            
                             ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::SPACEMXIN[0], const8x8ch::SPACEMXIN[1], const8x8ch::LETTERS[9], const8x8ch::SPACEMXIN[2]);
                         }
                         else{
-                            mijnmidi.noteOn(txPin, 0x00, rowCtr, colCtr,127, keyToMidiMap);
+                            myMidi.noteOn(txPin, 0x00, rowCtr, colCtr,myMidi.getVelocity());
 
-                            int *sepnumber = ledmatrix.hunderdnumbersepnum(velocity);
+                            int *sepnumber = ledmatrix.hunderdnumbersepnum(myMidi.getVelocity());
                             ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::LETTERS[ledmatrix.keymiditokeyletter(notenumber)] ,const8x8ch::NUMBERS[sepnumber[0]], const8x8ch::NUMBERS[sepnumber[1]], const8x8ch::NUMBERS[sepnumber[2]]);
 
                         }
@@ -133,13 +130,13 @@ int main( void ){
                 }
             }
             //midinoteOff checks if the input is false again and sends his own midi messages with note off
-            //mijnmidi.midinoteOff(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
+            //myMidi.midinoteOff(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
             for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
-                if(rowValue[rowCtr] == 0 && mijnmidi.getkeypressed(rowCtr, colCtr)){
-                    mijnmidi.setkeypressed(rowCtr, colCtr, false);
-                    mijnmidi.noteOff(txPin, 0x00, rowCtr, colCtr, 127, keyToMidiMap);
-                    manynotes--;
-                    if(manynotes == 0){
+                if(rowValue[rowCtr] == 0 && myMidi.getkeypressed(rowCtr, colCtr)){
+                    myMidi.setkeypressed(rowCtr, colCtr, false);
+                    myMidi.noteOff(txPin, 0x00, rowCtr, colCtr, myMidi.getVelocity());
+                    myMidi.minMaxQuantOfPresKeys(0);
+                    if(myMidi.getQuantOfPresKeys() == 0){
                     ledmatrix.clearDisplay();
                     }
                 }

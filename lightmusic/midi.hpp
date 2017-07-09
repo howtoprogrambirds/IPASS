@@ -89,7 +89,7 @@ public:
      * @param colCtr    ~ Container who holds the pressed col number    
      * @param vel       ~ velocity
      */
-    void noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]);
+    void noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel);
     
     /**
      * @brief Send midi note off message to tx_pin
@@ -99,7 +99,7 @@ public:
      * @param colCtr    ~ Container who holds the released col number    
      * @param vel       ~ velocity
      */
-    void noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]);
+    void noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel);
     
     /**
      * @brief Check which button is played on keymatrix. uses noteOn() based on the check.
@@ -109,7 +109,7 @@ public:
      * @param chan      ~ Uint8_t to send midi on a specific channel
      * @param vel       ~ veloctity
      */
-    void midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]);
+    void midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
     
     /**
      * @brief Check which button is released on keymatrix. uses noteOff() based on the check.
@@ -119,7 +119,7 @@ public:
      * @param chan      ~ Uint8_t to send midi on a specific channel
      * @param vel       ~ veloctity
      */
-    void midinoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]);
+    void midinoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
 };
 
 }

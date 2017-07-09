@@ -37,7 +37,7 @@ namespace lightmusic{
  * who makes it possible to set, draw and clear 8x8 matrixes
  */
 
-class max7219: public monochrome8x8dotmatrix{
+class max7219{
 private:
     hwlib::target::pin_out din;                                                                                                 ///<Pin dataIn
     hwlib::target::pin_out clk;                                                                                                 ///<Pin clock
@@ -51,13 +51,11 @@ public:
      * @param din Pin dataIn
      * @param clk Pin clock
      * @param load Pin load
-     * @param size_x Width of led matrix
-     * @param size_y Height of led matrix
      * 
      * @details
      * sets the din-outputpin, clock-outputpin, load/cs-outputpin
      */
-    max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y);
+    max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load);
     
     /*****************
         FUNCTIONS     
@@ -93,13 +91,6 @@ public:
      * @param repeat    How many times the shift repeats
      */
     void sendDataRepeat(const uint16_t data, const uint8_t repeat);
-    
-    /**
-     * @brief Shift data to the din pin, its repeating it so many time as it's own value repeat, but it doesn't load
-     * @param data      Pin Data
-     * @param repeat    How many times the shift repeats
-     */
-    void shiftDataRepeat(const uint16_t data, const uint8_t repeat);
     
     /**
      * @brief setup the matrix so its possible to use

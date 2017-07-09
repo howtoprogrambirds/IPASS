@@ -68,13 +68,13 @@ void midi::midiSetChannelVolume(hwlib::target::pin_out & tx_pin, uint8_t chan, u
 }
 
 //Send midi note on message to tx_pin
-void midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]){
+void midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel){
     if (chan > 15) return;
     if (vel > 127) return;
 
   
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(0x90 | chan, tx_pin, 31250);
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(keyToMidiMap[rowCtr][colCtr], tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(getkeytomidimap8t(rowCtr, colCtr), tx_pin, 31250);
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(vel, tx_pin, 31250);
     
     //TEST//
@@ -91,13 +91,13 @@ void midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int
 }
 
 //Send midi note off message to tx_pin
-void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel, uint8_t keyToMidiMap[9][17]) {
+void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int colCtr, uint8_t vel) {
     if (chan > 15) return;
     if (vel > 127) return;
     
     
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(0x80 | chan, tx_pin, 31250);
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(keyToMidiMap[rowCtr][colCtr], tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(getkeytomidimap8t(rowCtr,colCtr), tx_pin, 31250);
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(vel, tx_pin, 31250);
     
     //TEST//
@@ -122,7 +122,7 @@ void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, in
 //      4  -   |   -   -
 //      --------------->
 // Check which button is played on keymatrix and keypressed is false. uses noteOn() based on the check.
-void midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]) {
+void midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]) {
     for(int rowCtr=0; rowCtr< num_rows; ++rowCtr){
         
         //TEST//
@@ -131,18 +131,18 @@ void midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCt
         
         if(rowValue[rowCtr] != 0 && !keyPressed[rowCtr][colCtr]){
             keyPressed[rowCtr][colCtr] = true;
-            noteOn(tx_pin, chan, rowCtr, colCtr, vel, keyToMidiMap);
+            noteOn(tx_pin, chan, rowCtr, colCtr, vel);
             
         }
     }    
 }
 
 // Check which button is released on keymatrix and keypressed is true. uses noteOff() based on the check.
-void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]) {
+void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]) {
     for(int rowCtr=0; rowCtr< num_rows; ++rowCtr){
         if(rowValue[rowCtr] == 0 && keyPressed[rowCtr][colCtr]){
             keyPressed[rowCtr][colCtr] = false;
-            noteOff(tx_pin, chan, rowCtr, colCtr, vel, keyToMidiMap);
+            noteOff(tx_pin, chan, rowCtr, colCtr, vel);
         }
     }
 }

@@ -26,20 +26,21 @@
 namespace lightmusic{
 
 //sets the din-outputpin, clock-outputpin, load/cs-outputpin
-max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load, const int & size_x, const int & size_y):
-    monochrome8x8dotmatrix(size_x, size_y),
+max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load):
     din(din),
     clk(clk),
     load(load)
 {
     hwlib::wait_ms(1000);
 }
+
 //set a pixel on the big matrix(8,32)
 void max7219::setPixel(int x, int y, bool data){
     if( (x < constmax7219::LEDMATRIX_SIZE+1 ) && (x > 0) && (y < constmax7219::LEDMATRIX_SIZE*constmax7219::MAX7219_QUANTITY+1) && (y > 0) ){
         outputmatrix[x][y] = data;
     }
 }
+
 //setpixel and draw it direct after setting it
 void max7219::drawPixel(int x, int y, bool data){
     setPixel(x,y,data);
@@ -54,8 +55,11 @@ void max7219::pulseClk(hwlib::target::pin_out clk, int wait = 0){
 
 }
 
-//shift data to the din pin, its repeating it so many time as it's own parameter repeat
-void max7219::shiftDataRepeat(const uint16_t data, const uint8_t repeat){
+
+//Shift data to the din pin, its repeating so many times as it's own given value repeat, 
+void max7219::sendDataRepeat(const uint16_t data, const uint8_t repeat){
+    load.set(0);
+    
     for( uint8_t repeatCnt = 0; repeatCnt < repeat; repeatCnt++ ) {
         for( int16_t bitCnt = 15; bitCnt >= 0; bitCnt-- ) {
             
@@ -72,32 +76,25 @@ void max7219::shiftDataRepeat(const uint16_t data, const uint8_t repeat){
         //hwlib::cout<<"\n";
         
     }
-}
-
-
-//Shift data to the din pin, its repeating it so many time as it's own value repeat, 
-//it use the function shift data and it set the load "low" before it and "high" after
-void max7219::sendDataRepeat(const uint16_t data, const uint8_t repeat){
-    load.set(0);
-    shiftDataRepeat(data, repeat);
+    
     load.set(1);
 }
 
 //setup the matrix so its possible to use
 void max7219::Setup(){
-    //it send a DISPLAYTEST it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:       00001111 00000000(normal operation), 
+    //it sends the DISPLAYTEST, it is left shifted by 8 and afterwards it sends MAX7219_DATA_TEST_NORMAL_OPERATION because so it writes this two bytes:       00001111 00000000(normal operation), 
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
     sendDataRepeat( ( constmax7219::MAX7219_REG_DISPLAYTEST << 8) | constmax7219::MAX7219_DATA_TEST_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
-    //it send the SCANLIMIT it is left shifted by 8 and or on SCAN_LIMIT because it write this two bytes:       00001011 00000111(display digits 0,1,2,3,4,5,6,7),
+    //it sends the MAX7219_REG_SCAN_LIMIT , it is left shifted by 8 and afterwards it sends MAX7219_DATA_SCAN_LIMIT8 because so it writes this two bytes:     00001011 00000111(display digits 0,1,2,3,4,5,6,7),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
     sendDataRepeat( ( constmax7219::MAX7219_REG_SCAN_LIMIT  << 8) | constmax7219::MAX7219_DATA_SCAN_LIMIT8, constmax7219::MAX7219_QUANTITY );
-    //it send the DECODE it is left shifted by 8 and or on NO_OP_DATA because it write this two bytes:          00001001 00000000(no decoder for digits 7-0),
+    //it sends the MAX7219_REG_DECODE , it is left shifted by 8 and afterwards it sends MAX7219_DATA_DECODE_NO_DECODE because so it writes this two bytes:    00001001 00000000(no decoder for digits 7-0),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
     sendDataRepeat( ( constmax7219::MAX7219_REG_DECODE      << 8) | constmax7219::MAX7219_DATA_DECODE_NO_DECODE, constmax7219::MAX7219_QUANTITY );
-    //it send the INTENSITY it is left shifted by 8 and or on MAX7219_DATA_INTENSITY_LVL1 because it write this two bytes:    00001010 00000001(3/32),
+    //it sends the MAX7219_REG_INTENSITY , it is left shifted by 8 and afterwards it sends MAX7219_DATA_INTENSITY_LVL2 because so it writes this two bytes:   00001010 00000001(3/32),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
     sendDataRepeat( ( constmax7219::MAX7219_REG_INTENSITY  << 8)  | constmax7219::MAX7219_DATA_INTENSITY_LVL2, constmax7219::MAX7219_QUANTITY );
-    //it send the SHUTDOWN it is left shifted by 8 and or on INTENSITY_LVL because it write this two bytes:     00001100 00000001(normal operation),
+    //it sends the MAX7219_REG_SHUTDOWN , it is left shifted by 8 and afterwards it sends MAX7219_DATA_SHUTDOWN_NORMAL_OPERATION because so it writes this two bytes:     00001100 00000001(normal operation),
     //this data repeats 4 times so every max7219 is setup and there is no miss_behavior
     sendDataRepeat( ( constmax7219::MAX7219_REG_SHUTDOWN    << 8) | constmax7219::MAX7219_DATA_SHUTDOWN_NORMAL_OPERATION, constmax7219::MAX7219_QUANTITY );
     clearDisplay();

@@ -46,7 +46,9 @@ private:
     int bits[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};    ///< Array uses for scanning the columns
     bool keyPressed[9][17];
     uint8_t keyToMidiMap[9][17];
-protected:
+    int velocity = 127;
+    int quantOfPresKeys = 0;
+    protected:
     int num_rows;                                               ///< Number of all the rows  
     int num_cols;                                               ///< Number of all the colums
 public:
@@ -124,6 +126,16 @@ public:
      * @return int of the key on the given location
      */
     int getkeytomidimap(int rowctr, int colctr);
+    
+    uint8_t getkeytomidimap8t(int rowctr, int colctr);
+    
+    void minMaxVelocity(int number, bool minMax);
+    
+    int getVelocity();
+    
+    void minMaxQuantOfPresKeys(bool minMax);
+    
+    int getQuantOfPresKeys();
 
 };
 
