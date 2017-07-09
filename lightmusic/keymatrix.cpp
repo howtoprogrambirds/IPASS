@@ -27,6 +27,7 @@ namespace lightmusic{
 //Constructor initialize row with param row, num_row with the number of the pins of row, num_cols with param num_cols
 keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols, const int & note):
     row(row),
+    note(note),
     num_rows(row.number_of_pins()),
     num_cols(num_cols)
 {
@@ -37,7 +38,7 @@ keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols, const
 *****************/  
 
 // Function Sets every button of the matrix on false and gives his own key
-void keymatrix::set(int note, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]){
+void keymatrix::set(){
     
     //TEST//
     //hwlib::cout << num_rows << num_cols;
@@ -57,12 +58,15 @@ void keymatrix::set(int note, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17
             
             //sets the KeytoMidiMap of the button with his own note
             keyToMidiMap[colCtr][rowCtr] = note;
+            
+            //TEST//
             int midi = keyToMidiMap[colCtr][rowCtr];
             hwlib::cout << midi << "  ";
+            
             note++;
         }
         //TEST//
-        //hwlib::cout << "\n\n";
+        hwlib::cout << "\n\n";
     }    
 }
 
@@ -114,6 +118,18 @@ int keymatrix::getNum_rows(){
 //return number of cols in the keymatrix
 int keymatrix::getNum_cols(){
     return num_cols;
+}
+
+bool keymatrix::getkeypressed(int rowctr, int colctr){
+    return keyPressed[rowctr][colctr];
+}
+
+void keymatrix::setkeypressed(int rowctr, int colctr, bool data){
+    keyPressed[rowctr][colctr] = data;
+}
+
+int keymatrix::getkeytomidimap(int rowctr, int colctr){
+    return keyToMidiMap[rowctr][colctr];
 }
 
 }

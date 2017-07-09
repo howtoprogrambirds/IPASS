@@ -113,6 +113,28 @@ void max7219::set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1]
     }
 }
 
+void max7219::setfull_4_8x8_ch_matrix(const int ch1[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
+    const int ch2[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
+    const int ch3[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
+    const int ch4[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1]){
+        set8x8matrix(ch1, 0);
+        set8x8matrix(ch2, 1);
+        set8x8matrix(ch3, 2);
+        set8x8matrix(ch4, 3);
+}
+
+int* max7219::hunderdnumbersepnum(int hunderd){
+        sepnum[0] = hunderd/100;
+        sepnum[1] = (hunderd - (sepnum[0]*100)) / 10;
+        sepnum[2] = hunderd - (sepnum[0] *100 + sepnum[1] * 10);
+        
+        return sepnum;
+}
+
+int max7219::keymiditokeyletter(int keymidinumber){
+    return keymidinumber - ((keymidinumber/12) * 12);
+}
+
 //draw the output matrix to the led matrix
 void max7219::draw(){
     for( int columnr = 1; columnr <= constmax7219::LEDMATRIX_SIZE; columnr++ ){

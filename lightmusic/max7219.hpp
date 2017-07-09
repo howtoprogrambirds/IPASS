@@ -43,7 +43,7 @@ private:
     hwlib::target::pin_out clk;                                                                                                 ///<Pin clock
     hwlib::target::pin_out load;                                                                                                ///<Pin load
     int outputmatrix[constmax7219::LEDMATRIX_SIZE+1][(constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1] = {0};  ///<The output matrix that writes to the max7219
-    
+    int sepnum[3] = {0};
 public:
 
     /**
@@ -115,6 +115,14 @@ public:
      */
     void set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], int ledX);
     
+    void setfull_4_8x8_ch_matrix(const int ch1[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
+    const int ch2[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
+    const int ch3[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
+    const int ch4[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1]);
+    
+    int* hunderdnumbersepnum(int hunderd);
+    
+    int keymiditokeyletter(int keymidinumber);
     /**
      * @brief sets the outputmatrix to 0 and draws it to the ledmatrix
      */

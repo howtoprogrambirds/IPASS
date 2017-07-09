@@ -44,7 +44,8 @@ private:
     hwlib::port_in_from_pins row;                               ///< Port_in_from_pins of al the row inputs
     int note;                                                   ///< Number of the first button's key
     int bits[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};    ///< Array uses for scanning the columns
-    
+    bool keyPressed[9][17];
+    uint8_t keyToMidiMap[9][17];
 protected:
     int num_rows;                                               ///< Number of all the rows  
     int num_cols;                                               ///< Number of all the colums
@@ -69,7 +70,7 @@ public:
      * @brief Sets every button of the matrix on false and gives his own key
      * @param note Number of the first button's key
      */
-    void set( int note, bool keyPressed[9][17], uint8_t keyToMidiMap[9][17]);
+    void set();
     
     /**
      * @brief Shifts out a byte of data one bit at a time
@@ -96,9 +97,33 @@ public:
     
     /**
      * @brief give the number of cols back
-     * @return number of cols in the keymatrix
+     * @return int of cols in the keymatrix
      */
     int getNum_cols();
+    
+    /**
+     * @brief get the value of a keypressed on a given location
+     * @param rowctr which row
+     * @param colctr which column
+     * @return bool of a the given location of the keypressed
+     */
+    bool getkeypressed(int rowctr, int colctr);
+    
+    /**
+     * @brief set the given data to keypressed on a given location
+     * @param rowctr which row
+     * @param colctr which column
+     * @param data the data(true or false)
+     */
+    void setkeypressed(int rowctr, int colctr, bool data);
+    
+    /**
+     * @brief get the value of a keytomidimap on a given location
+     * @param rowctr which row
+     * @param colctr which column
+     * @return int of the key on the given location
+     */
+    int getkeytomidimap(int rowctr, int colctr);
 
 };
 

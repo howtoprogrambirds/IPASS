@@ -51,6 +51,8 @@ public:
      */
     midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note);
     
+    
+    
     /*****************
         FUNCTIONS     
     *****************/

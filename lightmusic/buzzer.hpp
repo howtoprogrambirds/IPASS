@@ -49,6 +49,8 @@ public:
      * @param hertz the hertz in ints
      */
     void tone(int hertz);
+    
+    int keymidimaptohertz(int keymidinumber);
 };
 
 }

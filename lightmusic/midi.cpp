@@ -96,9 +96,9 @@ void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, in
     if (vel > 127) return;
     
     
-    //hwlib::uart_putc_bit_banged_pin_custom_baudrate(0x80 | chan, tx_pin, 31250);
-    //hwlib::uart_putc_bit_banged_pin_custom_baudrate(keyToMidiMap[rowCtr][colCtr], tx_pin, 31250);
-    //hwlib::uart_putc_bit_banged_pin_custom_baudrate(vel, tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(0x80 | chan, tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(keyToMidiMap[rowCtr][colCtr], tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(vel, tx_pin, 31250);
     
     //TEST//
     //uint16_t midi = keyToMidiMap[colCtr][rowCtr];
