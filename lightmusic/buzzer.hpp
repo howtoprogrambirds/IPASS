@@ -50,6 +50,11 @@ public:
      */
     void tone(int hertz);
     
+    /**
+     * @brief calculate the hertz by given midikeynumber and returns the hertz in int
+     * @param keymidinumber the number of the key
+     * @return returns hettz in int
+     */
     int keymidimaptohertz(int keymidinumber);
 };
 

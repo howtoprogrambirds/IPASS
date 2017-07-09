@@ -28,7 +28,6 @@
 
 #define NUM_ROWS 4
 #define NUM_COLS 8
-#define VELOCITY 40
 
 int main( void ){	
     // kill the watchdog
@@ -104,7 +103,7 @@ int main( void ){
                         myMidi.setkeypressed(rowCtr, colCtr, true);
                         
                         //TEST//
-                        //hwlib::cout << "ROW: " << rowCtr << "COL: " << colCtr << "\n\n";
+                        //hwlib::cout << "ROW: " << rowCtr << " COL: " << colCtr << "\n\n";
                         
                         myMidi.minMaxQuantOfPresKeys(1);
                         
@@ -119,7 +118,7 @@ int main( void ){
                             ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::SPACEMXIN[0], const8x8ch::SPACEMXIN[1], const8x8ch::LETTERS[9], const8x8ch::SPACEMXIN[2]);
                         }
                         else{
-                            myMidi.noteOn(txPin, 0x00, rowCtr, colCtr,myMidi.getVelocity());
+                            myMidi.noteOn(txPin, 0x00, rowCtr, colCtr, myMidi.getVelocity());
 
                             int *sepnumber = ledmatrix.hunderdnumbersepnum(myMidi.getVelocity());
                             ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::LETTERS[ledmatrix.keymiditokeyletter(notenumber)] ,const8x8ch::NUMBERS[sepnumber[0]], const8x8ch::NUMBERS[sepnumber[1]], const8x8ch::NUMBERS[sepnumber[2]]);

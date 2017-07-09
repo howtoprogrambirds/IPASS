@@ -55,6 +55,7 @@ void buzzer::tone(int hertz){
     hwlib::wait_ns(halfPeriodns);
 }
 
+//calculate the hertz by given midikeynumber and returns the hertz in int
 int buzzer::keymidimaptohertz(int keymidinumber){
     
     int note = keymidinumber - ((keymidinumber/12) * 12);

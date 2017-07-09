@@ -44,10 +44,10 @@ private:
     hwlib::port_in_from_pins row;                               ///< Port_in_from_pins of al the row inputs
     int note;                                                   ///< Number of the first button's key
     int bits[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};    ///< Array uses for scanning the columns
-    bool keyPressed[9][17];
-    uint8_t keyToMidiMap[9][17];
-    int velocity = 127;
-    int quantOfPresKeys = 0;
+    bool keyPressed[9][17];                                     ///< Bool used for detection of a pushed button or releaved button
+    uint8_t keyToMidiMap[9][17];                                ///< Uint8_t used for setting every button to a key
+    int velocity = 127;                                         ///< Indicate the velocity, default 127
+    int quantOfPresButtons = 0;                                 ///< How many buttons are pressed, default 0
     protected:
     int num_rows;                                               ///< Number of all the rows  
     int num_cols;                                               ///< Number of all the colums
@@ -91,6 +91,10 @@ public:
      */
     void scanColumn(const int num_cols, hwlib::target::pin_out & latchPin, hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin);
     
+    /*****************
+     GETTERS/SETTERS     
+    *****************/
+    
     /**
      * @brief give the number of rows back
      * @return number of rows in the keymatrix
@@ -127,14 +131,37 @@ public:
      */
     int getkeytomidimap(int rowctr, int colctr);
     
+    /**
+     * @brief get the value of a keytomidimap on a given location
+     * @param rowctr which row
+     * @param colctr which column
+     * @return uint8_t of the key on the given location
+     */
     uint8_t getkeytomidimap8t(int rowctr, int colctr);
     
+    /**
+     * @brief set the velocity by "min/max number + velocity"
+     * @param number how many numbers it wil change
+     * @param minMax minus(false) or plus(true)
+     */
     void minMaxVelocity(int number, bool minMax);
     
+    /**
+     * @brief get the velocity
+     * @return int velocity
+     */
     int getVelocity();
     
+    /**
+     * @brief set 1 minus/plus the int quantOfPressKeys
+     * @param minMax minus(false) or plus(true
+     */
     void minMaxQuantOfPresKeys(bool minMax);
     
+    /**
+     * @brief get int quantofpreskeys
+     * @return int quantofpreskeys
+     */
     int getQuantOfPresKeys();
 
 };

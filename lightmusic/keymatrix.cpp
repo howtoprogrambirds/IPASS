@@ -110,6 +110,10 @@ void keymatrix::scanColumn( const int num_cols, hwlib::target::pin_out & latchPi
     latchPin.set(1);
 }
 
+    /*****************
+      GETTERS/SETTERS     
+    *****************/
+
 //return number of rows in the keymatrix
 int keymatrix::getNum_rows(){
     return num_rows;
@@ -120,22 +124,27 @@ int keymatrix::getNum_cols(){
     return num_cols;
 }
 
+//return bool of a the given location of the keypressed
 bool keymatrix::getkeypressed(int rowctr, int colctr){
     return keyPressed[rowctr][colctr];
 }
 
+//set the given data to keypressed on a given location
 void keymatrix::setkeypressed(int rowctr, int colctr, bool data){
     keyPressed[rowctr][colctr] = data;
 }
 
+//get the value of a keytomidimap on a given location in int
 int keymatrix::getkeytomidimap(int rowctr, int colctr){
     return keyToMidiMap[rowctr][colctr];
 }
 
+//get the value of a keytomidimap on a given location in int8_t
 uint8_t keymatrix::getkeytomidimap8t(int rowctr, int colctr){
     return keyToMidiMap[rowctr][colctr];
 }
 
+//set the velocity by "min/max number + velocity"
 void keymatrix::minMaxVelocity(int number, bool minMax){
     if(minMax == 1 && ((velocity+number) <= 127)){
         hwlib::cout << velocity;
@@ -147,10 +156,12 @@ void keymatrix::minMaxVelocity(int number, bool minMax){
 
 }
 
+//get the velocity
 int keymatrix::getVelocity(){
     return velocity;
 }
 
+//set 1 minus/plus the int quantOfPressKeys
 void keymatrix::minMaxQuantOfPresKeys(bool minMax){
     if(minMax == 1){
         quantOfPresKeys++;
@@ -161,6 +172,7 @@ void keymatrix::minMaxQuantOfPresKeys(bool minMax){
 
 }
 
+//get int quantofpreskeys
 int keymatrix::getQuantOfPresKeys(){
     return quantOfPresKeys;
 }

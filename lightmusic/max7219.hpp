@@ -106,14 +106,34 @@ public:
      */
     void set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], int ledX);
     
+    /**
+     * @brief set four 8x8 matrixes to the four ledmatrix
+     * @param ch1 first 8x8 matrix
+     * @param ch2 second 8x8 matrix
+     * @param ch3 thirth 8x8 matrix
+     * @param ch4 fourth 8x8 matrix
+     */
     void setfull_4_8x8_ch_matrix(const int ch1[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
     const int ch2[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
     const int ch3[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
     const int ch4[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1]);
     
+    /**
+     * @brief seperate a hunderd number in 3 seperate numbers.
+     * @details Example: 158 -> 1,5,8; 94 -> 0,9,4
+     * @param hunderd int to convert
+     * @return array with 3 numbers
+     */
     int* hunderdnumbersepnum(int hunderd);
     
+    /**
+     * @brief convert the midikeynumber to keynumber
+     * @details 14 -> 2, 18 -> 6
+     * @param keymidinumber
+     * @return int of keynumber
+     */
     int keymiditokeyletter(int keymidinumber);
+    
     /**
      * @brief sets the outputmatrix to 0 and draws it to the ledmatrix
      */
