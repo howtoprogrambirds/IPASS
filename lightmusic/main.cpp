@@ -75,9 +75,6 @@ int main( void ){
     int note = 81;
     lightmusic::midi myMidi(rows, NUM_COLS, note);
     
-    //set the keymatrix of myMidi every keypressed on false and keytomidimap to his note 
-    //myMidi.set();
-    
     while(true){
         for (int colCtr = 0; colCtr < NUM_COLS; ++colCtr){
             //scan the column for input
@@ -91,8 +88,6 @@ int main( void ){
             rowValue[3] = row4Pin.get();
             
             
-            //midinoteOn checks if there is an input if so he sends a midi message with note on
-            //myMidi.midinoteOn(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
             for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
                 //hwlib::cout << rowValue[rowCtr];
                 if(rowValue[rowCtr] != 0){
@@ -128,8 +123,7 @@ int main( void ){
                         ledmatrix.draw();
                     }
                 }
-            //midinoteOff checks if the input is false again and sends his own midi messages with note off
-            //myMidi.midinoteOff(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
+                
                 else if(rowValue[rowCtr] == 0 && myMidi.getkeypressed(rowCtr, colCtr)){
                     myMidi.setkeypressed(rowCtr, colCtr, false);
                     myMidi.noteOff(txPin, 0x00, rowCtr, colCtr, myMidi.getVelocity());

@@ -38,11 +38,11 @@ keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols):
             keyPressed[rowCtr][colCtr] = false;
             
             //TEST//
-            hwlib::cout << keyPressed[rowCtr][colCtr] << "  ";
+            //hwlib::cout << keyPressed[rowCtr][colCtr] << "  ";
             
         }
         //TEST//
-        hwlib::cout << "\n\n";
+        //hwlib::cout << "\n\n";
     } 
 }
 
@@ -125,4 +125,5 @@ void keymatrix::minMaxQuantOfPresKeys(bool minMax){
 int keymatrix::getQuantOfPresKeys(){
     return quantOfPresButtons;
 }
+
 }

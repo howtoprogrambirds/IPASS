@@ -46,6 +46,7 @@ private:
     int bits[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};    ///< Array uses for scanning the columns
     bool keyPressed[8][8];                                      ///< Bool used for detection of a pushed button or releaved button
     int quantOfPresButtons = 0;                                 ///< How many buttons are pressed, default 0
+
 protected:
     int num_rows;                                               ///< Number of all the rows  
     int num_cols;                                               ///< Number of all the colums
@@ -153,6 +154,7 @@ public:
      * @return int quantofpreskeys
      */
     int getQuantOfPresKeys();
+
 
 };
 
