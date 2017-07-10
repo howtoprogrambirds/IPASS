@@ -41,14 +41,17 @@ namespace lightmusic{
 class keymatrix {
     
 private:
-    hwlib::port_in_from_pins row;                               ///< Port_in_from_pins of al the row inputs
+    hwlib::target::pin_in row1;
+    hwlib::target::pin_in row2;
+    hwlib::target::pin_in row3;
+    hwlib::target::pin_in row4;                                 ///< all pin_in of al the row inputs
     int note;                                                   ///< Number of the first button's key
     int bits[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};    ///< Array uses for scanning the columns
     bool keyPressed[8][8];                                      ///< Bool used for detection of a pushed button or releaved button
     int quantOfPresButtons = 0;                                 ///< How many buttons are pressed, default 0
-
+    bool rowValue[4] = {0};
 protected:
-    int num_rows;                                               ///< Number of all the rows  
+    int num_rows = 4;                                               ///< Number of all the rows  
     int num_cols;                                               ///< Number of all the colums
 public:
     
@@ -61,7 +64,7 @@ public:
     * @details
     * sets row with param row, num_row with the number of the pins of row, num_cols with param num_cols
     */
-    keymatrix(hwlib::port_in_from_pins & row, const int & num_cols);
+    keymatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols);
     
     /*****************
         FUNCTIONS     
@@ -85,6 +88,12 @@ public:
     /*****************
      GETTERS/SETTERS     
     *****************/
+    
+    /**
+     * @brief give the value of the row in a array
+     * @return array of row values
+     */
+    bool* getRowValue();
     
     /**
      * @brief give the number of rows back

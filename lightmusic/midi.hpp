@@ -53,7 +53,7 @@ public:
      * @details
      * initialize the same parameters as the class keymatrix
      */
-    midi(hwlib::port_in_from_pins & row, const int & num_cols, int & note);
+    midi(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols, int & note);
     
     
     

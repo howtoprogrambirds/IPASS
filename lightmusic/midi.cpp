@@ -27,8 +27,8 @@
 namespace lightmusic{
 
 //constructor initialize the same as the class keymatrix
-midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, int & note):
-    keymatrix(row, num_cols),
+midi::midi(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols, int & note):
+    keymatrix(row1, row2, row3, row4, num_cols),
     note(note)
 {
     for(int rowCtr = 0; rowCtr < num_rows; ++rowCtr){

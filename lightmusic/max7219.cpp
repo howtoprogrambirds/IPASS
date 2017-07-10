@@ -26,7 +26,7 @@
 namespace lightmusic{
 
 //sets the din-outputpin, clock-outputpin, load/cs-outputpin
-max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::target::pin_out load):
+max7219::max7219(hwlib::target::pin_out & din, hwlib::target::pin_out & clk, hwlib::target::pin_out & load):
     din(din),
     clk(clk),
     load(load)

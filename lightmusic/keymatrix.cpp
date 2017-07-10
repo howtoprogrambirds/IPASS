@@ -25,9 +25,11 @@
 namespace lightmusic{
 
 //Constructor initialize row with param row, num_row with the number of the pins of row, num_cols with param num_cols
-keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols):
-    row(row),
-    num_rows(row.number_of_pins()),
+keymatrix::keymatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols ):
+    row1(row1),
+    row2(row2),
+    row3(row3),
+    row4(row4),
     num_cols(num_cols)
 {
       for(int rowCtr = 0; rowCtr < num_rows; ++rowCtr){
@@ -49,7 +51,6 @@ keymatrix::keymatrix(hwlib::port_in_from_pins & row, const int & num_cols):
 /*****************
     FUNCTIONS     
 *****************/  
-
 
 // function send to each column line a 1 
 //     1   2   3   4
@@ -89,6 +90,15 @@ void keymatrix::scanColumn( const int num_cols, hwlib::target::pin_out & latchPi
     /*****************
       GETTERS/SETTERS     
     *****************/
+
+    
+bool* keymatrix::getRowValue(){
+    rowValue[0] = row1.get();
+    rowValue[1] = row2.get();
+    rowValue[2] = row3.get();
+    rowValue[3] = row4.get();
+    return rowValue;
+}
 
 //return number of rows in the keymatrix
 int keymatrix::getNum_rows(){

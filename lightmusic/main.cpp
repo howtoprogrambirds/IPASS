@@ -49,7 +49,7 @@ int main( void ){
     ledmatrix.Setup();
     
     //TEST//
-    //kees.checkOutputmatrix();
+    //ledmatrix.checkOutputmatrix();
     
     lightmusic::buzzer buzz(sig);
     
@@ -59,34 +59,23 @@ int main( void ){
     auto row3Pin = target::pin_in(target::pins::d4);
     auto row4Pin = target::pin_in(target::pins::d5);
     
-    //port_in_from_pins
-    auto rows = hwlib::port_in_from_pins(row1Pin, row2Pin, row3Pin, row4Pin);
-    
     //datapin, latchpin, clockpin, txpin
     auto dataPin  = target::pin_out(target::pins::d8);
     auto latchPin = target::pin_out(target::pins::d9);
     auto clockPin = target::pin_out(target::pins::d10);
     auto txPin    = target::pin_out(target::pins::d1);
     
-    //bool keyPressed[9][17];           ///< Bool used for detection of a pushed button or releaved button
-    //uint8_t keyToMidiMap[9][17];        ///< Uint8_t used for setting every button to a key
     
     //makes a object myMidi
     int note = 81;
-    lightmusic::midi myMidi(rows, NUM_COLS, note);
+    lightmusic::midi myMidi(row1Pin, row2Pin, row3Pin, row4Pin, NUM_COLS, note);
     
     while(true){
         for (int colCtr = 0; colCtr < NUM_COLS; ++colCtr){
             //scan the column for input
             myMidi.scanColumn(colCtr,latchPin,dataPin,clockPin);
             
-            
-            int rowValue[NUM_ROWS];
-            rowValue[0] = row1Pin.get();
-            rowValue[1] = row2Pin.get();
-            rowValue[2] = row3Pin.get();
-            rowValue[3] = row4Pin.get();
-            
+            bool* rowValue = myMidi.getRowValue();
             
             for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
                 //hwlib::cout << rowValue[rowCtr];
