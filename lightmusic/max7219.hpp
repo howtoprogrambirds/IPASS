@@ -23,7 +23,7 @@
 #ifndef MAX7219_HPP
 #define MAX7219_HPP
 
-#include "monochrome8x8dotmatrix.hpp"
+#include "constantsmax7219.hpp"
 #include "hwlib.hpp"
 
 namespace lightmusic{

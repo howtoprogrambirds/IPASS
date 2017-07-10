@@ -42,8 +42,6 @@
     <File Name="max7219.hpp"/>
     <File Name="midi.cpp"/>
     <File Name="midi.hpp"/>
-    <File Name="monochrome8x8dotmatrix.cpp"/>
-    <File Name="monochrome8x8dotmatrix.hpp"/>
     <File Name="makefile"/>
   </VirtualDirectory>
   <Settings Type="Dynamic Library">
