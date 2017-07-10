@@ -70,12 +70,6 @@ public:
         FUNCTIONS     
     *****************/
     
-    /**
-     * @brief Sets every button of the matrix on false
-     * @param note Number of the first button's key
-     */
-    void set();
-    
      /**
      * @brief Send to each column line a 1 
      * @param numCols Number of all the colums

@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="example code" Database="">
-  <Project Name="library" Path="library/_codelite.project" Active="No"/>
-  <BuildMatrix>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="library" ConfigName="Release"/>
-    </WorkspaceConfiguration>
-  </BuildMatrix> 
   <Project Name="lightmusic" Path="lightmusic/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="lightmusic" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix> 
-  <Project Name="lightmusic_test4x4" Path="lightmusic_test4x4/_codelite.project" Active="No"/>
+  <Project Name="lightmusic_4x4KeyMatrix_test" Path="lightmusic_4x4KeyMatrix_test/_codelite.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="lightmusic_test4x4" ConfigName="Release"/>
-    </WorkspaceConfiguration>
-  </BuildMatrix> 
-  <Project Name="lightmusic_testlibrary" Path="lightmusic_testlibrary/_codelite.project" Active="No"/>
-  <BuildMatrix>
-    <WorkspaceConfiguration Name="Release" Selected="yes">
-      <Project Name="lightmusic_testlibrary" ConfigName="Release"/>
+      <Project Name="lightmusic_4x4KeyMatrix_test" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix> 
 </CodeLite_Workspace>
