@@ -1,0 +1,305 @@
+\hypertarget{classlight_music_1_1key_matrix}{}\section{light\+Music\+:\+:key\+Matrix Class Reference}
+\label{classlight_music_1_1key_matrix}\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+
+
+Class for a \hyperlink{classlight_music_1_1key_matrix}{key\+Matrix}.  
+
+
+
+
+{\ttfamily \#include $<$keymatrix.\+hpp$>$}
+
+Inheritance diagram for light\+Music\+:\+:key\+Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlight_music_1_1key_matrix}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlight_music_1_1key_matrix_a20157eac9f3c3c056101178beeae5cc2}{key\+Matrix} (hwlib\+::target\+::pin\+\_\+in \&row1, hwlib\+::target\+::pin\+\_\+in \&row2, hwlib\+::target\+::pin\+\_\+in \&row3, hwlib\+::target\+::pin\+\_\+in \&row4, const int \&\hyperlink{classlight_music_1_1key_matrix_ab9fa44924cb5e674870f2602f92b39d3}{num\+Cols})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1key_matrix_ab14732662e5383219d953562dca72093}{set} ()
+\begin{DoxyCompactList}\small\item\em Sets every button of the matrix on false. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1key_matrix_a12c6a2c68f752505b080b9ec5a43601b}{scan\+Column} (const int \hyperlink{classlight_music_1_1key_matrix_ab9fa44924cb5e674870f2602f92b39d3}{num\+Cols}, hwlib\+::target\+::pin\+\_\+out \&latch\+Pin, hwlib\+::target\+::pin\+\_\+out \&data\+Pin, hwlib\+::target\+::pin\+\_\+out \&clock\+Pin)
+\begin{DoxyCompactList}\small\item\em Send to each column line a 1. \end{DoxyCompactList}\item 
+bool $\ast$ \hyperlink{classlight_music_1_1key_matrix_a11147e2bed1cc44d6127d23f6d1750be}{get\+Row\+Value} ()
+\begin{DoxyCompactList}\small\item\em give the value of the row in a array \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1key_matrix_ac57a81f084a6eed8aea1db203ddebcbe}{get\+Num\+Rows} ()
+\begin{DoxyCompactList}\small\item\em give the number of rows back \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1key_matrix_a26d5321912cf6eb7e4cb653ae52f2127}{get\+Num\+Cols} ()
+\begin{DoxyCompactList}\small\item\em give the number of cols back \end{DoxyCompactList}\item 
+bool \hyperlink{classlight_music_1_1key_matrix_aa24325eefb6e1d1c658a95414d178152}{get\+Key\+Pressed} (int row\+Ctr, int col\+Ctr)
+\begin{DoxyCompactList}\small\item\em get the value of a keypressed on a given location \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1key_matrix_a6b14156dc4fe97c317878e638e25b065}{set\+Key\+Pressed} (int rowctr, int colctr, bool data)
+\begin{DoxyCompactList}\small\item\em set the given data to keypressed on a given location \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1key_matrix_a0da0736764140f22eeb6874f4b5d2080}{get\+Key\+To\+Midi\+Map} (int rowctr, int colctr)
+\begin{DoxyCompactList}\small\item\em get the value of a keytomidimap on a given location \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classlight_music_1_1key_matrix_a3e25f2258ac3be18fe6e85f6cf0cccfa}{get\+Key\+To\+Midi\+Map8t} (int rowctr, int colctr)
+\begin{DoxyCompactList}\small\item\em get the value of a keytomidimap on a given location \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1key_matrix_a21cce0cc53842750aac7fad18652e697}{min\+Max\+Velocity} (int number, bool min\+Max)
+\begin{DoxyCompactList}\small\item\em set the velocity by \char`\"{}min/max number + velocity\char`\"{} \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1key_matrix_ac0598a969eaf6469ccac2206f4456f3b}{get\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em get the velocity \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1key_matrix_a299fd57c69d7afa13da683b3e2e59368}{min\+Max\+Quant\+Of\+Pres\+Keys} (bool min\+Max)
+\begin{DoxyCompactList}\small\item\em set 1 minus/plus the int quant\+Of\+Press\+Keys \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1key_matrix_a3508804c32287b9694bf2329aa4f9ece}{get\+Quant\+Of\+Pres\+Keys} ()
+\begin{DoxyCompactList}\small\item\em get int quantofpreskeys \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_afbad6c22d812070e3ad0fbeefe73b94b}\label{classlight_music_1_1key_matrix_afbad6c22d812070e3ad0fbeefe73b94b}} 
+int \hyperlink{classlight_music_1_1key_matrix_afbad6c22d812070e3ad0fbeefe73b94b}{num\+Rows} = 4
+\begin{DoxyCompactList}\small\item\em Number of all the rows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_ab9fa44924cb5e674870f2602f92b39d3}\label{classlight_music_1_1key_matrix_ab9fa44924cb5e674870f2602f92b39d3}} 
+int \hyperlink{classlight_music_1_1key_matrix_ab9fa44924cb5e674870f2602f92b39d3}{num\+Cols}
+\begin{DoxyCompactList}\small\item\em Number of all the colums. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for a \hyperlink{classlight_music_1_1key_matrix}{key\+Matrix}. 
+
+\hyperlink{classlight_music_1_1key_matrix}{key\+Matrix} is a class with 5 functions, which makes it possible to setup the \hyperlink{classlight_music_1_1key_matrix}{key\+Matrix}, scan the colums by using the shiftout function. And to return the number of cols and rows 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a20157eac9f3c3c056101178beeae5cc2}\label{classlight_music_1_1key_matrix_a20157eac9f3c3c056101178beeae5cc2}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!key\+Matrix@{key\+Matrix}}
+\index{key\+Matrix@{key\+Matrix}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{key\+Matrix()}{keyMatrix()}}
+{\footnotesize\ttfamily light\+Music\+::key\+Matrix\+::key\+Matrix (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row1,  }\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row2,  }\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row3,  }\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row4,  }\item[{const int \&}]{num\+Cols }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Port of al the row inputs \\
+\hline
+{\em num\+Cols} & Number of all the colums \\
+\hline
+{\em note} & Number of the first button\textquotesingle{}s key\\
+\hline
+\end{DoxyParams}
+sets row with param row, num\+\_\+row with the number of the pins of row, num\+\_\+cols with param num\+\_\+cols 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_aa24325eefb6e1d1c658a95414d178152}\label{classlight_music_1_1key_matrix_aa24325eefb6e1d1c658a95414d178152}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Key\+Pressed@{get\+Key\+Pressed}}
+\index{get\+Key\+Pressed@{get\+Key\+Pressed}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Key\+Pressed()}{getKeyPressed()}}
+{\footnotesize\ttfamily bool light\+Music\+::key\+Matrix\+::get\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{row\+Ctr,  }\item[{int}]{col\+Ctr }\end{DoxyParamCaption})}
+
+
+
+get the value of a keypressed on a given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rowctr} & which row \\
+\hline
+{\em colctr} & which column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool of a the given location of the keypressed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a0da0736764140f22eeb6874f4b5d2080}\label{classlight_music_1_1key_matrix_a0da0736764140f22eeb6874f4b5d2080}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Key\+To\+Midi\+Map@{get\+Key\+To\+Midi\+Map}}
+\index{get\+Key\+To\+Midi\+Map@{get\+Key\+To\+Midi\+Map}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Key\+To\+Midi\+Map()}{getKeyToMidiMap()}}
+{\footnotesize\ttfamily int light\+Music\+::key\+Matrix\+::get\+Key\+To\+Midi\+Map (\begin{DoxyParamCaption}\item[{int}]{rowctr,  }\item[{int}]{colctr }\end{DoxyParamCaption})}
+
+
+
+get the value of a keytomidimap on a given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rowctr} & which row \\
+\hline
+{\em colctr} & which column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int of the key on the given location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a3e25f2258ac3be18fe6e85f6cf0cccfa}\label{classlight_music_1_1key_matrix_a3e25f2258ac3be18fe6e85f6cf0cccfa}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Key\+To\+Midi\+Map8t@{get\+Key\+To\+Midi\+Map8t}}
+\index{get\+Key\+To\+Midi\+Map8t@{get\+Key\+To\+Midi\+Map8t}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Key\+To\+Midi\+Map8t()}{getKeyToMidiMap8t()}}
+{\footnotesize\ttfamily uint8\+\_\+t light\+Music\+::key\+Matrix\+::get\+Key\+To\+Midi\+Map8t (\begin{DoxyParamCaption}\item[{int}]{rowctr,  }\item[{int}]{colctr }\end{DoxyParamCaption})}
+
+
+
+get the value of a keytomidimap on a given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rowctr} & which row \\
+\hline
+{\em colctr} & which column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t of the key on the given location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a26d5321912cf6eb7e4cb653ae52f2127}\label{classlight_music_1_1key_matrix_a26d5321912cf6eb7e4cb653ae52f2127}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Num\+Cols@{get\+Num\+Cols}}
+\index{get\+Num\+Cols@{get\+Num\+Cols}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Num\+Cols()}{getNumCols()}}
+{\footnotesize\ttfamily int light\+Music\+::key\+Matrix\+::get\+Num\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+give the number of cols back 
+
+\begin{DoxyReturn}{Returns}
+int of cols in the keymatrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_ac57a81f084a6eed8aea1db203ddebcbe}\label{classlight_music_1_1key_matrix_ac57a81f084a6eed8aea1db203ddebcbe}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Num\+Rows@{get\+Num\+Rows}}
+\index{get\+Num\+Rows@{get\+Num\+Rows}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Num\+Rows()}{getNumRows()}}
+{\footnotesize\ttfamily int light\+Music\+::key\+Matrix\+::get\+Num\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+give the number of rows back 
+
+\begin{DoxyReturn}{Returns}
+number of rows in the keymatrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a3508804c32287b9694bf2329aa4f9ece}\label{classlight_music_1_1key_matrix_a3508804c32287b9694bf2329aa4f9ece}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Quant\+Of\+Pres\+Keys@{get\+Quant\+Of\+Pres\+Keys}}
+\index{get\+Quant\+Of\+Pres\+Keys@{get\+Quant\+Of\+Pres\+Keys}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Quant\+Of\+Pres\+Keys()}{getQuantOfPresKeys()}}
+{\footnotesize\ttfamily int light\+Music\+::key\+Matrix\+::get\+Quant\+Of\+Pres\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get int quantofpreskeys 
+
+\begin{DoxyReturn}{Returns}
+int quantofpreskeys 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a11147e2bed1cc44d6127d23f6d1750be}\label{classlight_music_1_1key_matrix_a11147e2bed1cc44d6127d23f6d1750be}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Row\+Value@{get\+Row\+Value}}
+\index{get\+Row\+Value@{get\+Row\+Value}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Row\+Value()}{getRowValue()}}
+{\footnotesize\ttfamily bool $\ast$ light\+Music\+::key\+Matrix\+::get\+Row\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+give the value of the row in a array 
+
+\begin{DoxyReturn}{Returns}
+array of row values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_ac0598a969eaf6469ccac2206f4456f3b}\label{classlight_music_1_1key_matrix_ac0598a969eaf6469ccac2206f4456f3b}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Velocity()}{getVelocity()}}
+{\footnotesize\ttfamily int light\+Music\+::key\+Matrix\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the velocity 
+
+\begin{DoxyReturn}{Returns}
+int velocity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a299fd57c69d7afa13da683b3e2e59368}\label{classlight_music_1_1key_matrix_a299fd57c69d7afa13da683b3e2e59368}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!min\+Max\+Quant\+Of\+Pres\+Keys@{min\+Max\+Quant\+Of\+Pres\+Keys}}
+\index{min\+Max\+Quant\+Of\+Pres\+Keys@{min\+Max\+Quant\+Of\+Pres\+Keys}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{min\+Max\+Quant\+Of\+Pres\+Keys()}{minMaxQuantOfPresKeys()}}
+{\footnotesize\ttfamily void light\+Music\+::key\+Matrix\+::min\+Max\+Quant\+Of\+Pres\+Keys (\begin{DoxyParamCaption}\item[{bool}]{min\+Max }\end{DoxyParamCaption})}
+
+
+
+set 1 minus/plus the int quant\+Of\+Press\+Keys 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Max} & minus(false) or plus(true \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a21cce0cc53842750aac7fad18652e697}\label{classlight_music_1_1key_matrix_a21cce0cc53842750aac7fad18652e697}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!min\+Max\+Velocity@{min\+Max\+Velocity}}
+\index{min\+Max\+Velocity@{min\+Max\+Velocity}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{min\+Max\+Velocity()}{minMaxVelocity()}}
+{\footnotesize\ttfamily void light\+Music\+::key\+Matrix\+::min\+Max\+Velocity (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{bool}]{min\+Max }\end{DoxyParamCaption})}
+
+
+
+set the velocity by \char`\"{}min/max number + velocity\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & how many numbers it wil change \\
+\hline
+{\em min\+Max} & minus(false) or plus(true) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a12c6a2c68f752505b080b9ec5a43601b}\label{classlight_music_1_1key_matrix_a12c6a2c68f752505b080b9ec5a43601b}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!scan\+Column@{scan\+Column}}
+\index{scan\+Column@{scan\+Column}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{scan\+Column()}{scanColumn()}}
+{\footnotesize\ttfamily void light\+Music\+::key\+Matrix\+::scan\+Column (\begin{DoxyParamCaption}\item[{const int}]{num\+Cols,  }\item[{hwlib\+::target\+::pin\+\_\+out \&}]{latch\+Pin,  }\item[{hwlib\+::target\+::pin\+\_\+out \&}]{data\+Pin,  }\item[{hwlib\+::target\+::pin\+\_\+out \&}]{clock\+Pin }\end{DoxyParamCaption})}
+
+
+
+Send to each column line a 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Cols} & Number of all the colums \\
+\hline
+{\em latch\+Pin} & The pin which transfers the byte to the device(\+Key matrix) \\
+\hline
+{\em data\+Pin} & The pin on which to output each bit \\
+\hline
+{\em clock\+Pin} & The pin to toggle once the data\+Pin has been set to correct value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_ab14732662e5383219d953562dca72093}\label{classlight_music_1_1key_matrix_ab14732662e5383219d953562dca72093}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!set@{set}}
+\index{set@{set}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void light\+Music\+::key\+Matrix\+::set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets every button of the matrix on false. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em note} & Number of the first button\textquotesingle{}s key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1key_matrix_a6b14156dc4fe97c317878e638e25b065}\label{classlight_music_1_1key_matrix_a6b14156dc4fe97c317878e638e25b065}} 
+\index{light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}!set\+Key\+Pressed@{set\+Key\+Pressed}}
+\index{set\+Key\+Pressed@{set\+Key\+Pressed}!light\+Music\+::key\+Matrix@{light\+Music\+::key\+Matrix}}
+\subsubsection{\texorpdfstring{set\+Key\+Pressed()}{setKeyPressed()}}
+{\footnotesize\ttfamily void light\+Music\+::key\+Matrix\+::set\+Key\+Pressed (\begin{DoxyParamCaption}\item[{int}]{rowctr,  }\item[{int}]{colctr,  }\item[{bool}]{data }\end{DoxyParamCaption})}
+
+
+
+set the given data to keypressed on a given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rowctr} & which row \\
+\hline
+{\em colctr} & which column \\
+\hline
+{\em data} & the data(true or false) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/ti-\/software/lightmusic/lightmusic/keymatrix.\+hpp\item 
+C\+:/ti-\/software/lightmusic/lightmusic/keymatrix.\+cpp\end{DoxyCompactItemize}

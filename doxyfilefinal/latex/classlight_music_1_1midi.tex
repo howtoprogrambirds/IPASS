@@ -1,0 +1,300 @@
+\hypertarget{classlight_music_1_1midi}{}\section{light\+Music\+:\+:midi Class Reference}
+\label{classlight_music_1_1midi}\index{light\+Music\+::midi@{light\+Music\+::midi}}
+
+
+Class to send midi messages to tx pin.  
+
+
+
+
+{\ttfamily \#include $<$midi.\+hpp$>$}
+
+Inheritance diagram for light\+Music\+:\+:midi\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classlight_music_1_1midi}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlight_music_1_1midi_a07cce4974be1f6bc22238c15cdba5867}{midi} (hwlib\+::target\+::pin\+\_\+in \&row1, hwlib\+::target\+::pin\+\_\+in \&row2, hwlib\+::target\+::pin\+\_\+in \&row3, hwlib\+::target\+::pin\+\_\+in \&row4, const int \&\hyperlink{classlight_music_1_1key_matrix_ab9fa44924cb5e674870f2602f92b39d3}{num\+Cols}, int \&note)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_a4d5928a15254e3a087130349205a11ec}{midi\+Set\+Channel\+Bank} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, uint8\+\_\+t chan, uint8\+\_\+t bank)
+\begin{DoxyCompactList}\small\item\em Set te channelbank of the vs1053. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_a5478f0b47275719046e67d673570f87f}{midi\+Set\+Instrument} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, uint8\+\_\+t chan, uint8\+\_\+t inst)
+\begin{DoxyCompactList}\small\item\em Set te instrument of the vs1053. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_aa83675530bb23b24e50d1346431d2f1f}{midi\+Set\+Channel\+Volume} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, uint8\+\_\+t chan, uint8\+\_\+t vol)
+\begin{DoxyCompactList}\small\item\em Set te Volume channel of the vs1053. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_a01bcd1c91476ac59cc6be090b2b1daef}{note\+On} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, uint8\+\_\+t chan, int row\+Ctr, int col\+Ctr, uint8\+\_\+t vel)
+\begin{DoxyCompactList}\small\item\em Send midi note on message to tx\+\_\+pin. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_a6f47e6a388993c88f087a231a4e8f776}{note\+Off} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, uint8\+\_\+t chan, int row\+Ctr, int col\+Ctr, uint8\+\_\+t vel)
+\begin{DoxyCompactList}\small\item\em Send midi note off message to tx\+\_\+pin. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_acc93cbd42e1d1257644f0102283b3db3}{midi\+Note\+On} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, int row\+Value\mbox{[}$\,$\mbox{]}, int col\+Ctr, uint8\+\_\+t chan, uint8\+\_\+t vel, bool key\+Pressed\mbox{[}9\mbox{]}\mbox{[}17\mbox{]})
+\begin{DoxyCompactList}\small\item\em Check which button is played on keymatrix. uses \hyperlink{classlight_music_1_1midi_a01bcd1c91476ac59cc6be090b2b1daef}{note\+On()} based on the check. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_ae36edf372f74e28dabe879dc7600494a}{midi\+Note\+Off} (hwlib\+::target\+::pin\+\_\+out \&tx\+\_\+pin, int row\+Valu\mbox{[}$\,$\mbox{]}, int col\+Ctr, uint8\+\_\+t chan, uint8\+\_\+t vel, bool key\+Pressed\mbox{[}9\mbox{]}\mbox{[}17\mbox{]})
+\begin{DoxyCompactList}\small\item\em Check which button is released on keymatrix. uses \hyperlink{classlight_music_1_1midi_a6f47e6a388993c88f087a231a4e8f776}{note\+Off()} based on the check. \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1midi_a8648ced30cbd9b89fb336fe874fc1102}{get\+Key\+To\+Midi\+Map} (int rowctr, int colctr)
+\begin{DoxyCompactList}\small\item\em get the value of a keytomidimap on a given location \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{classlight_music_1_1midi_a974ccfcfc13bf4dff0743ebe7d832eed}{get\+Key\+To\+Midi\+Map8t} (int rowctr, int colctr)
+\begin{DoxyCompactList}\small\item\em get the value of a keytomidimap on a given location \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1midi_a8ca9db5a0738b181107d2035a3439798}{min\+Max\+Velocity} (int number, bool min\+Max)
+\begin{DoxyCompactList}\small\item\em set the velocity by \char`\"{}min/max number + velocity\char`\"{} \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1midi_aed22201e6c80c8fb8242803e22d71032}{get\+Velocity} ()
+\begin{DoxyCompactList}\small\item\em get the velocity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class to send midi messages to tx pin. 
+
+Midi is a sub class It has six functions who makes it possible to send midi messages on the basis of the keymatrix\textquotesingle{}s input. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlight_music_1_1midi_a07cce4974be1f6bc22238c15cdba5867}\label{classlight_music_1_1midi_a07cce4974be1f6bc22238c15cdba5867}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!midi@{midi}}
+\index{midi@{midi}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{midi()}{midi()}}
+{\footnotesize\ttfamily light\+Music\+::midi\+::midi (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row1,  }\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row2,  }\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row3,  }\item[{hwlib\+::target\+::pin\+\_\+in \&}]{row4,  }\item[{const int \&}]{num\+Cols,  }\item[{int \&}]{note }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & $\sim$ Port of al the row inputs \\
+\hline
+{\em num\+\_\+cols} & $\sim$ Number of all the colums \\
+\hline
+{\em note} & $\sim$ Number of the first button\textquotesingle{}s key\\
+\hline
+\end{DoxyParams}
+initialize the same parameters as the class keymatrix 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlight_music_1_1midi_a8648ced30cbd9b89fb336fe874fc1102}\label{classlight_music_1_1midi_a8648ced30cbd9b89fb336fe874fc1102}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!get\+Key\+To\+Midi\+Map@{get\+Key\+To\+Midi\+Map}}
+\index{get\+Key\+To\+Midi\+Map@{get\+Key\+To\+Midi\+Map}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{get\+Key\+To\+Midi\+Map()}{getKeyToMidiMap()}}
+{\footnotesize\ttfamily int light\+Music\+::midi\+::get\+Key\+To\+Midi\+Map (\begin{DoxyParamCaption}\item[{int}]{rowctr,  }\item[{int}]{colctr }\end{DoxyParamCaption})}
+
+
+
+get the value of a keytomidimap on a given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rowctr} & which row \\
+\hline
+{\em colctr} & which column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int of the key on the given location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1midi_a974ccfcfc13bf4dff0743ebe7d832eed}\label{classlight_music_1_1midi_a974ccfcfc13bf4dff0743ebe7d832eed}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!get\+Key\+To\+Midi\+Map8t@{get\+Key\+To\+Midi\+Map8t}}
+\index{get\+Key\+To\+Midi\+Map8t@{get\+Key\+To\+Midi\+Map8t}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{get\+Key\+To\+Midi\+Map8t()}{getKeyToMidiMap8t()}}
+{\footnotesize\ttfamily uint8\+\_\+t light\+Music\+::midi\+::get\+Key\+To\+Midi\+Map8t (\begin{DoxyParamCaption}\item[{int}]{rowctr,  }\item[{int}]{colctr }\end{DoxyParamCaption})}
+
+
+
+get the value of a keytomidimap on a given location 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rowctr} & which row \\
+\hline
+{\em colctr} & which column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t of the key on the given location 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1midi_aed22201e6c80c8fb8242803e22d71032}\label{classlight_music_1_1midi_aed22201e6c80c8fb8242803e22d71032}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!get\+Velocity@{get\+Velocity}}
+\index{get\+Velocity@{get\+Velocity}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{get\+Velocity()}{getVelocity()}}
+{\footnotesize\ttfamily int light\+Music\+::midi\+::get\+Velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the velocity 
+
+\begin{DoxyReturn}{Returns}
+int velocity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1midi_ae36edf372f74e28dabe879dc7600494a}\label{classlight_music_1_1midi_ae36edf372f74e28dabe879dc7600494a}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!midi\+Note\+Off@{midi\+Note\+Off}}
+\index{midi\+Note\+Off@{midi\+Note\+Off}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{midi\+Note\+Off()}{midiNoteOff()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::midi\+Note\+Off (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{int}]{row\+Valu\mbox{[}$\,$\mbox{]},  }\item[{int}]{col\+Ctr,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{vel,  }\item[{bool}]{key\+Pressed\mbox{[}9\mbox{]}\mbox{[}17\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Check which button is released on keymatrix. uses \hyperlink{classlight_music_1_1midi_a6f47e6a388993c88f087a231a4e8f776}{note\+Off()} based on the check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em row\+Value} & $\sim$ Array with the values of the row \\
+\hline
+{\em col\+Ctr} & $\sim$ Container who holds the released col number \\
+\hline
+{\em chan} & $\sim$ Uint8\+\_\+t to send midi on a specific channel \\
+\hline
+{\em vel} & $\sim$ veloctity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_acc93cbd42e1d1257644f0102283b3db3}\label{classlight_music_1_1midi_acc93cbd42e1d1257644f0102283b3db3}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!midi\+Note\+On@{midi\+Note\+On}}
+\index{midi\+Note\+On@{midi\+Note\+On}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{midi\+Note\+On()}{midiNoteOn()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::midi\+Note\+On (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{int}]{row\+Value\mbox{[}$\,$\mbox{]},  }\item[{int}]{col\+Ctr,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{vel,  }\item[{bool}]{key\+Pressed\mbox{[}9\mbox{]}\mbox{[}17\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Check which button is played on keymatrix. uses \hyperlink{classlight_music_1_1midi_a01bcd1c91476ac59cc6be090b2b1daef}{note\+On()} based on the check. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em row\+Value} & $\sim$ Array with the values of the row \\
+\hline
+{\em col\+Ctr} & $\sim$ Container who holds the released col number \\
+\hline
+{\em chan} & $\sim$ Uint8\+\_\+t to send midi on a specific channel \\
+\hline
+{\em vel} & $\sim$ veloctity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_a4d5928a15254e3a087130349205a11ec}\label{classlight_music_1_1midi_a4d5928a15254e3a087130349205a11ec}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!midi\+Set\+Channel\+Bank@{midi\+Set\+Channel\+Bank}}
+\index{midi\+Set\+Channel\+Bank@{midi\+Set\+Channel\+Bank}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{midi\+Set\+Channel\+Bank()}{midiSetChannelBank()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::midi\+Set\+Channel\+Bank (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{bank }\end{DoxyParamCaption})}
+
+
+
+Set te channelbank of the vs1053. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em chan} & $\sim$ Channel \\
+\hline
+{\em bank} & $\sim$ Bank \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_aa83675530bb23b24e50d1346431d2f1f}\label{classlight_music_1_1midi_aa83675530bb23b24e50d1346431d2f1f}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!midi\+Set\+Channel\+Volume@{midi\+Set\+Channel\+Volume}}
+\index{midi\+Set\+Channel\+Volume@{midi\+Set\+Channel\+Volume}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{midi\+Set\+Channel\+Volume()}{midiSetChannelVolume()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::midi\+Set\+Channel\+Volume (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{vol }\end{DoxyParamCaption})}
+
+
+
+Set te Volume channel of the vs1053. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em chan} & $\sim$ Channel \\
+\hline
+{\em vol} & $\sim$ volume \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_a5478f0b47275719046e67d673570f87f}\label{classlight_music_1_1midi_a5478f0b47275719046e67d673570f87f}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!midi\+Set\+Instrument@{midi\+Set\+Instrument}}
+\index{midi\+Set\+Instrument@{midi\+Set\+Instrument}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{midi\+Set\+Instrument()}{midiSetInstrument()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::midi\+Set\+Instrument (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{uint8\+\_\+t}]{chan,  }\item[{uint8\+\_\+t}]{inst }\end{DoxyParamCaption})}
+
+
+
+Set te instrument of the vs1053. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em chan} & $\sim$ Channel \\
+\hline
+{\em inst} & $\sim$ Instrument \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_a8ca9db5a0738b181107d2035a3439798}\label{classlight_music_1_1midi_a8ca9db5a0738b181107d2035a3439798}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!min\+Max\+Velocity@{min\+Max\+Velocity}}
+\index{min\+Max\+Velocity@{min\+Max\+Velocity}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{min\+Max\+Velocity()}{minMaxVelocity()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::min\+Max\+Velocity (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{bool}]{min\+Max }\end{DoxyParamCaption})}
+
+
+
+set the velocity by \char`\"{}min/max number + velocity\char`\"{} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & how many numbers it wil change \\
+\hline
+{\em min\+Max} & minus(false) or plus(true) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_a6f47e6a388993c88f087a231a4e8f776}\label{classlight_music_1_1midi_a6f47e6a388993c88f087a231a4e8f776}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!note\+Off@{note\+Off}}
+\index{note\+Off@{note\+Off}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{note\+Off()}{noteOff()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::note\+Off (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{uint8\+\_\+t}]{chan,  }\item[{int}]{row\+Ctr,  }\item[{int}]{col\+Ctr,  }\item[{uint8\+\_\+t}]{vel }\end{DoxyParamCaption})}
+
+
+
+Send midi note off message to tx\+\_\+pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em chan} & $\sim$ Uint8\+\_\+t to send midi on a specific channel \\
+\hline
+{\em row\+Ctr} & $\sim$ Container who holds the released row number \\
+\hline
+{\em col\+Ctr} & $\sim$ Container who holds the released col number \\
+\hline
+{\em vel} & $\sim$ velocity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1midi_a01bcd1c91476ac59cc6be090b2b1daef}\label{classlight_music_1_1midi_a01bcd1c91476ac59cc6be090b2b1daef}} 
+\index{light\+Music\+::midi@{light\+Music\+::midi}!note\+On@{note\+On}}
+\index{note\+On@{note\+On}!light\+Music\+::midi@{light\+Music\+::midi}}
+\subsubsection{\texorpdfstring{note\+On()}{noteOn()}}
+{\footnotesize\ttfamily void light\+Music\+::midi\+::note\+On (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{tx\+\_\+pin,  }\item[{uint8\+\_\+t}]{chan,  }\item[{int}]{row\+Ctr,  }\item[{int}]{col\+Ctr,  }\item[{uint8\+\_\+t}]{vel }\end{DoxyParamCaption})}
+
+
+
+Send midi note on message to tx\+\_\+pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+pin} & $\sim$ The pin on which sends midi messages \\
+\hline
+{\em chan} & $\sim$ Uint8\+\_\+t to send midi on a specific channel \\
+\hline
+{\em row\+Ctr} & $\sim$ Container who holds the pressed row number \\
+\hline
+{\em col\+Ctr} & $\sim$ Container who holds the pressed col number \\
+\hline
+{\em vel} & $\sim$ velocity \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/ti-\/software/lightmusic/lightmusic/midi.\+hpp\item 
+C\+:/ti-\/software/lightmusic/lightmusic/midi.\+cpp\end{DoxyCompactItemize}

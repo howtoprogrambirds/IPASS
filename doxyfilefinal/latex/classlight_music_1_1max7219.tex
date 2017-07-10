@@ -1,0 +1,250 @@
+\hypertarget{classlight_music_1_1max7219}{}\section{light\+Music\+:\+:max7219 Class Reference}
+\label{classlight_music_1_1max7219}\index{light\+Music\+::max7219@{light\+Music\+::max7219}}
+
+
+Class to set and draw on the \hyperlink{classlight_music_1_1max7219}{max7219} 8x8 matrixes.  
+
+
+
+
+{\ttfamily \#include $<$max7219.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlight_music_1_1max7219_a46f63fd7ef87caa1372a54d7d0504163}{max7219} (hwlib\+::target\+::pin\+\_\+out \&din, hwlib\+::target\+::pin\+\_\+out \&clk, hwlib\+::target\+::pin\+\_\+out \&load)
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_aeebab4f9b18a9a949b2250b1043aeb27}{set\+Pixel} (int x, int y, bool data)
+\begin{DoxyCompactList}\small\item\em Funtion Set a pixel on the outputmatrix. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_a7173e81fccc1aac88737c7a47304d481}{draw\+Pixel} (int x, int y, bool data)
+\begin{DoxyCompactList}\small\item\em Funtion Set a pixel draw it direct after setting it on the outputmatrix. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_ac17b41eaeb4f2ff86a8e3c6e325ae183}{pulse\+Clk} (hwlib\+::target\+::pin\+\_\+out clk, int wait)
+\begin{DoxyCompactList}\small\item\em Pulse the clkpin once. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_a8ae67d8bb04df14a5e97b2c080a3ac06}{send\+Data\+Repeat} (const uint16\+\_\+t data, const uint8\+\_\+t repeat)
+\begin{DoxyCompactList}\small\item\em Shift data to the din pin, its repeating it so many time as it\textquotesingle{}s own value repeat, it use the function shift data and it set the load \char`\"{}low\char`\"{} before it and \char`\"{}high\char`\"{} after. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_a33e75f73d1dd7c12ade3ee9d28bcdca7}{setup} (const uint8\+\_\+t display\+Test, const uint8\+\_\+t scan\+Limit, const uint8\+\_\+t decode, const uint8\+\_\+t intensity, const uint8\+\_\+t shutdown)
+\begin{DoxyCompactList}\small\item\em setup the matrix so its possible to use \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_aad2aed3a52ed6c26ab907d05f3740b7e}{set8x8\+Matrix} (const int inputmatrix\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}, int ledX)
+\begin{DoxyCompactList}\small\item\em Sets a 8x8 matrix in the output matrix, it is possible to set the matrix at the first second thirth and last matrix,. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1max7219_aab6d44530bb37580982654432e9171c8}{set\+Full4\+\_\+8x8\+Ch\+Matrix} (const int ch1\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}, const int ch2\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}, const int ch3\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}, const int ch4\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+ZE+1\mbox{]})
+\begin{DoxyCompactList}\small\item\em set four 8x8 matrixes to the four ledmatrix \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{classlight_music_1_1max7219_a90bb4806e930ccfac74ca33c7716fc3f}{hunderd\+Number\+Sep\+Num} (int hunderd)
+\begin{DoxyCompactList}\small\item\em seperate a hunderd number in 3 seperate numbers. \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1max7219_a6e3db6f8018bc2b3248a1226e4e07682}{semitone\+Code} (int keymidinumber)
+\begin{DoxyCompactList}\small\item\em convert the midikeynumber to semitone \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlight_music_1_1max7219_a483ed3b3de5d4aff64eb1b133cd35688}\label{classlight_music_1_1max7219_a483ed3b3de5d4aff64eb1b133cd35688}} 
+void \hyperlink{classlight_music_1_1max7219_a483ed3b3de5d4aff64eb1b133cd35688}{clear\+Display} ()
+\begin{DoxyCompactList}\small\item\em sets the output\+Matrix to 0 and draws it to the ledmatrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlight_music_1_1max7219_a36ac65282e84e7ed37470a93af3bce6b}\label{classlight_music_1_1max7219_a36ac65282e84e7ed37470a93af3bce6b}} 
+void \hyperlink{classlight_music_1_1max7219_a36ac65282e84e7ed37470a93af3bce6b}{draw} ()
+\begin{DoxyCompactList}\small\item\em draws the outputmatrix to the ledmatrix \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlight_music_1_1max7219_aa9356c5bb77c6a020c474454e8860058}\label{classlight_music_1_1max7219_aa9356c5bb77c6a020c474454e8860058}} 
+void \hyperlink{classlight_music_1_1max7219_aa9356c5bb77c6a020c474454e8860058}{check\+Output\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em writes the outputmatrix out with hwlib\+::cout \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to set and draw on the \hyperlink{classlight_music_1_1max7219}{max7219} 8x8 matrixes. 
+
+\hyperlink{classlight_music_1_1max7219}{max7219} is a class with 8 functions, who makes it possible to set, draw and clear 8x8 matrixes 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlight_music_1_1max7219_a46f63fd7ef87caa1372a54d7d0504163}\label{classlight_music_1_1max7219_a46f63fd7ef87caa1372a54d7d0504163}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!max7219@{max7219}}
+\index{max7219@{max7219}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{max7219()}{max7219()}}
+{\footnotesize\ttfamily light\+Music\+::max7219\+::max7219 (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out \&}]{din,  }\item[{hwlib\+::target\+::pin\+\_\+out \&}]{clk,  }\item[{hwlib\+::target\+::pin\+\_\+out \&}]{load }\end{DoxyParamCaption})}
+
+
+
+Construtor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em din} & Pin data\+In \\
+\hline
+{\em clk} & Pin clock \\
+\hline
+{\em load} & Pin load\\
+\hline
+\end{DoxyParams}
+sets the din-\/outputpin, clock-\/outputpin, load/cs-\/outputpin 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlight_music_1_1max7219_a7173e81fccc1aac88737c7a47304d481}\label{classlight_music_1_1max7219_a7173e81fccc1aac88737c7a47304d481}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!draw\+Pixel@{draw\+Pixel}}
+\index{draw\+Pixel@{draw\+Pixel}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{draw\+Pixel()}{drawPixel()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::draw\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{bool}]{data }\end{DoxyParamCaption})}
+
+
+
+Funtion Set a pixel draw it direct after setting it on the outputmatrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & $\sim$ Indicates the x-\/axis where the pixel have to be set \\
+\hline
+{\em y} & $\sim$ Indicates the y-\/axis where the pixel have to be set \\
+\hline
+{\em data} & $\sim$ Is the data that will be set on the location it is default 1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1max7219_a90bb4806e930ccfac74ca33c7716fc3f}\label{classlight_music_1_1max7219_a90bb4806e930ccfac74ca33c7716fc3f}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!hunderd\+Number\+Sep\+Num@{hunderd\+Number\+Sep\+Num}}
+\index{hunderd\+Number\+Sep\+Num@{hunderd\+Number\+Sep\+Num}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{hunderd\+Number\+Sep\+Num()}{hunderdNumberSepNum()}}
+{\footnotesize\ttfamily int $\ast$ light\+Music\+::max7219\+::hunderd\+Number\+Sep\+Num (\begin{DoxyParamCaption}\item[{int}]{hunderd }\end{DoxyParamCaption})}
+
+
+
+seperate a hunderd number in 3 seperate numbers. 
+
+Example\+: 158 -\/$>$ 1,5,8; 94 -\/$>$ 0,9,4 
+\begin{DoxyParams}{Parameters}
+{\em hunderd} & int to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array with 3 numbers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1max7219_ac17b41eaeb4f2ff86a8e3c6e325ae183}\label{classlight_music_1_1max7219_ac17b41eaeb4f2ff86a8e3c6e325ae183}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!pulse\+Clk@{pulse\+Clk}}
+\index{pulse\+Clk@{pulse\+Clk}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{pulse\+Clk()}{pulseClk()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::pulse\+Clk (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out}]{clk,  }\item[{int}]{wait = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Pulse the clkpin once. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clk} & Pin clock \\
+\hline
+{\em wait} & How many ms you want to slow the pulse down, default is 0 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1max7219_a6e3db6f8018bc2b3248a1226e4e07682}\label{classlight_music_1_1max7219_a6e3db6f8018bc2b3248a1226e4e07682}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!semitone\+Code@{semitone\+Code}}
+\index{semitone\+Code@{semitone\+Code}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{semitone\+Code()}{semitoneCode()}}
+{\footnotesize\ttfamily int light\+Music\+::max7219\+::semitone\+Code (\begin{DoxyParamCaption}\item[{int}]{keymidinumber }\end{DoxyParamCaption})}
+
+
+
+convert the midikeynumber to semitone 
+
+14 -\/$>$ 2, 18 -\/$>$ 6 
+\begin{DoxyParams}{Parameters}
+{\em keymidinumber} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int of semitone 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1max7219_a8ae67d8bb04df14a5e97b2c080a3ac06}\label{classlight_music_1_1max7219_a8ae67d8bb04df14a5e97b2c080a3ac06}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!send\+Data\+Repeat@{send\+Data\+Repeat}}
+\index{send\+Data\+Repeat@{send\+Data\+Repeat}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{send\+Data\+Repeat()}{sendDataRepeat()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::send\+Data\+Repeat (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{data,  }\item[{const uint8\+\_\+t}]{repeat }\end{DoxyParamCaption})}
+
+
+
+Shift data to the din pin, its repeating it so many time as it\textquotesingle{}s own value repeat, it use the function shift data and it set the load \char`\"{}low\char`\"{} before it and \char`\"{}high\char`\"{} after. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pin Data \\
+\hline
+{\em repeat} & How many times the shift repeats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1max7219_aad2aed3a52ed6c26ab907d05f3740b7e}\label{classlight_music_1_1max7219_aad2aed3a52ed6c26ab907d05f3740b7e}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!set8x8\+Matrix@{set8x8\+Matrix}}
+\index{set8x8\+Matrix@{set8x8\+Matrix}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{set8x8\+Matrix()}{set8x8Matrix()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::set8x8\+Matrix (\begin{DoxyParamCaption}\item[{const int}]{inputmatrix\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]},  }\item[{int}]{ledX }\end{DoxyParamCaption})}
+
+
+
+Sets a 8x8 matrix in the output matrix, it is possible to set the matrix at the first second thirth and last matrix,. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inputmatrix} & 8x8 matrix, character what have to write to the output matrix \\
+\hline
+{\em outputmatrix} & The full matrix where the inputmatrix will be set \\
+\hline
+{\em ledX} & Use for where to set the inputmatrix, first, second, thirth or last matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1max7219_aab6d44530bb37580982654432e9171c8}\label{classlight_music_1_1max7219_aab6d44530bb37580982654432e9171c8}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!set\+Full4\+\_\+8x8\+Ch\+Matrix@{set\+Full4\+\_\+8x8\+Ch\+Matrix}}
+\index{set\+Full4\+\_\+8x8\+Ch\+Matrix@{set\+Full4\+\_\+8x8\+Ch\+Matrix}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{set\+Full4\+\_\+8x8\+Ch\+Matrix()}{setFull4\_8x8ChMatrix()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::set\+Full4\+\_\+8x8\+Ch\+Matrix (\begin{DoxyParamCaption}\item[{const int}]{ch1\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]},  }\item[{const int}]{ch2\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]},  }\item[{const int}]{ch3\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]},  }\item[{const int}]{ch4\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]}\mbox{[}const\+Max7219\+::\+L\+E\+D\+M\+A\+T\+R\+I\+X\+\_\+\+S\+I\+Z\+E+1\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+set four 8x8 matrixes to the four ledmatrix 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch1} & first 8x8 matrix \\
+\hline
+{\em ch2} & second 8x8 matrix \\
+\hline
+{\em ch3} & thirth 8x8 matrix \\
+\hline
+{\em ch4} & fourth 8x8 matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1max7219_aeebab4f9b18a9a949b2250b1043aeb27}\label{classlight_music_1_1max7219_aeebab4f9b18a9a949b2250b1043aeb27}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!set\+Pixel@{set\+Pixel}}
+\index{set\+Pixel@{set\+Pixel}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{set\+Pixel()}{setPixel()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::set\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{bool}]{data }\end{DoxyParamCaption})}
+
+
+
+Funtion Set a pixel on the outputmatrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & $\sim$ Indicates the x-\/axis where the pixel have to be set \\
+\hline
+{\em y} & $\sim$ Indicates the y-\/axis where the pixel have to be set \\
+\hline
+{\em data} & $\sim$ Is the data that will be set on the location it is default 1 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlight_music_1_1max7219_a33e75f73d1dd7c12ade3ee9d28bcdca7}\label{classlight_music_1_1max7219_a33e75f73d1dd7c12ade3ee9d28bcdca7}} 
+\index{light\+Music\+::max7219@{light\+Music\+::max7219}!setup@{setup}}
+\index{setup@{setup}!light\+Music\+::max7219@{light\+Music\+::max7219}}
+\subsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void light\+Music\+::max7219\+::setup (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{display\+Test,  }\item[{const uint8\+\_\+t}]{scan\+Limit,  }\item[{const uint8\+\_\+t}]{decode,  }\item[{const uint8\+\_\+t}]{intensity,  }\item[{const uint8\+\_\+t}]{shutdown }\end{DoxyParamCaption})}
+
+
+
+setup the matrix so its possible to use 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Test} & register data for the displaytest \\
+\hline
+{\em scan\+Limit} & register data for setting the scanlimit \\
+\hline
+{\em decode} & register data for setting the decode mode \\
+\hline
+{\em intensity} & register data for setting the instensity \\
+\hline
+{\em shutdown} & register data for using shutdown \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/ti-\/software/lightmusic/lightmusic/max7219.\+hpp\item 
+C\+:/ti-\/software/lightmusic/lightmusic/max7219.\+cpp\end{DoxyCompactItemize}

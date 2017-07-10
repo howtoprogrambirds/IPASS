@@ -1,0 +1,71 @@
+\hypertarget{classlight_music_1_1buzzer}{}\section{light\+Music\+:\+:buzzer Class Reference}
+\label{classlight_music_1_1buzzer}\index{light\+Music\+::buzzer@{light\+Music\+::buzzer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlight_music_1_1buzzer_aa708682093bf3831c1d54e75ef21eb63}{buzzer} (hwlib\+::target\+::pin\+\_\+out sig)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classlight_music_1_1buzzer_a5fed541127d6e863a4981b79388ab1bb}{tone} (int hertz)
+\begin{DoxyCompactList}\small\item\em play the tone by given hertz \end{DoxyCompactList}\item 
+int \hyperlink{classlight_music_1_1buzzer_a51b71d6a57ac66340e67f641fb3d3a69}{key\+Midi\+Map\+To\+Hertz} (int Key\+Midi\+Number)
+\begin{DoxyCompactList}\small\item\em calculate the hertz by given midi\+Key\+Number and returns the hertz in int \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlight_music_1_1buzzer_aa708682093bf3831c1d54e75ef21eb63}\label{classlight_music_1_1buzzer_aa708682093bf3831c1d54e75ef21eb63}} 
+\index{light\+Music\+::buzzer@{light\+Music\+::buzzer}!buzzer@{buzzer}}
+\index{buzzer@{buzzer}!light\+Music\+::buzzer@{light\+Music\+::buzzer}}
+\subsubsection{\texorpdfstring{buzzer()}{buzzer()}}
+{\footnotesize\ttfamily light\+Music\+::buzzer\+::buzzer (\begin{DoxyParamCaption}\item[{hwlib\+::target\+::pin\+\_\+out}]{sig }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sig} & signal output pin for the buzzer\\
+\hline
+\end{DoxyParams}
+sets the output pin to the given output pin 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlight_music_1_1buzzer_a51b71d6a57ac66340e67f641fb3d3a69}\label{classlight_music_1_1buzzer_a51b71d6a57ac66340e67f641fb3d3a69}} 
+\index{light\+Music\+::buzzer@{light\+Music\+::buzzer}!key\+Midi\+Map\+To\+Hertz@{key\+Midi\+Map\+To\+Hertz}}
+\index{key\+Midi\+Map\+To\+Hertz@{key\+Midi\+Map\+To\+Hertz}!light\+Music\+::buzzer@{light\+Music\+::buzzer}}
+\subsubsection{\texorpdfstring{key\+Midi\+Map\+To\+Hertz()}{keyMidiMapToHertz()}}
+{\footnotesize\ttfamily int light\+Music\+::buzzer\+::key\+Midi\+Map\+To\+Hertz (\begin{DoxyParamCaption}\item[{int}]{Key\+Midi\+Number }\end{DoxyParamCaption})}
+
+
+
+calculate the hertz by given midi\+Key\+Number and returns the hertz in int 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key\+Midi\+Number} & the number of the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns hertz in int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlight_music_1_1buzzer_a5fed541127d6e863a4981b79388ab1bb}\label{classlight_music_1_1buzzer_a5fed541127d6e863a4981b79388ab1bb}} 
+\index{light\+Music\+::buzzer@{light\+Music\+::buzzer}!tone@{tone}}
+\index{tone@{tone}!light\+Music\+::buzzer@{light\+Music\+::buzzer}}
+\subsubsection{\texorpdfstring{tone()}{tone()}}
+{\footnotesize\ttfamily void light\+Music\+::buzzer\+::tone (\begin{DoxyParamCaption}\item[{int}]{hertz }\end{DoxyParamCaption})}
+
+
+
+play the tone by given hertz 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hertz} & the hertz in ints \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/ti-\/software/lightmusic/lightmusic/buzzer.\+hpp\item 
+C\+:/ti-\/software/lightmusic/lightmusic/buzzer.\+cpp\end{DoxyCompactItemize}
