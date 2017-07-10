@@ -94,14 +94,20 @@ public:
     
     /**
      * @brief setup the matrix so its possible to use
+     * @param displayTest register data for the displaytest
+     * @param scanLimit register data for setting the scanlimit
+     * @param decode register data for setting the decode mode
+     * @param intensity register data for setting the instensity
+     * @param shutdown register data for using shutdown
      */
+     
     void setup(const uint8_t displayTest, const uint8_t scanLimit, const uint8_t decode, const uint8_t intensity,  const uint8_t shutdown);
     
     /**
      * @brief Sets a 8x8 matrix in the output matrix, it is possible to set the matrix at the first second thirth and last matrix,
-     * @param inputmatrix       8x8 matrix, character what have to write to the output matrix
-     * @param outputmatrix      The full matrix where the inputmatrix will be set
-     * @param ledX              Use for where to set the inputmatrix, first, second, thirth or last matrix
+     * @param inputmatrix 8x8 matrix, character what have to write to the output matrix
+     * @param outputmatrix The full matrix where the inputmatrix will be set
+     * @param ledX Use for where to set the inputmatrix, first, second, thirth or last matrix
      */
     void set8x8Matrix(const int inputmatrix[constMax7219::LEDMATRIX_SIZE+1][constMax7219::LEDMATRIX_SIZE +1], int ledX);
     

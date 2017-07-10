@@ -101,12 +101,12 @@ bool* keyMatrix::getRowValue(){
 }
 
 //return number of rows in the keyMatrix
-int keyMatrix::getNum_rows(){
+int keyMatrix::getNumRows(){
     return numRows;
 }
 
 //return number of cols in the keyMatrix
-int keyMatrix::getNum_cols(){
+int keyMatrix::getNumCols(){
     return numCols;
 }
 

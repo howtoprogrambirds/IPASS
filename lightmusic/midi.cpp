@@ -168,6 +168,10 @@ void midi::midiNoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int col
     }
 }
 
+    /*****************
+     GETTERS/SETTERS     
+    *****************/
+
 //get the value of a keytomidimap on a given location in int
 int midi::getKeyToMidiMap(int rowctr, int colctr){
     return keyToMidiMap[rowctr][colctr];

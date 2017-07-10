@@ -58,13 +58,13 @@ public:
     /**
     * @brief Constructor
     * @param row Port of al the row inputs
-    * @param num_cols Number of all the colums
+    * @param numCols Number of all the colums
     * @param note Number of the first button's key
     * 
     * @details
     * sets row with param row, num_row with the number of the pins of row, num_cols with param num_cols
     */
-    keyMatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols);
+    keyMatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & numCols);
     
     /*****************
         FUNCTIONS     
@@ -78,7 +78,7 @@ public:
     
      /**
      * @brief Send to each column line a 1 
-     * @param num_cols Number of all the colums
+     * @param numCols Number of all the colums
      * @param latchPin The pin which transfers the byte to the device(Key matrix)
      * @param dataPin The pin on which to output each bit
      * @param clockPin The pin to toggle once the dataPin has been set to correct value
@@ -99,13 +99,13 @@ public:
      * @brief give the number of rows back
      * @return number of rows in the keymatrix
      */
-    int getNum_rows();
+    int getNumRows();
     
     /**
      * @brief give the number of cols back
      * @return int of cols in the keymatrix
      */
-    int getNum_cols();
+    int getNumCols();
     
     /**
      * @brief get the value of a keypressed on a given location

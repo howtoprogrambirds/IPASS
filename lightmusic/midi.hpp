@@ -125,6 +125,10 @@ public:
      */
     void midiNoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
     
+    /*****************
+     GETTERS/SETTERS     
+    *****************/
+    
     /**
      * @brief get the value of a keytomidimap on a given location
      * @param rowctr which row
