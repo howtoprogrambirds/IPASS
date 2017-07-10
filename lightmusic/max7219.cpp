@@ -34,7 +34,7 @@ max7219::max7219(hwlib::target::pin_out din, hwlib::target::pin_out clk, hwlib::
     hwlib::wait_ms(1000);
 }
 
-//set a pixel on the big matrix(8,32)
+//set a pixel on the outputmatrix
 void max7219::setPixel(int x, int y, bool data){
     if( (x < constmax7219::LEDMATRIX_SIZE+1 ) && (x > 0) && (y < constmax7219::LEDMATRIX_SIZE*constmax7219::MAX7219_QUANTITY+1) && (y > 0) ){
         outputmatrix[x][y] = data;

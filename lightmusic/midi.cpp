@@ -27,14 +27,35 @@
 namespace lightmusic{
 
 //constructor initialize the same as the class keymatrix
-midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note):
-    keymatrix(row, num_cols, note)
+midi::midi(hwlib::port_in_from_pins & row, const int & num_cols, int & note):
+    keymatrix(row, num_cols),
+    note(note)
 {
+    for(int rowCtr = 0; rowCtr < num_rows; ++rowCtr){
+        
+        for(int colCtr = 0; colCtr < num_cols; ++colCtr){
+            
+            //TEST//
+            //hwlib::cout << note << "  ";
+            
+            //sets the KeytoMidiMap of the button with his own note
+            keyToMidiMap[colCtr][rowCtr] = note;
+            
+            //TEST//
+            //int midi = keyToMidiMap[colCtr][rowCtr];
+            //hwlib::cout << midi << "  ";
+            
+            note++;
+        }
+        //TEST//
+        //hwlib::cout << "\n\n";
+    }    
 }
 
 /*****************
     FUNCTIONS       
 *****************/  
+
 
 //Set te channelbank of the vs1053
 void midi::midiSetChannelBank(hwlib::target::pin_out & tx_pin, uint8_t chan, uint8_t bank){
@@ -147,4 +168,30 @@ void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int col
     }
 }
 
+//get the value of a keytomidimap on a given location in int
+int midi::getkeytomidimap(int rowctr, int colctr){
+    return keyToMidiMap[rowctr][colctr];
+}
+
+//get the value of a keytomidimap on a given location in int8_t
+uint8_t midi::getkeytomidimap8t(int rowctr, int colctr){
+    return keyToMidiMap[rowctr][colctr];
+}
+
+//set the velocity by "min/max number + velocity"
+void midi::minMaxVelocity(int number, bool minMax){
+    if(minMax == 1 && ((velocity+number) <= 127)){
+        hwlib::cout << velocity;
+        velocity += number;
+    }
+    else if(minMax == 0 && ((velocity-number) >= 0)){
+        velocity -= number;
+    }
+
+}
+
+//get the velocity
+int midi::getVelocity(){
+    return velocity;
+}
 }

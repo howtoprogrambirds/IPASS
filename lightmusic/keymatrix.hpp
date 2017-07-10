@@ -33,8 +33,8 @@ namespace lightmusic{
  *
  * @details   
  * keymatrix is a class with 5 functions,
- * who makes it possible to setup the keymatrix, 
- * scan the colums with using of shiftout function.
+ * which makes it possible to setup the keymatrix, 
+ * scan the colums by using the shiftout function.
  * And to return the number of cols and rows
  */
     
@@ -44,11 +44,9 @@ private:
     hwlib::port_in_from_pins row;                               ///< Port_in_from_pins of al the row inputs
     int note;                                                   ///< Number of the first button's key
     int bits[8] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};    ///< Array uses for scanning the columns
-    bool keyPressed[9][17];                                     ///< Bool used for detection of a pushed button or releaved button
-    uint8_t keyToMidiMap[9][17];                                ///< Uint8_t used for setting every button to a key
-    int velocity = 127;                                         ///< Indicate the velocity, default 127
+    bool keyPressed[8][8];                                      ///< Bool used for detection of a pushed button or releaved button
     int quantOfPresButtons = 0;                                 ///< How many buttons are pressed, default 0
-    protected:
+protected:
     int num_rows;                                               ///< Number of all the rows  
     int num_cols;                                               ///< Number of all the colums
 public:
@@ -62,32 +60,24 @@ public:
     * @details
     * sets row with param row, num_row with the number of the pins of row, num_cols with param num_cols
     */
-    keymatrix(hwlib::port_in_from_pins & row, const int & num_cols, const int & note);
+    keymatrix(hwlib::port_in_from_pins & row, const int & num_cols);
     
     /*****************
         FUNCTIONS     
     *****************/
     
     /**
-     * @brief Sets every button of the matrix on false and gives his own key
+     * @brief Sets every button of the matrix on false
      * @param note Number of the first button's key
      */
     void set();
     
-    /**
-     * @brief Shifts out a byte of data one bit at a time
-     * @param dataPin The pin on which to output each bit
-     * @param clockPin The pin to toggle once the dataPin has been set to correct value
-     * @param val The data to shift out
-     */
-    void shiftOut(hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin, uint8_t val);
-    
      /**
      * @brief Send to each column line a 1 
-     * @param num_cols  ~ Number of all the colums
-     * @param latchPin  ~ The pin which transfers the byte to the device(Key matrix)
-     * @param dataPin   ~ The pin on which to output each bit
-     * @param clockPin  ~ The pin to toggle once the dataPin has been set to correct value
+     * @param num_cols Number of all the colums
+     * @param latchPin The pin which transfers the byte to the device(Key matrix)
+     * @param dataPin The pin on which to output each bit
+     * @param clockPin The pin to toggle once the dataPin has been set to correct value
      */
     void scanColumn(const int num_cols, hwlib::target::pin_out & latchPin, hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin);
     

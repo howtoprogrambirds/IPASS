@@ -72,10 +72,11 @@ int main( void ){
     //uint8_t keyToMidiMap[9][17];        ///< Uint8_t used for setting every button to a key
     
     //makes a object myMidi
-    lightmusic::midi myMidi(rows, NUM_COLS, 81);
+    int note = 81;
+    lightmusic::midi myMidi(rows, NUM_COLS, note);
     
     //set the keymatrix of myMidi every keypressed on false and keytomidimap to his note 
-    myMidi.set();
+    //myMidi.set();
     
     while(true){
         for (int colCtr = 0; colCtr < NUM_COLS; ++colCtr){
@@ -127,11 +128,9 @@ int main( void ){
                         ledmatrix.draw();
                     }
                 }
-            }
             //midinoteOff checks if the input is false again and sends his own midi messages with note off
             //myMidi.midinoteOff(txPin, rowValue, colCtr, 0, 127, keyPressed, keyToMidiMap);
-            for(int rowCtr=0; rowCtr< NUM_ROWS; ++rowCtr){
-                if(rowValue[rowCtr] == 0 && myMidi.getkeypressed(rowCtr, colCtr)){
+                else if(rowValue[rowCtr] == 0 && myMidi.getkeypressed(rowCtr, colCtr)){
                     myMidi.setkeypressed(rowCtr, colCtr, false);
                     myMidi.noteOff(txPin, 0x00, rowCtr, colCtr, myMidi.getVelocity());
                     myMidi.minMaxQuantOfPresKeys(0);

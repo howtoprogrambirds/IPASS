@@ -38,6 +38,10 @@ namespace lightmusic{
  */
 
 class midi: public keymatrix{
+private:
+    uint8_t keyToMidiMap[8][8];                                 ///< Uint8_t used for setting every button to a key
+    int velocity = 127;                                         ///< Indicate the velocity, default 127
+    int note;
 public:
 
     /**
@@ -49,7 +53,7 @@ public:
      * @details
      * initialize the same parameters as the class keymatrix
      */
-    midi(hwlib::port_in_from_pins & row, const int & num_cols, const int & note);
+    midi(hwlib::port_in_from_pins & row, const int & num_cols, int & note);
     
     
     
@@ -120,6 +124,35 @@ public:
      * @param vel       ~ veloctity
      */
     void midinoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
+    
+    /**
+     * @brief get the value of a keytomidimap on a given location
+     * @param rowctr which row
+     * @param colctr which column
+     * @return int of the key on the given location
+     */
+    int getkeytomidimap(int rowctr, int colctr);
+    
+    /**
+     * @brief get the value of a keytomidimap on a given location
+     * @param rowctr which row
+     * @param colctr which column
+     * @return uint8_t of the key on the given location
+     */
+    uint8_t getkeytomidimap8t(int rowctr, int colctr);
+    
+    /**
+     * @brief set the velocity by "min/max number + velocity"
+     * @param number how many numbers it wil change
+     * @param minMax minus(false) or plus(true)
+     */
+    void minMaxVelocity(int number, bool minMax);
+    
+    /**
+     * @brief get the velocity
+     * @return int velocity
+     */
+    int getVelocity();
 };
 
 }
