@@ -26,7 +26,7 @@
 #include "keymatrix.hpp"
 #include "hwlib.hpp"
 
-namespace lightmusic{
+namespace lightMusic{
 
  /**
  * @class     midi
@@ -37,7 +37,7 @@ namespace lightmusic{
  * to send midi messages on the basis of the keymatrix's input.
  */
 
-class midi: public keymatrix{
+class midi: public keyMatrix{
 private:
     uint8_t keyToMidiMap[8][8];                                 ///< Uint8_t used for setting every button to a key
     int velocity = 127;                                         ///< Indicate the velocity, default 127
@@ -53,7 +53,7 @@ public:
      * @details
      * initialize the same parameters as the class keymatrix
      */
-    midi(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols, int & note);
+    midi(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & numCols, int & note);
     
     
     
@@ -113,7 +113,7 @@ public:
      * @param chan      ~ Uint8_t to send midi on a specific channel
      * @param vel       ~ veloctity
      */
-    void midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
+    void midiNoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
     
     /**
      * @brief Check which button is released on keymatrix. uses noteOff() based on the check.
@@ -123,7 +123,7 @@ public:
      * @param chan      ~ Uint8_t to send midi on a specific channel
      * @param vel       ~ veloctity
      */
-    void midinoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
+    void midiNoteOff(hwlib::target::pin_out & tx_pin, int rowValu[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]);
     
     /**
      * @brief get the value of a keytomidimap on a given location
@@ -131,7 +131,7 @@ public:
      * @param colctr which column
      * @return int of the key on the given location
      */
-    int getkeytomidimap(int rowctr, int colctr);
+    int getKeyToMidiMap(int rowctr, int colctr);
     
     /**
      * @brief get the value of a keytomidimap on a given location
@@ -139,7 +139,7 @@ public:
      * @param colctr which column
      * @return uint8_t of the key on the given location
      */
-    uint8_t getkeytomidimap8t(int rowctr, int colctr);
+    uint8_t getKeyToMidiMap8t(int rowctr, int colctr);
     
     /**
      * @brief set the velocity by "min/max number + velocity"

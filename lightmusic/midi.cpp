@@ -24,16 +24,16 @@
 #include "midi.hpp"
 #include "constantsmidi.hpp"
 
-namespace lightmusic{
+namespace lightMusic{
 
 //constructor initialize the same as the class keymatrix
-midi::midi(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols, int & note):
-    keymatrix(row1, row2, row3, row4, num_cols),
+midi::midi(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & numCols, int & note):
+    keyMatrix(row1, row2, row3, row4, numCols),
     note(note)
 {
-    for(int rowCtr = 0; rowCtr < num_rows; ++rowCtr){
+    for(int rowCtr = 0; rowCtr < numRows; ++rowCtr){
         
-        for(int colCtr = 0; colCtr < num_cols; ++colCtr){
+        for(int colCtr = 0; colCtr < numCols; ++colCtr){
             
             //TEST//
             //hwlib::cout << note << "  ";
@@ -62,8 +62,8 @@ void midi::midiSetChannelBank(hwlib::target::pin_out & tx_pin, uint8_t chan, uin
     if (chan > 15)  return;
     if (bank > 127) return;
     
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_BANK, tx_pin, 31250);           //midi_chan_bank
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constMidi::STATUS_MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constMidi::STATUS_MIDI_CHAN_BANK, tx_pin, 31250);           //midi_chan_bank
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(bank, tx_pin, 31250);
 }
 
@@ -74,7 +74,7 @@ void midi::midiSetInstrument(hwlib::target::pin_out & tx_pin, uint8_t chan, uint
     inst --; // page 32 of the datasheet vs1053 has instruments starting with 1 not 0
     if (inst > 127) return;
   
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_PROGRAM | chan, tx_pin, 31250);    //midi_chan_program
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constMidi::STATUS_MIDI_CHAN_PROGRAM | chan, tx_pin, 31250);    //midi_chan_program
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(inst, tx_pin, 31250);
 }
 
@@ -83,8 +83,8 @@ void midi::midiSetChannelVolume(hwlib::target::pin_out & tx_pin, uint8_t chan, u
     if (chan > 15) return;
     if (vol > 127) return;
 
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg  
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constmidi::STATUS_MIDI_CHAN_VOLUME, tx_pin, 31250);           //midi_chan_volume
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constMidi::STATUS_MIDI_CHAN_MSG | chan, tx_pin, 31250);    //midi_chan_msg  
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(constMidi::STATUS_MIDI_CHAN_VOLUME, tx_pin, 31250);           //midi_chan_volume
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(vol, tx_pin, 31250);
 }
 
@@ -95,7 +95,7 @@ void midi::noteOn(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, int
 
   
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(0x90 | chan, tx_pin, 31250);
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(getkeytomidimap8t(rowCtr, colCtr), tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(getKeyToMidiMap8t(rowCtr, colCtr), tx_pin, 31250);
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(vel, tx_pin, 31250);
     
     //TEST//
@@ -118,7 +118,7 @@ void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, in
     
     
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(0x80 | chan, tx_pin, 31250);
-    hwlib::uart_putc_bit_banged_pin_custom_baudrate(getkeytomidimap8t(rowCtr,colCtr), tx_pin, 31250);
+    hwlib::uart_putc_bit_banged_pin_custom_baudrate(getKeyToMidiMap8t(rowCtr,colCtr), tx_pin, 31250);
     hwlib::uart_putc_bit_banged_pin_custom_baudrate(vel, tx_pin, 31250);
     
     //TEST//
@@ -143,8 +143,8 @@ void midi::noteOff(hwlib::target::pin_out & tx_pin, uint8_t chan, int rowCtr, in
 //      4  -   |   -   -
 //      --------------->
 // Check which button is played on keymatrix and keypressed is false. uses noteOn() based on the check.
-void midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]) {
-    for(int rowCtr=0; rowCtr< num_rows; ++rowCtr){
+void midi::midiNoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]) {
+    for(int rowCtr=0; rowCtr< numRows; ++rowCtr){
         
         //TEST//
         //int k = rowValue[rowCtr];
@@ -159,8 +159,8 @@ void midi::midinoteOn(hwlib::target::pin_out & tx_pin, int rowValue[], int colCt
 }
 
 // Check which button is released on keymatrix and keypressed is true. uses noteOff() based on the check.
-void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]) {
-    for(int rowCtr=0; rowCtr< num_rows; ++rowCtr){
+void midi::midiNoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int colCtr, uint8_t chan, uint8_t vel, bool keyPressed[9][17]) {
+    for(int rowCtr=0; rowCtr< numRows; ++rowCtr){
         if(rowValue[rowCtr] == 0 && keyPressed[rowCtr][colCtr]){
             keyPressed[rowCtr][colCtr] = false;
             noteOff(tx_pin, chan, rowCtr, colCtr, vel);
@@ -169,12 +169,12 @@ void midi::midinoteOff(hwlib::target::pin_out & tx_pin ,int  rowValue[], int col
 }
 
 //get the value of a keytomidimap on a given location in int
-int midi::getkeytomidimap(int rowctr, int colctr){
+int midi::getKeyToMidiMap(int rowctr, int colctr){
     return keyToMidiMap[rowctr][colctr];
 }
 
 //get the value of a keytomidimap on a given location in int8_t
-uint8_t midi::getkeytomidimap8t(int rowctr, int colctr){
+uint8_t midi::getKeyToMidiMap8t(int rowctr, int colctr){
     return keyToMidiMap[rowctr][colctr];
 }
 

@@ -22,19 +22,19 @@
 
 #include "keymatrix.hpp"
 
-namespace lightmusic{
+namespace lightMusic{
 
 //Constructor initialize row with param row, num_row with the number of the pins of row, num_cols with param num_cols
-keymatrix::keymatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols ):
+keyMatrix::keyMatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & numCols ):
     row1(row1),
     row2(row2),
     row3(row3),
     row4(row4),
-    num_cols(num_cols)
+    numCols(numCols)
 {
-      for(int rowCtr = 0; rowCtr < num_rows; ++rowCtr){
+      for(int rowCtr = 0; rowCtr < numRows; ++rowCtr){
         
-        for(int colCtr = 0; colCtr < num_cols; ++colCtr){
+        for(int colCtr = 0; colCtr < numCols; ++colCtr){
             
             //sets the keypressed of the button false
             keyPressed[rowCtr][colCtr] = false;
@@ -59,7 +59,7 @@ keymatrix::keymatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2,
 //  3  -   |   -   -
 //  4  -   |   -   -
 //  --------------->
-void keymatrix::scanColumn( const int num_cols, hwlib::target::pin_out & latchPin, hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin){
+void keyMatrix::scanColumn( const int numCols, hwlib::target::pin_out & latchPin, hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin){
     latchPin.set(0);
     
     uint8_t i;
@@ -75,7 +75,7 @@ void keymatrix::scanColumn( const int num_cols, hwlib::target::pin_out & latchPi
         //00000100
         //00001000
         //etc.
-        dataPin.set( !!(bits[num_cols] & (1 << (7 - i))));
+        dataPin.set( !!(bits[numCols] & (1 << (7 - i))));
 
         clockPin.set(1);
         clockPin.set(0);
@@ -92,7 +92,7 @@ void keymatrix::scanColumn( const int num_cols, hwlib::target::pin_out & latchPi
     *****************/
 
     
-bool* keymatrix::getRowValue(){
+bool* keyMatrix::getRowValue(){
     rowValue[0] = row1.get();
     rowValue[1] = row2.get();
     rowValue[2] = row3.get();
@@ -100,28 +100,28 @@ bool* keymatrix::getRowValue(){
     return rowValue;
 }
 
-//return number of rows in the keymatrix
-int keymatrix::getNum_rows(){
-    return num_rows;
+//return number of rows in the keyMatrix
+int keyMatrix::getNum_rows(){
+    return numRows;
 }
 
-//return number of cols in the keymatrix
-int keymatrix::getNum_cols(){
-    return num_cols;
+//return number of cols in the keyMatrix
+int keyMatrix::getNum_cols(){
+    return numCols;
 }
 
-//return bool of a the given location of the keypressed
-bool keymatrix::getkeypressed(int rowctr, int colctr){
-    return keyPressed[rowctr][colctr];
+//return bool of a the given location of the keyPressed
+bool keyMatrix::getKeyPressed(int rowCtr, int colCtr){
+    return keyPressed[rowCtr][colCtr];
 }
 
-//set the given data to keypressed on a given location
-void keymatrix::setkeypressed(int rowctr, int colctr, bool data){
-    keyPressed[rowctr][colctr] = data;
+//set the given data to keyPressed on a given location
+void keyMatrix::setKeyPressed(int rowCtr, int colCtr, bool data){
+    keyPressed[rowCtr][colCtr] = data;
 }
 
 //set 1 minus/plus the int quantOfPressKeys
-void keymatrix::minMaxQuantOfPresKeys(bool minMax){
+void keyMatrix::minMaxQuantOfPresKeys(bool minMax){
     if(minMax == 1){
         quantOfPresButtons++;
     }
@@ -132,7 +132,7 @@ void keymatrix::minMaxQuantOfPresKeys(bool minMax){
 }
 
 //get int quantofpreskeys
-int keymatrix::getQuantOfPresKeys(){
+int keyMatrix::getQuantOfPresKeys(){
     return quantOfPresButtons;
 }
 

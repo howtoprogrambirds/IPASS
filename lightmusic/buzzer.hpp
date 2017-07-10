@@ -24,7 +24,7 @@
 #define BUZZER_HPP
 #include "hwlib.hpp"
 
-namespace lightmusic{
+namespace lightMusic{
 
 class buzzer{
 private:
@@ -51,11 +51,11 @@ public:
     void tone(int hertz);
     
     /**
-     * @brief calculate the hertz by given midikeynumber and returns the hertz in int
-     * @param keymidinumber the number of the key
-     * @return returns hettz in int
+     * @brief calculate the hertz by given midiKeyNumber and returns the hertz in int
+     * @param keyMidiNumber the number of the key
+     * @return returns hertz in int
      */
-    int keymidimaptohertz(int keymidinumber);
+    int keyMidiMapToHertz(int KeyMidiNumber);
 };
 
 }

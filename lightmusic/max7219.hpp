@@ -26,7 +26,7 @@
 #include "constantsmax7219.hpp"
 #include "hwlib.hpp"
 
-namespace lightmusic{
+namespace lightMusic{
     
  /**
  * @class       max7219
@@ -42,8 +42,8 @@ private:
     hwlib::target::pin_out din;                                                                                                 ///<Pin dataIn
     hwlib::target::pin_out clk;                                                                                                 ///<Pin clock
     hwlib::target::pin_out load;                                                                                                ///<Pin load
-    int outputmatrix[constmax7219::LEDMATRIX_SIZE+1][(constmax7219::LEDMATRIX_SIZE * constmax7219::MAX7219_QUANTITY)+1] = {0};  ///<The output matrix that writes to the max7219
-    int sepnum[3] = {0};
+    int outputMatrix[constMax7219::LEDMATRIX_SIZE+1][(constMax7219::LEDMATRIX_SIZE * constMax7219::MAX7219_QUANTITY)+1] = {0};  ///<The output matrix that writes to the max7219
+    int sepNum[3] = {0};
 public:
 
     /**
@@ -94,9 +94,8 @@ public:
     
     /**
      * @brief setup the matrix so its possible to use
-     * @param matrix    Matrix who will be setup
      */
-    void Setup();
+    void setup(const uint8_t displayTest, const uint8_t scanLimit, const uint8_t decode, const uint8_t intensity,  const uint8_t shutdown);
     
     /**
      * @brief Sets a 8x8 matrix in the output matrix, it is possible to set the matrix at the first second thirth and last matrix,
@@ -104,7 +103,7 @@ public:
      * @param outputmatrix      The full matrix where the inputmatrix will be set
      * @param ledX              Use for where to set the inputmatrix, first, second, thirth or last matrix
      */
-    void set8x8matrix(const int inputmatrix[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], int ledX);
+    void set8x8Matrix(const int inputmatrix[constMax7219::LEDMATRIX_SIZE+1][constMax7219::LEDMATRIX_SIZE +1], int ledX);
     
     /**
      * @brief set four 8x8 matrixes to the four ledmatrix
@@ -113,10 +112,10 @@ public:
      * @param ch3 thirth 8x8 matrix
      * @param ch4 fourth 8x8 matrix
      */
-    void setfull_4_8x8_ch_matrix(const int ch1[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
-    const int ch2[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
-    const int ch3[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1], 
-    const int ch4[constmax7219::LEDMATRIX_SIZE+1][constmax7219::LEDMATRIX_SIZE +1]);
+    void setFull4_8x8ChMatrix(const int ch1[constMax7219::LEDMATRIX_SIZE+1][constMax7219::LEDMATRIX_SIZE +1], 
+    const int ch2[constMax7219::LEDMATRIX_SIZE+1][constMax7219::LEDMATRIX_SIZE +1], 
+    const int ch3[constMax7219::LEDMATRIX_SIZE+1][constMax7219::LEDMATRIX_SIZE +1], 
+    const int ch4[constMax7219::LEDMATRIX_SIZE+1][constMax7219::LEDMATRIX_SIZE +1]);
     
     /**
      * @brief seperate a hunderd number in 3 seperate numbers.
@@ -124,18 +123,18 @@ public:
      * @param hunderd int to convert
      * @return array with 3 numbers
      */
-    int* hunderdnumbersepnum(int hunderd);
+    int* hunderdNumberSepNum(int hunderd);
     
     /**
-     * @brief convert the midikeynumber to keynumber
+     * @brief convert the midikeynumber to semitone
      * @details 14 -> 2, 18 -> 6
      * @param keymidinumber
-     * @return int of keynumber
+     * @return int of semitone
      */
-    int keymiditokeyletter(int keymidinumber);
+    int semitoneCode(int keymidinumber);
     
     /**
-     * @brief sets the outputmatrix to 0 and draws it to the ledmatrix
+     * @brief sets the outputMatrix to 0 and draws it to the ledmatrix
      */
     void clearDisplay();
     
@@ -147,7 +146,7 @@ public:
     /**
      * @brief writes the outputmatrix out with hwlib::cout
      */
-    void checkOutputmatrix();
+    void checkOutputMatrix();
 
 };
 

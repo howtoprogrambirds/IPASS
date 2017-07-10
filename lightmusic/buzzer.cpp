@@ -23,7 +23,7 @@
 #include "buzzer.hpp"
 #include <cmath>
 
-namespace lightmusic{
+namespace lightMusic{
  
 //constructor, sets the output pin to the given output pin
 buzzer::buzzer(hwlib::target::pin_out sig):
@@ -38,11 +38,11 @@ buzzer::buzzer(hwlib::target::pin_out sig):
 void buzzer::tone(int hertz){
     
     //calculate the half of the period by the given hertz in nanoseconds
-    int halfPeriodns = ((period/hertz)/2);
+    int halfPeriodNs = ((period/hertz)/2);
     
     
-    //sets halfperiod the signal on 1 and halftime the signal on 0
-    //     halfp          halfp
+    //sets halfPeriod the signal on 1 and halftime the signal on 0
+    //     halfP          halfP
     // ------------------------------>
     //_______1______                ______
     //|             |               |
@@ -50,19 +50,19 @@ void buzzer::tone(int hertz){
     //|             |               |
     //|             |_______0_______|
     sig.set(1);
-    hwlib::wait_ns(halfPeriodns);
+    hwlib::wait_ns(halfPeriodNs);
     sig.set(0);
-    hwlib::wait_ns(halfPeriodns);
+    hwlib::wait_ns(halfPeriodNs);
 }
 
-//calculate the hertz by given midikeynumber and returns the hertz in int
-int buzzer::keymidimaptohertz(int keymidinumber){
+//calculate the hertz by given midiKeyNumber and returns the hertz in int
+int buzzer::keyMidiMapToHertz(int keyMidiNumber){
     
-    int note = keymidinumber - ((keymidinumber/12) * 12);
-    int octave = (keymidinumber/12);
-    int hertzoctave = 16 * pow(2,octave);
-    int hertznote = (((16 * pow(2,octave+1))-(16 * pow(2,octave)))/12*note);
-    return hertzoctave+hertznote;
+    int note = keyMidiNumber - ((keyMidiNumber/12) * 12);
+    int octave = (keyMidiNumber/12);
+    int hertzOctave = 16 * pow(2,octave);
+    int hertzNote = (((16 * pow(2,octave+1))-(16 * pow(2,octave)))/12*note);
+    return hertzOctave+hertzNote;
     
 }
 

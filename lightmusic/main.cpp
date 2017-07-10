@@ -45,13 +45,14 @@ int main( void ){
     auto sig    = target::pin_out(target::pins::d12);
     
     
-    lightmusic::max7219 ledmatrix(din,clk,load);
-    ledmatrix.Setup();
+    lightMusic::max7219 ledmatrix(din,clk,load);
+    ledmatrix.setup( constMax7219::MAX7219_DATA_TEST_NORMAL_OPERATION, constMax7219::MAX7219_DATA_SCAN_LIMIT8, constMax7219::MAX7219_DATA_DECODE_NO_DECODE, 
+    constMax7219::MAX7219_DATA_INTENSITY_LVL2,constMax7219::MAX7219_DATA_SHUTDOWN_NORMAL_OPERATION);
     
     //TEST//
     //ledmatrix.checkOutputmatrix();
     
-    lightmusic::buzzer buzz(sig);
+    lightMusic::buzzer buzz(sig);
     
     //initialize all rows
     auto row1Pin = target::pin_in(target::pins::d2);
@@ -68,7 +69,7 @@ int main( void ){
     
     //makes a object myMidi
     int note = 81;
-    lightmusic::midi myMidi(row1Pin, row2Pin, row3Pin, row4Pin, NUM_COLS, note);
+    lightMusic::midi myMidi(row1Pin, row2Pin, row3Pin, row4Pin, NUM_COLS, note);
     
     while(true){
         for (int colCtr = 0; colCtr < NUM_COLS; ++colCtr){
@@ -81,11 +82,11 @@ int main( void ){
                 //hwlib::cout << rowValue[rowCtr];
                 if(rowValue[rowCtr] != 0){
                     
-                    int notenumber = myMidi.getkeytomidimap(colCtr,rowCtr);
-                    buzz.tone(buzz.keymidimaptohertz(notenumber));
+                    int notenumber = myMidi.getKeyToMidiMap(colCtr,rowCtr);
+                    buzz.tone(buzz.keyMidiMapToHertz(notenumber));
                     
-                    if(!myMidi.getkeypressed(rowCtr, colCtr)){
-                        myMidi.setkeypressed(rowCtr, colCtr, true);
+                    if(!myMidi.getKeyPressed(rowCtr, colCtr)){
+                        myMidi.setKeyPressed(rowCtr, colCtr, true);
                         
                         //TEST//
                         //hwlib::cout << "ROW: " << rowCtr << " COL: " << colCtr << "\n\n";
@@ -93,28 +94,28 @@ int main( void ){
                         myMidi.minMaxQuantOfPresKeys(1);
                         
                         
-                        if(myMidi.getkeypressed(NUM_ROWS-1, NUM_COLS-4) == true && myMidi.getVelocity() > 0){
+                        if(myMidi.getKeyPressed(NUM_ROWS-1, NUM_COLS-4) == true && myMidi.getVelocity() > 0){
                             myMidi.minMaxVelocity(10,false);
-                            ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::SPACEMXIN[0], const8x8ch::SPACEMXIN[1], const8x8ch::SPACEMXIN[3], const8x8ch::SPACEMXIN[4]);
+                            ledmatrix.setFull4_8x8ChMatrix(const8x8Ch::SPACEMXIN[0], const8x8Ch::SPACEMXIN[1], const8x8Ch::SPACEMXIN[3], const8x8Ch::SPACEMXIN[4]);
                         }
-                        else if(myMidi.getkeypressed(NUM_ROWS-1, NUM_COLS-3) == true && myMidi.getVelocity() < 127){
+                        else if(myMidi.getKeyPressed(NUM_ROWS-1, NUM_COLS-3) == true && myMidi.getVelocity() < 127){
                             myMidi.minMaxVelocity(10,true);
                             
-                            ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::SPACEMXIN[0], const8x8ch::SPACEMXIN[1], const8x8ch::LETTERS[9], const8x8ch::SPACEMXIN[2]);
+                            ledmatrix.setFull4_8x8ChMatrix(const8x8Ch::SPACEMXIN[0], const8x8Ch::SPACEMXIN[1], const8x8Ch::LETTERS[9], const8x8Ch::SPACEMXIN[2]);
                         }
                         else{
                             myMidi.noteOn(txPin, 0x00, rowCtr, colCtr, myMidi.getVelocity());
 
-                            int *sepnumber = ledmatrix.hunderdnumbersepnum(myMidi.getVelocity());
-                            ledmatrix.setfull_4_8x8_ch_matrix(const8x8ch::LETTERS[ledmatrix.keymiditokeyletter(notenumber)] ,const8x8ch::NUMBERS[sepnumber[0]], const8x8ch::NUMBERS[sepnumber[1]], const8x8ch::NUMBERS[sepnumber[2]]);
+                            int *sepnumber = ledmatrix.hunderdNumberSepNum(myMidi.getVelocity());
+                            ledmatrix.setFull4_8x8ChMatrix(const8x8Ch::LETTERS[ledmatrix.semitoneCode(notenumber)] ,const8x8Ch::NUMBERS[sepnumber[0]], const8x8Ch::NUMBERS[sepnumber[1]], const8x8Ch::NUMBERS[sepnumber[2]]);
 
                         }
                         ledmatrix.draw();
                     }
                 }
                 
-                else if(rowValue[rowCtr] == 0 && myMidi.getkeypressed(rowCtr, colCtr)){
-                    myMidi.setkeypressed(rowCtr, colCtr, false);
+                else if(rowValue[rowCtr] == 0 && myMidi.getKeyPressed(rowCtr, colCtr)){
+                    myMidi.setKeyPressed(rowCtr, colCtr, false);
                     myMidi.noteOff(txPin, 0x00, rowCtr, colCtr, myMidi.getVelocity());
                     myMidi.minMaxQuantOfPresKeys(0);
                     if(myMidi.getQuantOfPresKeys() == 0){

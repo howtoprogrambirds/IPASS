@@ -25,20 +25,20 @@
 
 #include "hwlib.hpp"
 
-namespace lightmusic{
+namespace lightMusic{
     
  /**
- * @class     keymatrix
- * @brief     Class for a keymatrix.
+ * @class     keyMatrix
+ * @brief     Class for a keyMatrix.
  *
  * @details   
- * keymatrix is a class with 5 functions,
- * which makes it possible to setup the keymatrix, 
+ * keyMatrix is a class with 5 functions,
+ * which makes it possible to setup the keyMatrix, 
  * scan the colums by using the shiftout function.
  * And to return the number of cols and rows
  */
     
-class keymatrix {
+class keyMatrix {
     
 private:
     hwlib::target::pin_in row1;
@@ -51,8 +51,8 @@ private:
     int quantOfPresButtons = 0;                                 ///< How many buttons are pressed, default 0
     bool rowValue[4] = {0};
 protected:
-    int num_rows = 4;                                               ///< Number of all the rows  
-    int num_cols;                                               ///< Number of all the colums
+    int numRows = 4;                                           ///< Number of all the rows  
+    int numCols;                                               ///< Number of all the colums
 public:
     
     /**
@@ -64,7 +64,7 @@ public:
     * @details
     * sets row with param row, num_row with the number of the pins of row, num_cols with param num_cols
     */
-    keymatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols);
+    keyMatrix(hwlib::target::pin_in & row1, hwlib::target::pin_in & row2, hwlib::target::pin_in & row3, hwlib::target::pin_in & row4, const int & num_cols);
     
     /*****************
         FUNCTIONS     
@@ -83,7 +83,7 @@ public:
      * @param dataPin The pin on which to output each bit
      * @param clockPin The pin to toggle once the dataPin has been set to correct value
      */
-    void scanColumn(const int num_cols, hwlib::target::pin_out & latchPin, hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin);
+    void scanColumn(const int numCols, hwlib::target::pin_out & latchPin, hwlib::target::pin_out & dataPin, hwlib::target::pin_out & clockPin);
     
     /*****************
      GETTERS/SETTERS     
@@ -113,7 +113,7 @@ public:
      * @param colctr which column
      * @return bool of a the given location of the keypressed
      */
-    bool getkeypressed(int rowctr, int colctr);
+    bool getKeyPressed(int rowCtr, int colCtr);
     
     /**
      * @brief set the given data to keypressed on a given location
@@ -121,7 +121,7 @@ public:
      * @param colctr which column
      * @param data the data(true or false)
      */
-    void setkeypressed(int rowctr, int colctr, bool data);
+    void setKeyPressed(int rowctr, int colctr, bool data);
     
     /**
      * @brief get the value of a keytomidimap on a given location
@@ -129,7 +129,7 @@ public:
      * @param colctr which column
      * @return int of the key on the given location
      */
-    int getkeytomidimap(int rowctr, int colctr);
+    int getKeyToMidiMap(int rowctr, int colctr);
     
     /**
      * @brief get the value of a keytomidimap on a given location
@@ -137,7 +137,7 @@ public:
      * @param colctr which column
      * @return uint8_t of the key on the given location
      */
-    uint8_t getkeytomidimap8t(int rowctr, int colctr);
+    uint8_t getKeyToMidiMap8t(int rowctr, int colctr);
     
     /**
      * @brief set the velocity by "min/max number + velocity"

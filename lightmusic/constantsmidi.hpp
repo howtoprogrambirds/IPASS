@@ -25,7 +25,7 @@
 
 #include "stdint.h"
 
-namespace constmidi{
+namespace constMidi{
 
 ///@file
 

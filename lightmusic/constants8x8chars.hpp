@@ -26,7 +26,7 @@
 
 #include "stdint.h"
 
-namespace const8x8ch{
+namespace const8x8Ch{
     
 ///@file
 

@@ -25,7 +25,7 @@
 
 #include "stdint.h"
 
-namespace constmax7219{
+namespace constMax7219{
     
 ///@file
 
